@@ -1,7 +1,7 @@
 
 #include <math.h>
 
-#include <polygon.h>
+#include "polygon.h"
 
 float polygon_Area(polygon *p)
 {
@@ -40,20 +40,20 @@ int polygon_Overlapping(polygon *p, polygon *q)
     for (i=0;i<=p->nvertices;i++)
     {
         line t1,t2;
-        t1->v1=p[i];
-        t1->v2=p[(i+1)%p->nvertices];
+        t1.v1=p->v[i];
+        t1.v2=p->v[(i+1)%(p->nvertices)];
         for (j=0;j<=q->nvertices;j++)
         {
-            t2->v1=q[j];
-            t2->v2=q[(j+1)%q->nvertices];
-            if (line_LineIntersection(t1,t2))
+            t2.v1=q->v[j];
+            t2.v2=q->v[(j+1)%q->nvertices];
+            if (line_LineIntersection(&t1,&t2))
                 return 1;
         }
     }
     return 0;
 }
 
-int polygon_pointinPolygon(polygon *p, point *f)
+int polygon_PointinPolygon(polygon *p, point *f)
 {
     int c=0;
     unsigned int i,j,n=0;
@@ -68,23 +68,7 @@ int polygon_pointinPolygon(polygon *p, point *f)
     return c;
 }
 
-float distance_pointLine(point *p, line *l)
-{
-    float dist,dot1,dot2;
 
-    dist = cross(l->v1,l->v2,p) / distance(l->v1,l->v2);
-    dot1 = dot(l->v1,l->v2,p);
-
-    if(dot1 > 0)
-        return distance(l->v2,p);
-
-    dot2 = dot(l->v2,l->v1,p);
-
-    if(dot2 > 0)
-        return distance(l->v1,p);
-
-    return fabsf(dist);
-}
 
 float distance_pointPolygon(point *p, polygon *q)
 {
@@ -96,9 +80,9 @@ float distance_pointPolygon(point *p, polygon *q)
         float d;
         line l;
 
-        l->v1=q[i];
-        l->v2=q[(i+1)%q->nvertices];
-        d=distance_pointLine(p,l);
+        l.v1=q->v[i];
+        l.v2=q->v[(i+1)%(q->nvertices)];
+        d=distance_pointLine(p,&l);
         if (i==0 || min>d)
             min = d;
     }

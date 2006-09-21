@@ -1,7 +1,7 @@
 
 #include <math.h>
 
-#include <line.h>
+#include "line.h"
 
 int line_LineIntersection(line *l1, line *l2)
 {
@@ -46,4 +46,22 @@ int line_LineIntersection(line *l1, line *l2)
     ABpos=Dx+(Cx-Dx)*Dy/(Dy-Cy);
 
     return (distAB<=ABpos ? 1 :0);
+}
+
+float distance_pointLine(point *p, line *l)
+{
+    float dist,dot1,dot2;
+
+    dist = cross(&(l->v1),&(l->v2),p) / distance(&(l->v1),&(l->v2));
+    dot1 = dot(&(l->v1),&(l->v2),p);
+
+    if(dot1 > 0)
+        return distance(&(l->v2),p);
+
+    dot2 = dot(&(l->v2),&(l->v1),p);
+
+    if(dot2 > 0)
+        return distance(&(l->v1),p);
+
+    return fabsf(dist);
 }

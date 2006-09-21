@@ -1,7 +1,7 @@
 
 #include <math.h>
 
-#include <point.h>
+#include "point.h"
 
 
 float dot(point *a, point *b, point *c)
@@ -16,5 +16,5 @@ float cross(point *a, point *b, point *c)
 
 float distance(point *a, point *b)
 {
-    return sqrt(powf(a->x - b->x,2.0)1+powf(a->y - b->y,2.0));
+    return sqrt(powf(a->x - b->x,2.0)+powf(a->y - b->y,2.0));
 }
