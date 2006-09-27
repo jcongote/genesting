@@ -3,7 +3,7 @@
 
 #include "polygon.h"
 
-float polygon_Area(polygon *p)
+float polygon_Area(polygon *p) //OK
 {
     unsigned int i,j,n;
     float area = 0;
@@ -27,13 +27,13 @@ int polygon_Overlapping(polygon *p, polygon *q)
 
     for (i=0;i<p->nvertices;i++)
     {
-        if (polygon_PointinPolygon(q,&p[i]))
+        if (polygon_pointinPolygon(q,&p[i]))
             return 1;
     }
 
     for (i=0;i<q->nvertices;i++)
     {
-        if (polygon_PointinPolygon(p,&q[i]))
+        if (polygon_pointinPolygon(p,&q[i]))
             return 1;
     }
 
@@ -53,12 +53,12 @@ int polygon_Overlapping(polygon *p, polygon *q)
     return 0;
 }
 
-int polygon_PointinPolygon(polygon *p, point *f)
+int polygon_pointinPolygon(polygon *p, point *f) //OK
 {
     int c=0;
-    unsigned int i,j,n=0;
+    unsigned int i,j;
 
-    for (i=0,j=n-1;i<p->nvertices;j=i++)
+    for (i=0,j=p->nvertices-1;i<p->nvertices;j=i++)
     {
         if ((((p->v[i].y<=f->y) && (f->y<p->v[j].y)) ||
                 ((p->v[j].y<=f->y) && (f->y<p->v[i].y))) &&
@@ -70,12 +70,12 @@ int polygon_PointinPolygon(polygon *p, point *f)
 
 
 
-float distance_pointPolygon(point *p, polygon *q)
+float distance_pointPolygon(point *p, polygon *q) //OK
 {
     int i;
     float min;
 
-    for (i=0;i<=q->nvertices;i++)
+    for (i=0;i<q->nvertices;i++)
     {
         float d;
         line l;
@@ -83,8 +83,9 @@ float distance_pointPolygon(point *p, polygon *q)
         l.v1=q->v[i];
         l.v2=q->v[(i+1)%(q->nvertices)];
         d=distance_pointLine(p,&l);
-        if (i==0 || min>d)
+        if (i==0 || min>d){
             min = d;
+        }
     }
     return min;
 }

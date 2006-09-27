@@ -48,7 +48,9 @@ int line_LineIntersection(line *l1, line *l2)
     return (distAB<=ABpos ? 1 :0);
 }
 
-float distance_pointLine(point *p, line *l)
+
+
+float distance_pointLine(point *p, line *l) //OK
 {
     float dist,dot1,dot2;
 
