@@ -126,7 +126,6 @@ int main(int argc, char **argv)
 
         for (i=0;i<pepe.ngenes;i++)
         {
-
             switch(movimiento)
             {
                 case 0:
