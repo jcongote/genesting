@@ -1,6 +1,8 @@
 #ifndef FILE_POLYGON_H
 #define FILE_POLYGON_H
 
+#include <stdbool.h>
+
 #include "point.h"
 #include "line.h"
 
@@ -14,18 +16,16 @@ struct _polygon
 typedef struct _polygon polygon;
 
 
-float polygon_Area(polygon *p);
+float polygon_area(polygon *p);
 
-int polygon_Overlapping(polygon *p, polygon *q);
+bool polygon_pointin(polygon *p, point *f);
 
-int polygon_pointinPolygon(polygon *p, point *f);
+bool polygon_overlapping(polygon *p, polygon *q);
 
-float distance_pointPolygon(point *p, polygon *q);
+void polygon_rotate(polygon *p, float t);
 
-void rotate_Polygon(polygon *p, float t);
+void polygon_minbox(polygon *p, float *minx, float *miny, float *maxx, float *maxy);
 
-void minbox_Polygon(polygon *p, float *x1, float *y1, float *x2, float *y2);
-
-void translate_Polygon(polygon *p, float x, float y);
+void polygon_translate(polygon *p, float x, float y);
 
 #endif

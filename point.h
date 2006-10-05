@@ -8,8 +8,8 @@ struct _point
 
 typedef struct _point point;
 
-float dot(point *a, point *b, point *c);
-float cross(point *a, point *b, point *c);
-float distance(point *a, point *b);
+float point_dot(point *a, point *b, point *c);
+
+float point_cross(point *a, point *b, point *c);
 
 #endif
