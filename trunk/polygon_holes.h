@@ -23,4 +23,6 @@ bool polygonholes_pointin(polygon_holes *p, point *f);
 
 bool polygonholes_polygonin(polygon_holes *p, polygon *q);
 
+bool polygonholes_pointinhole(polygon_holes *p, point *f);
+
 #endif

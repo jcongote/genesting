@@ -1,9 +1,23 @@
+/*!\addtogroup geometry
+@{
+*/
+
+/*!\file polygon.c
+Este archivo define las funciones utilizadas por el objeto poligono
+*/
 
 #include <math.h>
 
 #include "polygon.h"
 
-float polygon_area(polygon *p) //OK
+/*!\fn float polygon_area(polygon *p)
+Esta funcion calcula el area de un poligono simple, el algoritmo fue tomado
+de Graphic Gems II, del articulo The Area of a Simple Polygon.
+
+\param [in] p Poligono simple
+\return El area del poligono
+*/
+float polygon_area(polygon *p)
 {
     unsigned int i;
     float area = 0;
@@ -17,7 +31,18 @@ float polygon_area(polygon *p) //OK
     return(area < 0 ? -area : area);
 }
 
-bool polygon_pointin(polygon *p, point *f) //OK
+
+/*!\fn bool polygon_pointin(polygon *p, point *f)
+La funcion identifica si un punto esta dentro de un poligono o no. la
+implementacion y explicacion de este codigo esta en la pagina
+http://www.faqs.org/faqs/graphics/algorithms-faq/
+
+\param [in] p Poligono simple en 2 dimensiones
+\param [in] f Punto en 2 dimensiones
+\return Un booleano que es verdadero en caso de que el punto este dentro del
+        poligono y falso en caso contrario
+*/
+bool polygon_pointin(polygon *p, point *f)
 {
     bool c=false;
     unsigned int i,j;
@@ -32,6 +57,17 @@ bool polygon_pointin(polygon *p, point *f) //OK
     return c;
 }
 
+/*!\fn bool polygon_overlapping(polygon *p, polygon *q)
+Esta funcion identifica si dos poligonos se solapan de alguna forma para
+verificar esto se realizan 3 comprobaciones:
+    - Ningun vertice del poligono p esta dentro del poligono q
+    - Ningun vertice del poligono q esta dentro del poligono p
+    - Ninguna linea de los poligonos p y q se intersectan
+
+\param [in] p Poligono Simple en 2 dimensiones
+\param [in] q Poligono Simple en 2 dimensiones
+\return Verdadero si los poligonos se solapan, falso en caso contrario.
+*/
 bool polygon_overlapping(polygon *p, polygon *q)
 {
     int i,j;
@@ -61,10 +97,19 @@ bool polygon_overlapping(polygon *p, polygon *q)
                 return true;
         }
     }
-
     return false;
 }
 
+/*!\fn void polygon_rotate(polygon *p, float t)
+La funcion rota el poligono p un angulo t, teniendo como eje de rotacion el
+centro de la caja mas pequena que contiene el poligono. Aunque se pueden
+elegir otros puntos como eje, o de hecho implementar un eje arbitrario, el
+centro de la caja que contiene el poligono es un punto facil de calcular y
+ademas que evita exageradas translaciones relativas del poligono al ser rotado.
+
+\param [in,out] p Poligono simple
+\param [in] t Angulo en radianes a rotar la figura en sentido antihorario.
+*/
 void polygon_rotate(polygon *p, float t)
 {
     int i;
@@ -109,7 +154,19 @@ void polygon_rotate(polygon *p, float t)
     }
 }
 
-void polygon_minbox(polygon *p, float *minx, float *miny, float *maxx, float *maxy){
+/*!\fn void polygon_minbox(polygon *p, float *minx, float *miny, float *maxx, float *maxy)
+La funcion calcula las coordenadas mas extremas del poligono, conformando con
+estas 2 puntos que pueden formar un rectangulo que contiene completamente el
+poligono
+
+\param [in] p Poligono simple
+\param [out] minx Coordenada mas pequeña del poligono en el eje x
+\param [out] miny Coordenada mas pequeña del poligono en el eje y
+\param [out] maxx Coordenada mas grande del poligono en el eje x
+\param [out] maxy Coordenada mas grande del poligono en el eje y
+*/
+void polygon_minbox(polygon *p, float *minx, float *miny, float *maxx, float *maxy)
+{
     int i;
     for (i=0;i<p->nvertices;i++)
     {
@@ -143,7 +200,15 @@ void polygon_minbox(polygon *p, float *minx, float *miny, float *maxx, float *ma
     }
 }
 
-void polygon_translate(polygon *p, float x, float y){
+/*!\fn void polygon_translate(polygon *p, float x, float y)
+Translada el poligono una distancia definida por x,y.
+
+\param [in,out] p Poligono simple
+\param [in] x Distancia en x a transladar el poligono
+\param [in] y Distancia en y a transladar el poligono
+*/
+void polygon_translate(polygon *p, float x, float y)
+{
     int i;
     for (i=0;i<p->nvertices;i++)
     {
@@ -151,3 +216,5 @@ void polygon_translate(polygon *p, float x, float y){
         p->v[i].y+=y;
     }
 }
+
+/*!@}*/
