@@ -1,3 +1,12 @@
+/*!\addtogroup genetic
+@{
+*/
+
+/*!\file genesting.c
+Aqui estan las estructuras principales del programa
+la estructura es muy sencilla
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -7,6 +16,12 @@
 #include "polygon.h"
 #include "polygon_holes.h"
 
+/*!\fn genesting* leer_archivo(char *arc_name)
+Lee el archivo de datos que definen las caracteristicas del problema
+*/
+/*!\todo
+Documentar como es la estructura leida por el programa.
+*/
 
 genesting* leer_archivo(char *arc_name)
 {
@@ -66,7 +81,11 @@ genesting* leer_archivo(char *arc_name)
 
     return g;
 }
-
+/*!\fn void genesting_init(genesting *g)
+Realiza unas correcciones iniciales al archivo de entrada y calcula los
+valores fijos del problema, como el area maxima y volumen maximo que se
+dan cuando generamos una solucion vacia.
+*/
 void genesting_init(genesting *g)
 {
     int i;
@@ -96,6 +115,11 @@ void genesting_init(genesting *g)
 
     g->volumen = polygonholes_volumen(&p);
 }
+
+/*!\fn float fitness(individuo *ind)
+Esta funcion evalua que tan bueno es un individuo en la poblacion. retorna
+un valor entre 0 y 1, y entre mas cercano a 0, mejor es el individuo
+*/
 
 float fitness(individuo *ind)
 {
@@ -132,9 +156,7 @@ float fitness(individuo *ind)
                 temp.h[i].v[j].x=ind->ambiente->huecos[i-ind->ngenes].v[j].x;
                 temp.h[i].v[j].y=ind->ambiente->huecos[i-ind->ngenes].v[j].y;
             }
-
         }
-
     }
 
     ind->fitness = polygonholes_volumen(&temp)/(ind->ambiente->volumen);
@@ -149,3 +171,5 @@ float fitness(individuo *ind)
 
     return (ind->fitness);
 }
+
+/*!@}*/

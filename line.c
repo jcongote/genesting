@@ -1,8 +1,24 @@
+/*!\addtogroup geometry
+@{
+*/
+
+/*!\file line.c
+Este archivo define las funciones que operan sobre el objeto segmento de linea
+*/
 
 #include <math.h>
 
 #include "line.h"
 
+/*!\fn bool line_intersection(line *l1, line *l2)
+Identifica si dos lineas se intersectan, el algoritmo utilizado fue sacado
+del libro de Graphics Gems del Articulo Faster Line Segment Intersection
+
+\param [in] l1 Linea en 2 dimensiones
+\param [in] l2 Linea en 2 dimensiones
+\return Un valor booleano que es verdadero si las lineas se intersectan y falso
+en caso contrario
+*/
 bool line_intersection(line *l1, line *l2)
 {
     float x1,y1,x2,y2,x3,y3,x4,y4;
@@ -81,7 +97,15 @@ bool line_intersection(line *l1, line *l2)
     return true;
 }
 
+/*!\fn bool line_equal(line *l1, line *l2)
+Compara dos segmentos de linea, en este caso el orden de los extremos
+importa en la operacion
 
+\param [in] l1 Linea en 2 dimensiones
+\param [in] l2 Linea en 2 dimensiones
+\return Verdadero si los segmentos de recta son iguales,
+                falso en caso contrario
+*/
 bool line_equal(line *l1, line *l2)
 {
     return (l1->v1.x == l2->v1.x &&
@@ -91,7 +115,19 @@ bool line_equal(line *l1, line *l2)
            ) ? true : false;
 }
 
+/*!\fn bool line_ispoint(line *l)
+Identifica si un segmento de recta es en realidad un unico punto, esto
+lo hace comprobando los puntos extremos del segmento de recta, si los
+extremos son iguales entonces se puede definir este segmento de recta
+como una linea
+
+\param [in] l Linea en 2 dimensiones
+\return Verdadero si la linea es un punto, falso en caso contrario.
+*/
+
 bool line_ispoint(line *l)
 {
     return (l->v1.x == l->v2.x && l->v1.y == l->v2.y) ? true : false;
 }
+
+/*!@}*/

@@ -14,6 +14,4 @@ float distance_pointpolygon(point *f, polygon *p, line *ref);
 
 float distance_pointpolygonholes(point *f, polygon_holes *p, line *ref);
 
-float foo();
-
 #endif

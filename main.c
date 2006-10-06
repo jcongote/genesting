@@ -1,6 +1,51 @@
-//#include <allegro.h>
+/*!\mainpage Projecto Genesting
+
+Genesting es un projecto que intenta resolver el problema de nesting o
+anidamiento de figuras a través del uso de algoritmos genéticos.
+
+\section definition Definicion
+El problema de nesting se puede definir como encontrar una dispocision de
+patrones que esten dentro de otro de forma que se maximice el area utilizada.
+Este problema tiene muchas variantes, pero en el proyecto se trabajara
+especificamente sobre el caso de Knapsack.
+
+\section objective Objetivo
+Encontrar una dispocicion de patrones que maximicen el area
+utilizada dentro de otro patron. Los patrones estan definidos como poligonos
+simples, los cuales pueden ser por definicion convexos o concavos pero solo
+pueden tener un adentro o mas claramente sus lineas no se intersectan.
+
+\section case Caso de Estudio
+Aunque el problema es teorico, el projecto quiere generar una aplicacion
+que pueda ser utilizada por la industria marroquinera, donde tienen que
+definir como distribuir los moldes de corte dentro de un cuero, en este caso
+el cuero se puede definir como el patron o poligono donde se tienen que
+colocar los demas patrones, y los moldes como los patrones internos.
+*/
+
+/*!\defgroup distance Distancias
+Para el projecto utilizamos la definicion de distancia Euclidiana, donde la
+distancia entre dos objetos es la longitud de la recta mas cercana que los toca.
+*/
+
+/*!\defgroup geometry Geometria
+Son los modelos y estructuras geometricas utilizadas para calcular las
+caracteristicas del problema, debido a que nesting esta fuertemente enlazado
+con poligonos, es necesario implementar el conjunto de objetos geometricos
+que lo manejen.
+*/
+
+/*!\defgroup genetic Genetico
+Dentro del modulo genetico encontraremos una implementacion de heuristicas
+de algoritmos geneticos y evoluticos que seleccionara la solucion.
+*/
+
+/*!\file main.c
+Programa principal, usa y prueba la libreria genesting.
+*/
 
 #include <stdio.h>
+#include <math.h>
 
 #include "genesting.h"
 #include "graphics.h"
@@ -19,7 +64,9 @@ int main(int argc, char **argv)
 {
     genesting *g;
 
+#if graphics
     init_graphics();
+#endif
 
     if (argc<2)
     {
@@ -62,11 +109,11 @@ void show(genesting *g)
         printf("    Area: %f\n",polygon_area(&(g->patrones[i])));
     }
 
-    float oldvol;
+    //float oldvol;
 
-    oldvol=f_volumen(&(g->plantilla),g->nhuecos,g->huecos,0,NULL,0.1);
+    //oldvol=f_volumen(&(g->plantilla),g->nhuecos,g->huecos,0,NULL,sqrt(DELTA));
 
-    printf("Volumen calculado a la antigua: %f\n",oldvol);
+    //printf("Volumen calculado a la antigua: %f\n",oldvol);
 
 }
 

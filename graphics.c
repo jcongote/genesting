@@ -1,6 +1,7 @@
 #include <allegro.h>
 
-#define graphics 0
+#include "graphics.h"
+
 
 void init_graphics()
 {
