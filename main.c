@@ -65,6 +65,7 @@ int main(int argc, char **argv)
     genesting *g;
 
 #if graphics
+
     init_graphics();
 #endif
 
@@ -77,7 +78,7 @@ int main(int argc, char **argv)
     g=leer_archivo(argv[1]);
 
     show(g);
-
+    getchar();
     return 0;
 }
 
@@ -109,11 +110,11 @@ void show(genesting *g)
         printf("    Area: %f\n",polygon_area(&(g->patrones[i])));
     }
 
-    //float oldvol;
+    float oldvol;
 
-    //oldvol=f_volumen(&(g->plantilla),g->nhuecos,g->huecos,0,NULL,sqrt(DELTA));
+    oldvol=f_volumen(&(g->plantilla),g->nhuecos,g->huecos,0,NULL,sqrt(DELTA));
 
-    //printf("Volumen calculado a la antigua: %f\n",oldvol);
+    printf("Volumen calculado a la antigua: %f\n",oldvol);
 
 }
 

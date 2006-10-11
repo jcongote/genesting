@@ -35,7 +35,7 @@ float polygon_area(polygon *p)
 /*!\fn bool polygon_pointin(polygon *p, point *f)
 La funcion identifica si un punto esta dentro de un poligono o no. la
 implementacion y explicacion de este codigo esta en la pagina
-http://www.faqs.org/faqs/graphics/algorithms-faq/
+http://www.faqs.org/faqs/graphics/algorithms-faq
 
 \param [in] p Poligono simple en 2 dimensiones
 \param [in] f Punto en 2 dimensiones
