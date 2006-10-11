@@ -2,6 +2,7 @@
 
 #include "individuo.h"
 
+#include "polygon.h"
 #include "polygon_holes.h"
 
 /*!\fn float individuo_fitness(individuo *ind)
@@ -59,7 +60,27 @@ float individuo_fitness(individuo *ind)
     return (ind->fitness);
 }
 
-individuo* individuo_create(genesting *g);
+individuo* individuo_create(genesting *g){
+        individuo *ind;
+        float maxx,maxy,minx,miny;
+
+        ind = (individuo*) malloc (sizeof(individuo));
+        srand((int)ind);
+
+        ind->ambiente = g;
+        ind->ngenes = 1;
+
+        ind->posgen = malloc (sizeof(posicion));
+
+        polygon_minbox(&(g->plantilla), &minx, &miny, &maxx, &maxy);
+
+        ind->posgen->x = (rand()%(int)(maxx-minx))+minx;
+        ind->posgen->y = (rand()%(int)(maxy-miny))+miny;
+        ind->posgen->t = (rand()%628)/100;
+        ind->posgen->id= rand()%g->npatrones;
+
+        return ind;
+}
 
 void individuo_mutate(individuo *i);
 
