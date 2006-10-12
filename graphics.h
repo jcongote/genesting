@@ -1,3 +1,5 @@
+/*!\file graphics.h*/
+
 #ifndef FILE_GRAPHICS_H
 #define FILE_GRAPHICS_H
 

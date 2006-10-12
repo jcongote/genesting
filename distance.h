@@ -1,3 +1,9 @@
+/*!\addtogroup distance
+@{
+*/
+
+/*!\file distance.h*/
+
 #ifndef FILE_DISTANCE_H
 #define FILE_DISTANCE_H
 
@@ -15,3 +21,5 @@ float distance_pointpolygon(point *f, polygon *p, line *ref);
 float distance_pointpolygonholes(point *f, polygon_holes *p, line *ref);
 
 #endif
+
+/*!@}*/
