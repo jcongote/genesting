@@ -1,3 +1,11 @@
+/*!\addtogroup geometry
+@{
+*/
+
+/*!\file polygon_holes.h
+Declaraciones del Objeto Poligono con huecos
+*/
+
 #ifndef FILE_POLYGON_HOLES_H
 #define FILE_POLYGON_HOLES_H
 
@@ -26,3 +34,5 @@ bool polygonholes_polygonin(polygon_holes *p, polygon *q);
 bool polygonholes_pointinhole(polygon_holes *p, point *f);
 
 #endif
+
+/*!@}*/

@@ -1,3 +1,11 @@
+/*!\addtogroup genetic
+@{
+*/
+
+/*!\file genesting.h
+Declaraciones del Objeto Genesting
+*/
+
 #ifndef FILE_GENESTING_H
 #define FILE_GENESTING_H
 
@@ -26,3 +34,5 @@ void genesting_createpoblation();
 void genesting_newgeneration();
 
 #endif
+
+/*!@}*/

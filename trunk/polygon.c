@@ -212,8 +212,8 @@ void polygon_translate(polygon *p, float x, float y)
     int i;
     for (i=0;i<p->nvertices;i++)
     {
-        p->v[i].x+=x;
-        p->v[i].y+=y;
+        p->v[i].x-=x;
+        p->v[i].y-=y;
     }
 }
 

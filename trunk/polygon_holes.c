@@ -380,15 +380,15 @@ bool polygonholes_polygonin(polygon_holes *p, polygon *q)
 
     for (i=0;i<q->nvertices && adentro;i++)
     {
-        if (!polygonholes_pointin(p,&q->v[i]))
-            adentro = false;
-    }
-
-    for (i=0;i<q->nvertices && adentro;i++)
-    {
         line t1,t2;
         t1.v1=q->v[i];
         t1.v2=q->v[(i+1)%(q->nvertices)];
+
+        if (!polygonholes_pointin(p,&q->v[i]))
+            adentro = false;
+
+        if (!polygonholes_pointin(p,&q->v[(i+1)%(q->nvertices)]))
+            adentro = false;
 
         for (j=0;j<p->p->nvertices && adentro;j++)
         {

@@ -1,3 +1,11 @@
+/*!\addtogroup genetic
+@{
+*/
+
+/*!\file individuo.h
+Declaraciones del Objeto Individuo
+*/
+
 #ifndef FILE_INDIVIDUO_H
 #define FILE_INDIVIDUO_H
 
@@ -39,3 +47,4 @@ individuo* individuo_procreate(individuo *p, individuo *m);
 bool individuo_validate(individuo *ind);
 
 #endif
+/*!@}*/

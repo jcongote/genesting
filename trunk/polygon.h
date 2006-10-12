@@ -1,3 +1,11 @@
+/*!\addtogroup geometry
+@{
+*/
+
+/*!\file polygon.h
+Declaraciones del Objeto Poligono
+*/
+
 #ifndef FILE_POLYGON_H
 #define FILE_POLYGON_H
 
@@ -29,3 +37,5 @@ void polygon_minbox(polygon *p, float *minx, float *miny, float *maxx, float *ma
 void polygon_translate(polygon *p, float x, float y);
 
 #endif
+
+/*!@}*/
