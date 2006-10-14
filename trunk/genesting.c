@@ -22,7 +22,6 @@ Lee el archivo de datos que definen las caracteristicas del problema
 /*!\todo
 Documentar como es la estructura leida por el programa.
 */
-
 genesting* leer_archivo(char *arc_name)
 {
     FILE* arc;
@@ -51,7 +50,7 @@ genesting* leer_archivo(char *arc_name)
     {
         int nvert,tipo;
 
-        polygon *p;
+        polygon *p=NULL;
         fscanf(arc,"%i %i",&nvert,&tipo);
         switch(tipo)
         {
@@ -81,6 +80,7 @@ genesting* leer_archivo(char *arc_name)
 
     return g;
 }
+
 /*!\fn void genesting_init(genesting *g)
 Realiza unas correcciones iniciales al archivo de entrada y calcula los
 valores fijos del problema, como el area maxima y volumen maximo que se
@@ -94,17 +94,17 @@ void genesting_init(genesting *g)
 
     polygon_minbox(&(g->plantilla), &minx, &miny, &maxx, &maxy);
 
-    polygon_translate(&(g->plantilla), -minx, -miny);
+    polygon_translate(&(g->plantilla), minx, miny);
 
     for (i=0;i<g->nhuecos;i++)
     {
-        polygon_translate(&(g->huecos[i]), -minx, -miny);
+        polygon_translate(&(g->huecos[i]), minx, miny);
     }
 
     for (i=0;i<g->npatrones;i++)
     {
         polygon_minbox(&(g->patrones[i]), &minx, &miny, &maxx, &maxy);
-        polygon_translate(&(g->patrones[i]), -minx, -miny);
+        polygon_translate(&(g->patrones[i]), minx, miny);
     }
 
     p.nholes = g->nhuecos;

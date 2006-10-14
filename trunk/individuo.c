@@ -70,9 +70,8 @@ float individuo_fitness(individuo *ind)
     return (ind->fitness);
 }
 
-/*!\fn individuo* individuo_create(genesting *g)
-Esta funcion crea un individuo de configuracion aleatoria, retornado
-el puntero del individuo, donde el programador debe manejar la memoria.
+/*!\fn void individuo_create(genesting *g,individuo *ind)
+Esta funcion crea un individuo de configuracion aleatoria.
 
 El individuo con el ambiente definido en el objeto genesting y en
 una posicion aleatoria entre el rectangulo creado por la plantilla,
@@ -82,15 +81,15 @@ no valido, pero esto debera ser verificado posteriormente por el algoritmo
 genetico.
 
 \param [in] g Obtiene el contexto del individuo
-\return Una direccion de memoria donde esta el individuo
+\param [out] ind Una direccion de memoria donde esta el individuo
 */
 
-individuo* individuo_create(genesting *g)
+void individuo_create(genesting *g,individuo *ind)
 {
-    individuo *ind;
+
     float maxx,maxy,minx,miny;
 
-    ind = (individuo*) malloc (sizeof(individuo));
+    //Se toma la direccion de memoria como semilla aleatoria
     srand((int)ind);
 
     ind->ambiente = g;
@@ -105,7 +104,6 @@ individuo* individuo_create(genesting *g)
     ind->posgen->t = (rand()%628)/100;
     ind->posgen->id= rand()%g->npatrones;
 
-    return ind;
 }
 
 /*!\fn void individuo_mutate(individuo *ind)
@@ -120,8 +118,7 @@ void individuo_mutate(individuo *ind)
     ind->posgen->t += ((rand()%100)-50)/100;
 };
 
-
-/*!\fn individuo* individuo_procreate(individuo *p, individuo *m)
+/*!\fn void individuo_procreate(individuo *p, individuo *m, individuo *h)
 Esta funcion crea un nuevo individuo partiendo de los individuos
 padres. La mescla se hace de la siguiente manera, se toman los
 patrones del padre y luego los patrones de la madre si ya no
@@ -130,14 +127,13 @@ se escoge cual de las posiciones del patron es heredada.
 
 \param [in] p Individuo padre
 \param [in] m Individuo madre
-\return Nuevo individuo
+\param [out] ind Nuevo individuo
 */
-individuo* individuo_procreate(individuo *p, individuo *m)
+void individuo_procreate(individuo *p, individuo *m, individuo *ind)
 {
-    individuo *ind = (individuo*) malloc (sizeof(individuo));
     int i,j,cont;
 
-    ind->posgen = (posicion*) malloc (sizeof(posicion)*(p->ngenes+m->ngenes));
+    ind->posgen = (posicion*) realloc(ind->posgen,sizeof(posicion)*(p->ngenes+m->ngenes));
 
     for (i=0,cont=0;i<p->ngenes;i++,cont++)
     {
@@ -175,8 +171,6 @@ individuo* individuo_procreate(individuo *p, individuo *m)
     ind->ambiente = p->ambiente;
     ind->ngenes = cont;
     ind->posgen = (posicion*) realloc(ind->posgen,sizeof(posicion)*cont);
-
-    return ind;
 }
 
 
@@ -198,11 +192,13 @@ bool individuo_validate(individuo *ind)
     polygon_holes ph;
     polygon *pat;
 
-    for (i=0;i<ind->ngenes-1 && valido;i++){
-            for (j=i+1;j<ind->ngenes && valido;j++){
-                if (ind->posgen[i].id == ind->posgen[j].id)
-                    valido = false;
-            }
+    for (i=0;i<ind->ngenes-1 && valido;i++)
+    {
+        for (j=i+1;j<ind->ngenes && valido;j++)
+        {
+            if (ind->posgen[i].id == ind->posgen[j].id)
+                valido = false;
+        }
     }
 
     ph.p = &(ind->ambiente->plantilla);
@@ -211,43 +207,50 @@ bool individuo_validate(individuo *ind)
 
     for (i=0;i<ph.nholes;i++)
     {
-            ph.h[i].nvertices = ind->ambiente->huecos[i].nvertices;
-            ph.h[i].v=(point*) malloc(sizeof(point)*ph.h[i].nvertices);
+        ph.h[i].nvertices = ind->ambiente->huecos[i].nvertices;
+        ph.h[i].v=(point*) malloc(sizeof(point)*ph.h[i].nvertices);
 
-            for (j=0;j<ph.h[i].nvertices;j++)
-            {
-                ph.h[i].v=ind->ambiente->huecos[i].v;
-            }
+        for (j=0;j<ph.h[i].nvertices;j++)
+        {
+            ph.h[i].v=ind->ambiente->huecos[i].v;
+        }
     }
 
     pat = (polygon*) malloc(sizeof(polygon)*ind->ngenes);
 
-    for (i=0;i<ind->ngenes;i++){
-            pat[i].nvertices = ind->ambiente->patrones[ind->posgen[i].id].nvertices;
-            pat[i].v = (point*) malloc(sizeof(point)*pat[i].nvertices);
-            for (j=0;j<pat[i].nvertices;j++)
-            {
-                pat[i].v=ind->ambiente->patrones[ind->posgen[i].id].v;
-            }
-            polygon_rotate(&(pat[i]),ind->posgen[i].t);
-            polygon_translate(&(pat[i]),ind->posgen[i].x, ind->posgen[i].y);
+    for (i=0;i<ind->ngenes;i++)
+    {
+        pat[i].nvertices = ind->ambiente->patrones[ind->posgen[i].id].nvertices;
+        pat[i].v = (point*) malloc(sizeof(point)*pat[i].nvertices);
+        for (j=0;j<pat[i].nvertices;j++)
+        {
+            pat[i].v=ind->ambiente->patrones[ind->posgen[i].id].v;
+        }
+        polygon_rotate(&(pat[i]),ind->posgen[i].t);
+        polygon_translate(&(pat[i]),ind->posgen[i].x, ind->posgen[i].y);
     }
 
-    for (i=0;i<ind->ngenes && valido;i++){
-        if(!polygonholes_polygonin(&ph, &(pat[i]))){
+    for (i=0;i<ind->ngenes && valido;i++)
+    {
+        if(!polygonholes_polygonin(&ph, &(pat[i])))
+        {
             valido=false;
         }
     }
 
-    for (i=0;i<ind->ngenes-1 && valido;i++){
-            for (j=i+1;j<ind->ngenes && valido;j++){
-                    if (polygon_overlapping(&(pat[i]),&(pat[j]))){
-                            valido=false;
-                    }
+    for (i=0;i<ind->ngenes-1 && valido;i++)
+    {
+        for (j=i+1;j<ind->ngenes && valido;j++)
+        {
+            if (polygon_overlapping(&(pat[i]),&(pat[j])))
+            {
+                valido=false;
             }
+        }
     }
 
-    for (i=0;i<ind->ngenes;i++){
+    for (i=0;i<ind->ngenes;i++)
+    {
         free(pat[i].v);
     }
     free(pat);
@@ -259,6 +262,11 @@ bool individuo_validate(individuo *ind)
     free(ph.h);
 
     return valido;
+}
+
+int comparar_individuos(individuo *ind1,individuo *ind2)
+{
+    return ((int)((ind1->fitness)-(ind2->fitness)));
 }
 
 /*!@}*/

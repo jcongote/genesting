@@ -112,9 +112,9 @@ void show(genesting *g)
 
     float oldvol;
 
-    oldvol=f_volumen(&(g->plantilla),g->nhuecos,g->huecos,0,NULL,sqrt(DELTA));
+//    oldvol=f_volumen(&(g->plantilla),g->nhuecos,g->huecos,0,NULL,sqrt(DELTA));
 
-    printf("Volumen calculado a la antigua: %f\n",oldvol);
+//   printf("Volumen calculado a la antigua: %f\n",oldvol);
 
 }
 
