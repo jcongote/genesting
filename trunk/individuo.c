@@ -19,49 +19,53 @@ Esta funcion evalua que tan bueno es un individuo en la poblacion. retorna
 un valor entre 0 y 1, y entre mas cercano a 0, mejor es el individuo
 \param [in] ind Individuo
 */
+
+/*!\todo
+No es necesario recalcular el fitness de un individuo si este no ha cambiado
+*/
 float individuo_fitness(individuo *ind)
 {
-    int i,j;
+    int i,j,cont;
 
     polygon_holes temp;
+
+    temp.p = &(ind->ambiente->plantilla);
 
     temp.h = (polygon*) malloc(sizeof(polygon)*(ind->ngenes+ind->ambiente->nhuecos));
 
     temp.nholes = ind->ngenes+ind->ambiente->nhuecos;
 
-    for (i=0;i<ind->ngenes+ind->ambiente->nhuecos;i++)
+    for (i=0,cont=0;i<ind->ambiente->nhuecos;i++)
     {
-        if (i<ind->ngenes)
-        {
-            temp.h[i].nvertices = ind->ambiente->patrones[ind->posgen[i].id].nvertices;
-            temp.h[i].v=(point*) malloc(sizeof(point)*temp.h[i].nvertices);
+        temp.h[cont].nvertices = ind->ambiente->huecos[i].nvertices;
+        temp.h[cont].v=(point*) malloc(sizeof(point)*temp.h[i].nvertices);
 
-            for (j=0;j<temp.h[i].nvertices;j++)
-            {
-                temp.h[i].v[j].x=ind->ambiente->patrones[ind->posgen[i].id].v[j].x;
-                temp.h[i].v[j].y=ind->ambiente->patrones[ind->posgen[i].id].v[j].y;
-            }
-
-            polygon_rotate(&(temp.h[i]),ind->posgen[i].t);
-            polygon_translate(&(temp.h[i]),ind->posgen[i].x, ind->posgen[i].y);
-        }
-        else
+        for (j=0;j<temp.h[cont].nvertices;j++)
         {
-            temp.h[i].nvertices = ind->ambiente->huecos[i-ind->ngenes].nvertices;
-            temp.h[i].v=(point*) malloc(sizeof(point)*temp.h[i].nvertices);
-            for (j=0;j<temp.h[i].nvertices;j++)
-            {
-                temp.h[i].v[j].x=ind->ambiente->huecos[i-ind->ngenes].v[j].x;
-                temp.h[i].v[j].y=ind->ambiente->huecos[i-ind->ngenes].v[j].y;
-            }
+            temp.h[cont].v[j].x=ind->ambiente->huecos[i].v[j].x;
+            temp.h[cont].v[j].y=ind->ambiente->huecos[i].v[j].y;
         }
+        cont++;
+    }
+    for (i=0;i<ind->ngenes;i++)
+    {
+        temp.h[cont].nvertices = ind->ambiente->patrones[ind->posgen[i].id].nvertices;
+        temp.h[cont].v = (point*) malloc(sizeof(point)*temp.h[cont].nvertices);
+        for (j=0;j<temp.h[cont].nvertices;j++)
+        {
+            temp.h[cont].v[j].x=ind->ambiente->patrones[ind->posgen[i].id].v[j].x;
+            temp.h[cont].v[j].y=ind->ambiente->patrones[ind->posgen[i].id].v[j].y;
+        }
+        polygon_rotate(&(temp.h[cont]),ind->posgen[i].t);
+        polygon_translate(&(temp.h[cont]),ind->posgen[i].x, ind->posgen[i].y);
+        cont++;
     }
 
     ind->fitness = polygonholes_volumen(&temp)/(ind->ambiente->volumen);
 
     ind->areautil = polygonholes_area(&temp);
 
-    for (i=0;i<ind->ngenes+ind->ambiente->nhuecos;i++)
+    for (i=0;i<temp.nholes;i++)
     {
         free(temp.h[i].v);
     }
@@ -86,24 +90,19 @@ genetico.
 
 void individuo_create(genesting *g,individuo *ind)
 {
-
     float maxx,maxy,minx,miny;
-
-    //Se toma la direccion de memoria como semilla aleatoria
-    srand((int)ind);
 
     ind->ambiente = g;
     ind->ngenes = 1;
-
     ind->posgen = (posicion*) malloc (sizeof(posicion));
-
     polygon_minbox(&(g->plantilla), &minx, &miny, &maxx, &maxy);
 
+    do{
     ind->posgen->x = (rand()%(int)(maxx-minx))+minx;
     ind->posgen->y = (rand()%(int)(maxy-miny))+miny;
-    ind->posgen->t = (rand()%628)/100;
+    ind->posgen->t = (rand()%628)/100.0;
     ind->posgen->id= rand()%g->npatrones;
-
+    } while (!individuo_validate(ind));
 }
 
 /*!\fn void individuo_mutate(individuo *ind)
@@ -113,12 +112,15 @@ Esta funcion modifica un individuo aleatoriamente.
 */
 void individuo_mutate(individuo *ind)
 {
-    ind->posgen->x += (rand()%4)-2;
-    ind->posgen->y += (rand()%4)-2;
-    ind->posgen->t += ((rand()%100)-50)/100;
+    int i;
+    for (i=0;i<ind->ngenes;i++){
+        ind->posgen[i].x += (rand()%4)-2;
+        ind->posgen[i].y += (rand()%4)-2;
+        ind->posgen[i].t += ((rand()%100)-50)/100.0;
+    }
 };
 
-/*!\fn void individuo_procreate(individuo *p, individuo *m, individuo *h)
+/*!\fn void individuo_procreate(individuo *p, individuo *m, individuo *ind)
 Esta funcion crea un nuevo individuo partiendo de los individuos
 padres. La mescla se hace de la siguiente manera, se toman los
 patrones del padre y luego los patrones de la madre si ya no
@@ -212,7 +214,8 @@ bool individuo_validate(individuo *ind)
 
         for (j=0;j<ph.h[i].nvertices;j++)
         {
-            ph.h[i].v=ind->ambiente->huecos[i].v;
+            ph.h[i].v[j].x=ind->ambiente->huecos[i].v[j].x;
+            ph.h[i].v[j].y=ind->ambiente->huecos[i].v[j].y;
         }
     }
 
@@ -224,7 +227,8 @@ bool individuo_validate(individuo *ind)
         pat[i].v = (point*) malloc(sizeof(point)*pat[i].nvertices);
         for (j=0;j<pat[i].nvertices;j++)
         {
-            pat[i].v=ind->ambiente->patrones[ind->posgen[i].id].v;
+            pat[i].v[j].x=ind->ambiente->patrones[ind->posgen[i].id].v[j].x;
+            pat[i].v[j].y=ind->ambiente->patrones[ind->posgen[i].id].v[j].y;
         }
         polygon_rotate(&(pat[i]),ind->posgen[i].t);
         polygon_translate(&(pat[i]),ind->posgen[i].x, ind->posgen[i].y);
@@ -264,9 +268,13 @@ bool individuo_validate(individuo *ind)
     return valido;
 }
 
+/*!\fn int comparar_individuos(individuo *ind1,individuo *ind2)
+Compara entre los dos individuos cual es mejor segun su fitness
+*/
+
 int comparar_individuos(individuo *ind1,individuo *ind2)
 {
-    return ((int)((ind1->fitness)-(ind2->fitness)));
+    return ((int)(((ind1->fitness)-(ind2->fitness))*10000.0));
 }
 
 /*!@}*/

@@ -27,7 +27,7 @@ void init_graphics()
 
 void draw_rect(float minx, float miny, float maxx, float maxy,int r, int g, int b){
 #if graphics
-    rect(screen, (int)minx, (int)miny, (int) maxx, (int) maxy, makecol(r,g,b));
+//    rect(screen, (int)minx, (int)miny, (int) maxx, (int) maxy, makecol(r,g,b));
 #endif
 }
 
@@ -36,3 +36,22 @@ void draw_line(float x1, float y1, float x2, float y2){
     line(screen,(int)x1,(int)y1,(int)x2,(int)y2,makecol(255,0,0));
 #endif
 }
+
+void getscreen(){
+#if graphics
+     acquire_screen();
+#endif
+}
+
+void relscreen(){
+#if graphics
+    release_screen();
+#endif
+}
+
+void clearscreen(){
+#if graphics
+clear_bitmap(screen);
+#endif
+}
+
