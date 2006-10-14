@@ -14,10 +14,7 @@ Define un punto en un espacio de dos dimensiones
 */
 struct _point
 {
-    /*!\var x Coordenada x del punto*/
     float x;
-
-     /*!\var y Coordenada y del punto*/
     float y;
 };
 typedef struct _point point;

@@ -3,7 +3,7 @@
 #ifndef FILE_GRAPHICS_H
 #define FILE_GRAPHICS_H
 
-#define graphics 1
+#define graphics 0
 
 #define DELTA 1
 

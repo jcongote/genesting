@@ -9,6 +9,7 @@ entre varios objetos.
 
 #include <stdlib.h>
 #include <math.h>
+#include <float.h>
 
 #include "distance.h"
 
@@ -86,7 +87,7 @@ la distancia al borde.
 float distance_pointpolygon(point *f, polygon *p, line *ref)
 {
     int seg,i;
-    float min;
+    float min=FLT_MAX;
 
     for (i=0;i<p->nvertices;i++)
     {

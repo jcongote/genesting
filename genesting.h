@@ -29,10 +29,6 @@ genesting* leer_archivo(char *arc_name);
 
 void genesting_init(genesting *g);
 
-void genesting_createpoblation();
-
-void genesting_newgeneration();
-
 #endif
 
 /*!@}*/

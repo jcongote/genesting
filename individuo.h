@@ -38,13 +38,15 @@ struct _individuo
 
 float individuo_fitness(individuo *ind);
 
-individuo* individuo_create(genesting *g);
+void individuo_create(genesting *g,individuo *ind);
 
 void individuo_mutate(individuo *ind);
 
-individuo* individuo_procreate(individuo *p, individuo *m);
+void individuo_procreate(individuo *p, individuo *m, individuo *ind);
 
 bool individuo_validate(individuo *ind);
+
+int comparar_individuos(individuo *ind1,individuo *ind2);
 
 #endif
 /*!@}*/
