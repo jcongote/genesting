@@ -102,9 +102,6 @@ float polygonholes_volumen(polygon_holes *p)
                                     float maxx,
                                     float maxy)
     {
-#if graphics
-        draw_polygon(p->p);
-#endif
 
         float vol=0;
         float da;
@@ -150,6 +147,7 @@ float polygonholes_volumen(polygon_holes *p)
             {
                 vol = da * distance_pointpolygonholes(&pm, p,NULL);
 #if graphics
+
                 draw_rect(minx, miny, maxx, maxy,128,128,128);
 #endif
 
@@ -158,8 +156,10 @@ float polygonholes_volumen(polygon_holes *p)
             {
                 vol = 0;
 #if graphics
+
                 draw_rect(minx, miny, maxx, maxy,225,255,255);
 #endif
+
             }
         }
         else
@@ -190,71 +190,75 @@ float polygonholes_volumen(polygon_holes *p)
                     b=maxy;
                     h=ref[0].v1.x;
                     k=ref[0].v1.y;
- /*!\bug
- Esta funcion para calcular el volument de un rectangulo que intersecta un
- cono tiene valores indeterminados en algunos segmentos del problema, es
- posible que este error aparesca solo en algunos casos, pero hay que examinar
- mas la funcion.
- */
+                    /*!\bug
+                    Esta funcion para calcular el volument de un rectangulo que intersecta un
+                    cono tiene valores indeterminados en algunos segmentos del problema, es
+                    posible que este error aparesca solo en algunos casos, pero hay que examinar
+                    mas la funcion.
+                    */
 
                     vol = (2*a*c*sqrt(pow(-c + h,2) + pow(a - k,2))
-                        - 2*a*h*sqrt(pow(-c + h,2) + pow(a - k,2))
-                        - 2*a*d*sqrt(pow(-d + h,2) + pow(a - k,2))
-                        + 2*a*h*sqrt(pow(-d + h,2) + pow(a - k,2))
-                        - 2*b*c*sqrt(pow(-c + h,2) + pow(b - k,2))
-                        + 2*b*h*sqrt(pow(-c + h,2) + pow(b - k,2))
-                        + 2*b*d*sqrt(pow(-d + h,2) + pow(b - k,2))
-                        - 2*b*h*sqrt(pow(-d + h,2) + pow(b - k,2))
-                        - 2*c*k*sqrt(pow(-c + h,2) + pow(a - k,2))
-                        + 2*h*k*sqrt(pow(-c + h,2) + pow(a - k,2))
-                        + 2*d*k*sqrt(pow(-d + h,2) + pow(a - k,2))
-                        - 2*h*k*sqrt(pow(-d + h,2) + pow(a - k,2))
-                        + 2*c*k*sqrt(pow(-c + h,2) + pow(b - k,2))
-                        - 2*h*k*sqrt(pow(-c + h,2) + pow(b - k,2))
-                        - 2*d*k*sqrt(pow(-d + h,2) + pow(b - k,2))
-                        + 2*h*k*sqrt(pow(-d + h,2) + pow(b - k,2))
-                        - pow(a,3)*log(-c + h + sqrt(pow(-c + h,2) + pow(a - k,2)))
-                        + 3*pow(a,2)*k*log(-c + h + sqrt(pow(-c + h,2) + pow(a - k,2)))
-                        - 3*a*pow(k,2)*log(-c + h + sqrt(pow(-c + h,2) + pow(a - k,2)))
-                        + pow(k,3)*log(-c + h + sqrt(pow(-c + h,2) + pow(a - k,2)))
-                        + pow(a,3)*log(-d + h + sqrt(pow(-d + h,2) + pow(a - k,2)))
-                        - 3*pow(a,2)*k*log(-d + h + sqrt(pow(-d + h,2) + pow(a - k,2)))
-                        + 3*a*pow(k,2)*log(-d + h + sqrt(pow(-d + h,2) + pow(a - k,2)))
-                        - pow(k,3)*log(-d + h + sqrt(pow(-d + h,2) + pow(a - k,2)))
-                        + pow(b,3)*log(-c + h + sqrt(pow(-c + h,2) + pow(b - k,2)))
-                        - 3*pow(b,2)*k*log(-c + h + sqrt(pow(-c + h,2) + pow(b - k,2)))
-                        + 3*b*pow(k,2)*log(-c + h + sqrt(pow(-c + h,2) + pow(b - k,2)))
-                        - pow(k,3)*log(-c + h + sqrt(pow(-c + h,2) + pow(b - k,2)))
-                        - pow(b,3)*log(-d + h + sqrt(pow(-d + h,2) + pow(b - k,2)))
-                        + 3*pow(b,2)*k*log(-d + h + sqrt(pow(-d + h,2) + pow(b - k,2)))
-                        - 3*b*pow(k,2)*log(-d + h + sqrt(pow(-d + h,2) + pow(b - k,2)))
-                        + pow(k,3)*log(-d + h + sqrt(pow(-d + h,2) + pow(b - k,2)))
-                        + pow(c,3)*log(a + sqrt(pow(-c + h,2) + pow(a - k,2)) - k)
-                        - 3*pow(c,2)*h*log(a + sqrt(pow(-c + h,2) + pow(a - k,2)) - k)
-                        + 3*c*pow(h,2)*log(a + sqrt(pow(-c + h,2) + pow(a - k,2)) - k)
-                        - pow(h,3)*log(a + sqrt(pow(-c + h,2) + pow(a - k,2)) - k)
-                        - pow(d,3)*log(a + sqrt(pow(-d + h,2) + pow(a - k,2)) - k)
-                        + 3*pow(d,2)*h*log(a + sqrt(pow(-d + h,2) + pow(a - k,2)) - k)
-                        - 3*d*pow(h,2)*log(a + sqrt(pow(-d + h,2) + pow(a - k,2)) - k)
-                        + pow(h,3)*log(a + sqrt(pow(-d + h,2) + pow(a - k,2)) - k)
-                        - pow(c,3)*log(b + sqrt(pow(-c + h,2) + pow(b - k,2)) - k)
-                        + 3*pow(c,2)*h*log(b + sqrt(pow(-c + h,2) + pow(b - k,2)) - k)
-                        - 3*c*pow(h,2)*log(b + sqrt(pow(-c + h,2) + pow(b - k,2)) - k)
-                        + pow(h,3)*log(b + sqrt(pow(-c + h,2) + pow(b - k,2)) - k)
-                        + pow(d,3)*log(b + sqrt(pow(-d + h,2) + pow(b - k,2)) - k)
-                        - 3*pow(d,2)*h*log(b + sqrt(pow(-d + h,2) + pow(b - k,2)) - k)
-                        + 3*d*pow(h,2)*log(b + sqrt(pow(-d + h,2) + pow(b - k,2)) - k)
-                        - pow(h,3)*log(b + sqrt(pow(-d + h,2) + pow(b - k,2)) - k))/6;
+                           - 2*a*h*sqrt(pow(-c + h,2) + pow(a - k,2))
+                           - 2*a*d*sqrt(pow(-d + h,2) + pow(a - k,2))
+                           + 2*a*h*sqrt(pow(-d + h,2) + pow(a - k,2))
+                           - 2*b*c*sqrt(pow(-c + h,2) + pow(b - k,2))
+                           + 2*b*h*sqrt(pow(-c + h,2) + pow(b - k,2))
+                           + 2*b*d*sqrt(pow(-d + h,2) + pow(b - k,2))
+                           - 2*b*h*sqrt(pow(-d + h,2) + pow(b - k,2))
+                           - 2*c*k*sqrt(pow(-c + h,2) + pow(a - k,2))
+                           + 2*h*k*sqrt(pow(-c + h,2) + pow(a - k,2))
+                           + 2*d*k*sqrt(pow(-d + h,2) + pow(a - k,2))
+                           - 2*h*k*sqrt(pow(-d + h,2) + pow(a - k,2))
+                           + 2*c*k*sqrt(pow(-c + h,2) + pow(b - k,2))
+                           - 2*h*k*sqrt(pow(-c + h,2) + pow(b - k,2))
+                           - 2*d*k*sqrt(pow(-d + h,2) + pow(b - k,2))
+                           + 2*h*k*sqrt(pow(-d + h,2) + pow(b - k,2))
+                           - pow(a,3)*log(-c + h + sqrt(pow(-c + h,2) + pow(a - k,2)))
+                           + 3*pow(a,2)*k*log(-c + h + sqrt(pow(-c + h,2) + pow(a - k,2)))
+                           - 3*a*pow(k,2)*log(-c + h + sqrt(pow(-c + h,2) + pow(a - k,2)))
+                           + pow(k,3)*log(-c + h + sqrt(pow(-c + h,2) + pow(a - k,2)))
+                           + pow(a,3)*log(-d + h + sqrt(pow(-d + h,2) + pow(a - k,2)))
+                           - 3*pow(a,2)*k*log(-d + h + sqrt(pow(-d + h,2) + pow(a - k,2)))
+                           + 3*a*pow(k,2)*log(-d + h + sqrt(pow(-d + h,2) + pow(a - k,2)))
+                           - pow(k,3)*log(-d + h + sqrt(pow(-d + h,2) + pow(a - k,2)))
+                           + pow(b,3)*log(-c + h + sqrt(pow(-c + h,2) + pow(b - k,2)))
+                           - 3*pow(b,2)*k*log(-c + h + sqrt(pow(-c + h,2) + pow(b - k,2)))
+                           + 3*b*pow(k,2)*log(-c + h + sqrt(pow(-c + h,2) + pow(b - k,2)))
+                           - pow(k,3)*log(-c + h + sqrt(pow(-c + h,2) + pow(b - k,2)))
+                           - pow(b,3)*log(-d + h + sqrt(pow(-d + h,2) + pow(b - k,2)))
+                           + 3*pow(b,2)*k*log(-d + h + sqrt(pow(-d + h,2) + pow(b - k,2)))
+                           - 3*b*pow(k,2)*log(-d + h + sqrt(pow(-d + h,2) + pow(b - k,2)))
+                           + pow(k,3)*log(-d + h + sqrt(pow(-d + h,2) + pow(b - k,2)))
+                           + pow(c,3)*log(a + sqrt(pow(-c + h,2) + pow(a - k,2)) - k)
+                           - 3*pow(c,2)*h*log(a + sqrt(pow(-c + h,2) + pow(a - k,2)) - k)
+                           + 3*c*pow(h,2)*log(a + sqrt(pow(-c + h,2) + pow(a - k,2)) - k)
+                           - pow(h,3)*log(a + sqrt(pow(-c + h,2) + pow(a - k,2)) - k)
+                           - pow(d,3)*log(a + sqrt(pow(-d + h,2) + pow(a - k,2)) - k)
+                           + 3*pow(d,2)*h*log(a + sqrt(pow(-d + h,2) + pow(a - k,2)) - k)
+                           - 3*d*pow(h,2)*log(a + sqrt(pow(-d + h,2) + pow(a - k,2)) - k)
+                           + pow(h,3)*log(a + sqrt(pow(-d + h,2) + pow(a - k,2)) - k)
+                           - pow(c,3)*log(b + sqrt(pow(-c + h,2) + pow(b - k,2)) - k)
+                           + 3*pow(c,2)*h*log(b + sqrt(pow(-c + h,2) + pow(b - k,2)) - k)
+                           - 3*c*pow(h,2)*log(b + sqrt(pow(-c + h,2) + pow(b - k,2)) - k)
+                           + pow(h,3)*log(b + sqrt(pow(-c + h,2) + pow(b - k,2)) - k)
+                           + pow(d,3)*log(b + sqrt(pow(-d + h,2) + pow(b - k,2)) - k)
+                           - 3*pow(d,2)*h*log(b + sqrt(pow(-d + h,2) + pow(b - k,2)) - k)
+                           + 3*d*pow(h,2)*log(b + sqrt(pow(-d + h,2) + pow(b - k,2)) - k)
+                           - pow(h,3)*log(b + sqrt(pow(-d + h,2) + pow(b - k,2)) - k))/6;
 #if graphics
+
                     draw_rect(minx, miny, maxx, maxy,0,128,0);
 #endif
+
                 }
                 else // Si es una linea se utiliza la formula de la cuna
                 {
                     vol = (dis[0]+dis[1]+dis[2]+dis[3])/4.0 * da;
 #if graphics
+
                     draw_rect(minx, miny, maxx, maxy,0,0,128);
 #endif
+
                 }
             }
             else
@@ -267,12 +271,12 @@ float polygonholes_volumen(polygon_holes *p)
                         )) // el poligono esta dentro de p pero no en un hueco
                 {
                     //Opcion de corte 1
-/*
-                    vol+= polygonholes_volumen_box(p, minx, miny, (minx+maxx)/2.0, (miny+maxy)/2.0);
-                    vol+= polygonholes_volumen_box(p, (minx+maxx)/2.0, miny, maxx, (miny+maxy)/2.0);
-                    vol+= polygonholes_volumen_box(p, minx, (miny+maxy)/2.0, (minx+maxx)/2.0, maxy);
-                    vol+= polygonholes_volumen_box(p, (minx+maxx)/2.0, (miny+maxy)/2.0, maxx, maxy);
-*/
+                    /*
+                                        vol+= polygonholes_volumen_box(p, minx, miny, (minx+maxx)/2.0, (miny+maxy)/2.0);
+                                        vol+= polygonholes_volumen_box(p, (minx+maxx)/2.0, miny, maxx, (miny+maxy)/2.0);
+                                        vol+= polygonholes_volumen_box(p, minx, (miny+maxy)/2.0, (minx+maxx)/2.0, maxy);
+                                        vol+= polygonholes_volumen_box(p, (minx+maxx)/2.0, (miny+maxy)/2.0, maxx, maxy);
+                    */
 
                     if (maxx-minx > maxy-miny)
                     {
@@ -292,20 +296,39 @@ float polygonholes_volumen(polygon_holes *p)
                     draw_rect(minx, miny, maxx, maxy,0,0,255);
                 }
 #endif
+
             }
         }
-        if (isnan(vol)){
+        if (isnan(vol))
+        {
 #if graphics
-                draw_rect(minx, miny, maxx, maxy,255,0,0);
+            draw_rect(minx, miny, maxx, maxy,255,0,0);
 #endif
-                fprintf(stderr,"Error: (%f, %f) (%f, %f)\n",minx,miny,maxx,maxy);
-                vol=0;
+
+            fprintf(stderr,"Error: (%f, %f) (%f, %f)\n",minx,miny,maxx,maxy);
+            vol=0;
         }
         return vol;
     }
 
     float minx, miny, maxx, maxy;
     polygon_minbox(p->p, &minx, &miny, &maxx, &maxy);
+
+#if graphics
+    getscreen();
+    clearscreen();
+    draw_polygon(p->p);
+
+    {
+        int j;
+        for (j=0;j<p->nholes;j++)
+        {
+            draw_polygon(&(p->h[j]));
+        }
+    }
+    relscreen();
+#endif
+
     return polygonholes_volumen_box(p,minx,miny,maxx,maxy);
 }
 

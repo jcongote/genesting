@@ -76,8 +76,6 @@ genesting* leer_archivo(char *arc_name)
 
     fclose(arc);
 
-    genesting_init(g);
-
     return g;
 }
 
@@ -94,17 +92,17 @@ void genesting_init(genesting *g)
 
     polygon_minbox(&(g->plantilla), &minx, &miny, &maxx, &maxy);
 
-    polygon_translate(&(g->plantilla), minx, miny);
+    polygon_translate(&(g->plantilla), -minx, -miny);
 
     for (i=0;i<g->nhuecos;i++)
     {
-        polygon_translate(&(g->huecos[i]), minx, miny);
+        polygon_translate(&(g->huecos[i]), -minx, -miny);
     }
 
     for (i=0;i<g->npatrones;i++)
     {
         polygon_minbox(&(g->patrones[i]), &minx, &miny, &maxx, &maxy);
-        polygon_translate(&(g->patrones[i]), minx, miny);
+        polygon_translate(&(g->patrones[i]), -minx, -miny);
     }
 
     p.nholes = g->nhuecos;
@@ -114,6 +112,39 @@ void genesting_init(genesting *g)
     g->area = polygonholes_area(&p);
 
     g->volumen = polygonholes_volumen(&p);
+}
+
+/*!\fn void genesting_show(genesting *g)
+Muestra la informacion del programa
+\param [in] g Genesting
+*/
+void genesting_show(genesting *g)
+{
+    int i;
+
+    printf("Mostrando informacion de genesting\n");
+    printf("Plantilla:\n");
+    printf("  Vertices: %i\n",g->plantilla.nvertices);
+    printf("  Area: %f\n",polygon_area(&(g->plantilla)));
+
+    printf("Huecos: %i\n",g->nhuecos);
+    for (i=0;i<g->nhuecos;i++)
+    {
+        printf("  Hueco %i:\n",i+1);
+        printf("    Vertices: %i\n",g->huecos[i].nvertices);
+        printf("    Area: %f\n",polygon_area(&(g->huecos[i])));
+    }
+
+    printf("Area Util: %f\n",g->area);
+    printf("Volumen Util: %f\n",g->volumen);
+
+    printf("Patrones: %i\n",g->npatrones);
+    for (i=0;i<g->npatrones;i++)
+    {
+        printf("  Patrones %i:\n",i+1);
+        printf("    Vertices: %i\n",g->patrones[i].nvertices);
+        printf("    Area: %f\n",polygon_area(&(g->patrones[i])));
+    }
 }
 
 

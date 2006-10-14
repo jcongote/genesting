@@ -40,29 +40,30 @@ Dentro del modulo genetico encontraremos una implementacion de heuristicas
 de algoritmos geneticos y evoluticos que seleccionara la solucion.
 */
 
+
+/*!\todo
+- Se deben cambiar los typedef de los objetos para que sean punteros
+- Para calcular el fitness es mejor comprobar primero el area y despues
+el fitness, asi se ahorra mucho calculo
+*/
+
 /*!\file main.c
 Programa principal, usa y prueba la libreria genesting.
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 #include "genesting.h"
 #include "graphics.h"
 #include "distance.h"
-
-void show(genesting *g);
-
-float f_volumen(  polygon *plantilla,
-                  int nhuecos,
-                  polygon *huecos,
-                  int npatrones,
-                  polygon *patrones,
-                  float delta);
+#include "population.h"
 
 int main(int argc, char **argv)
 {
     genesting *g;
+    population *p;
 
 #if graphics
 
@@ -76,118 +77,50 @@ int main(int argc, char **argv)
     }
 
     g=leer_archivo(argv[1]);
+    p=(population*) malloc(sizeof(population));
 
-    show(g);
-    getchar();
-    return 0;
-}
+    srand((int)p);
 
-void show(genesting *g)
-{
-    int i;
+    genesting_init(g);
 
-    printf("Mostrando informacion de genesting\n");
-    printf("Plantilla:\n");
-    printf("  Vertices: %i\n",g->plantilla.nvertices);
-    printf("  Area: %f\n",polygon_area(&(g->plantilla)));
+    genesting_show(g);
 
-    printf("Huecos: %i\n",g->nhuecos);
-    for (i=0;i<g->nhuecos;i++)
+    population_create(p,g, 10);
+
+    int i,j,k;
+    for (k=0;k<20;k++)
     {
-        printf("  Hueco %i:\n",i+1);
-        printf("    Vertices: %i\n",g->huecos[i].nvertices);
-        printf("    Area: %f\n",polygon_area(&(g->huecos[i])));
-    }
-
-    printf("Area Util: %f\n",g->area);
-    printf("Volumen Util: %f\n",g->volumen);
-
-    printf("Patrones: %i\n",g->npatrones);
-    for (i=0;i<g->npatrones;i++)
-    {
-        printf("  Patrones %i:\n",i+1);
-        printf("    Vertices: %i\n",g->patrones[i].nvertices);
-        printf("    Area: %f\n",polygon_area(&(g->patrones[i])));
-    }
-
-    float oldvol;
-
-//    oldvol=f_volumen(&(g->plantilla),g->nhuecos,g->huecos,0,NULL,sqrt(DELTA));
-
-//   printf("Volumen calculado a la antigua: %f\n",oldvol);
-
-}
-
-
-float f_volumen(  polygon *plantilla,
-                  int nhuecos,
-                  polygon *huecos,
-                  int npatrones,
-                  polygon *patrones,
-                  float delta)
-{
-    float vol=0;
-    float minx, miny, maxx, maxy;
-
-    point p;
-    int i;
-
-    polygon_minbox(plantilla, &minx, &miny, &maxx, &maxy);
-
-    for (p.x=minx;p.x<maxx;p.x+=delta)
-    {
-        for (p.y=miny;p.y<maxy;p.y+=delta)
+        for (i=0;i<10;i++)
         {
-            if (polygon_pointin(plantilla, &p))
+            printf("Individuo %i: [%i] \n",i,p->individuos[i].ngenes);
+            for (j=0;j<p->individuos[i].ngenes;j++)
             {
-                int valido=1;
-
-                for (i=0;i<nhuecos && valido==1;i++)
-                {
-                    if (polygon_pointin(&huecos[i], &p))
-                    {
-                        valido=0;
-                    }
-                }
-
-                for (i=0;i<npatrones && valido==1;i++)
-                {
-                    if (polygon_pointin(&patrones[i], &p))
-                    {
-                        valido=0;
-                    }
-                }
-
-                if (valido)
-                {
-                    float min=distance_pointpolygon(&p, plantilla, NULL);
-
-                    for (i=0;i<nhuecos;i++)
-                    {
-                        float min2=distance_pointpolygon(&p,&huecos[i],NULL);
-                        if (min2<min)
-                        {
-                            min=min2;
-                        }
-                    }
-
-                    for (i=0;i<npatrones;i++)
-                    {
-                        float min2=distance_pointpolygon(&p, &patrones[i],NULL);
-                        if (min2<min)
-                        {
-                            min=min2;
-                        }
-                    }
-                    /*
-                    acquire_screen();
-                    putpixel(screen,(int)p.x,(int)p.y,makecol((int)min,(int)min,(int)min));
-                    release_screen();
-                    */
-                    vol+=min*delta*delta;
-                }
+                printf("Pat[%i] x[%f] y[%f] t[%f]\n",
+                       p->individuos[i].posgen[j].id,
+                       p->individuos[i].posgen[j].x,
+                       p->individuos[i].posgen[j].y,
+                       p->individuos[i].posgen[j].t);
             }
         }
+
+        population_evaluate(p);
+
+        for (i=0;i<10;i++)
+        {
+            printf("Individuo %i: [%i] fitness: %f\n",i,p->individuos[i].ngenes,p->individuos[i].fitness);
+            for (j=0;j<p->individuos[i].ngenes;j++)
+            {
+                printf("Pat[%i] x[%f] y[%f] t[%f]\n",
+                       p->individuos[i].posgen[j].id,
+                       p->individuos[i].posgen[j].x,
+                       p->individuos[i].posgen[j].y,
+                       p->individuos[i].posgen[j].t);
+            }
+        }
+
+        population_generation(p);
     }
-    return vol;
+    free(p);
+
+    return 0;
 }
