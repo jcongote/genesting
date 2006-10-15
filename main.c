@@ -85,12 +85,15 @@ int main(int argc, char **argv)
 
     genesting_show(g);
 
-    population_create(p,g, 10);
+    population_create(p,g, 200);
 
     int i,j,k;
-    for (k=0;k<20;k++)
+    for (k=0;k<30;k++)
     {
-        for (i=0;i<10;i++)
+        printf("Iteracion: %i\n",k);
+
+        /*
+        for (i=0;i<5;i++)
         {
             printf("Individuo %i: [%i] \n",i,p->individuos[i].ngenes);
             for (j=0;j<p->individuos[i].ngenes;j++)
@@ -102,12 +105,13 @@ int main(int argc, char **argv)
                        p->individuos[i].posgen[j].t);
             }
         }
-
+*/
         population_evaluate(p);
 
         for (i=0;i<10;i++)
         {
-            printf("Individuo %i: [%i] fitness: %f\n",i,p->individuos[i].ngenes,p->individuos[i].fitness);
+            printf("Individuo %i: [%i] fitness: %f areautil: %f\n",i,p->individuos[i].ngenes,p->individuos[i].fitness,p->individuos[i].areautil);
+/*
             for (j=0;j<p->individuos[i].ngenes;j++)
             {
                 printf("Pat[%i] x[%f] y[%f] t[%f]\n",
@@ -116,6 +120,7 @@ int main(int argc, char **argv)
                        p->individuos[i].posgen[j].y,
                        p->individuos[i].posgen[j].t);
             }
+*/
         }
 
         population_generation(p);

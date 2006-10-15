@@ -56,7 +56,11 @@ los 2 primeros
 void population_generation(population *p){
     int i;
     for (i=0;i<p->nindividuos/3;i++){
-        individuo_procreate(&(p->individuos[i]),&(p->individuos[(p->nindividuos/3)+i]),&(p->individuos[(2*p->nindividuos/3)+i]));
+
+        individuo_procreate(&(p->individuos[i]),
+                            &(p->individuos[(p->nindividuos/3)+i]),
+                            &(p->individuos[(2*p->nindividuos/3)+i]));
+
         individuo_mutate(&(p->individuos[(p->nindividuos/3)+i]));
     }
     for (i=0;i<p->nindividuos;i++){
