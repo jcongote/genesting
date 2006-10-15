@@ -5,7 +5,7 @@
 
 #define graphics 1
 
-#define DELTA 1
+#define DELTA 10
 
 #if graphics
 void init_graphics();
