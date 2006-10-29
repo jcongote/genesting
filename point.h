@@ -9,9 +9,6 @@ Implementacion de un objeto punto en 2 dimensiones
 #ifndef FILE_POINT_H
 #define FILE_POINT_H
 
-/*!\struct _point point.h point.c
-Define un punto en un espacio de dos dimensiones
-*/
 struct _point
 {
     float x;
