@@ -33,15 +33,18 @@ float polygon_area(polygon *p)
 
 
 /*!\fn bool polygon_pointin(polygon *p, point *f)
-La funcion identifica si un punto esta dentro de un poligono o no. la
-implementacion y explicacion de este codigo esta en la pagina
-http://www.faqs.org/faqs/graphics/algorithms-faq
+La funcion identifica si un punto esta dentro de un poligono o no.
 
 \param [in] p Poligono simple en 2 dimensiones
 \param [in] f Punto en 2 dimensiones
 \return Un booleano que es verdadero en caso de que el punto este dentro del
         poligono y falso en caso contrario
 */
+/*
+la implementacion y explicacion de este codigo esta en la pagina
+http://www.faqs.org/faqs/graphics/algorithms-faq
+*/
+
 bool polygon_pointin(polygon *p, point *f)
 {
     bool c=false;
@@ -113,45 +116,37 @@ ademas que evita exageradas translaciones relativas del poligono al ser rotado.
 void polygon_rotate(polygon *p, float t)
 {
     int i;
-    float maxx,maxy;
-    float minx,miny;
-
-    float mx,my;
+    point pc;
 
     float sent = sin(t);
     float cost = cos(t);
 
-    polygon_minbox(p, &minx, &miny, &maxx, &maxy);
+    pc = polygon_center(p);
 
-    mx = ((maxx - minx)/2)+minx;
-    my = ((maxy - miny)/2)+miny;
+    polygon_translate(p, -pc.x, -pc.y);
 
     for (i=0;i<p->nvertices;i++)
     {
-        float lx= p->v[i].x - mx;
-        float ly= p->v[i].y - my;
-
-        p->v[i].x=(lx*cost - ly * sent)+mx;
-
-        p->v[i].y=(ly*cost + lx * sent)+my;
-
-        if (i==0)
-        {
-            minx = p->v[i].x;
-            miny = p->v[i].y;
-        }
-        else
-        {
-            if (minx > p->v[i].x)
-            {
-                minx = p->v[i].x;
-            }
-            if (miny > p->v[i].y)
-            {
-                miny = p->v[i].y;
-            }
-        }
+        p->v[i].x=(p->v[i].x*cost - p->v[i].y * sent);
+        p->v[i].y=(p->v[i].y*cost + p->v[i].x * sent);
     }
+
+    polygon_translate(p, pc.x, pc.y);
+}
+
+point polygon_center(polygon *p)
+{
+    int i=0;
+    float minx, maxx, miny, maxy;
+
+    point r;
+
+    polygon_minbox(p, &minx, &miny, &maxx, &maxy)
+
+    r.x = ((maxx - minx)/2)+minx;
+    r.y = ((maxy - miny)/2)+miny;
+
+    return r;
 }
 
 /*!\fn void polygon_minbox(polygon *p, float *minx, float *miny, float *maxx, float *maxy)
@@ -168,34 +163,29 @@ poligono
 void polygon_minbox(polygon *p, float *minx, float *miny, float *maxx, float *maxy)
 {
     int i;
-    for (i=0;i<p->nvertices;i++)
+
+    *minx = p->v[0].x;
+    *miny = p->v[0].y;
+    *maxx = p->v[0].x;
+    *maxy = p->v[0].y;
+
+    for (i=1;i<p->nvertices;i++)
     {
-        if (i==0)
+        if (*minx > p->v[i].x)
         {
             *minx = p->v[i].x;
-            *miny = p->v[i].y;
-
-            *maxx = p->v[i].x;
-            *maxy = p->v[i].y;
         }
-        else
+        if (*miny > p->v[i].y)
         {
-            if (*minx > p->v[i].x)
-            {
-                *minx = p->v[i].x;
-            }
-            if (*miny > p->v[i].y)
-            {
-                *miny = p->v[i].y;
-            }
-            if (*maxx < p->v[i].x)
-            {
-                *maxx = p->v[i].x;
-            }
-            if (*maxy < p->v[i].y)
-            {
-                *maxy = p->v[i].y;
-            }
+            *miny = p->v[i].y;
+        }
+        if (*maxx < p->v[i].x)
+        {
+            *maxx = p->v[i].x;
+        }
+        if (*maxy < p->v[i].y)
+        {
+            *maxy = p->v[i].y;
         }
     }
 }

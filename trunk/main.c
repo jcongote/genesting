@@ -1,7 +1,26 @@
-/*!\mainpage Projecto Genesting
+/*!\mainpage Proyecto Genesting
+\author John Edgar Congote Calle
+\version 0.3a1
 
-Genesting es un projecto que intenta resolver el problema de nesting o
+Genesting es un proyecto que intenta resolver el problema de nesting o
 anidamiento de figuras a través del uso de algoritmos genéticos.
+
+\section Introduction
+
+In the manufacturing industry the raw materials usually came in finite
+two-dimensional sheets, where the permanent goal is the reduction of waste
+materials. But there is a frequent problem: how to distribute two-dimensional
+patterns in a container sheet in order to get the maximum utilization of
+material? This is know as the Knapsack problem.
+
+
+Nowdays many company make this job according with the empirical experience
+of their employers having two risks. The first one is that there is not way
+to know if their solution are going to be the best to minimize the amount of
+waste materials. The second risk is in the case of presuming that an employ
+has the optimal solution the knowledge would be in the hands of just one person
+or group of work and not as a part of a system or as a part of the company.
+
 
 \section definition Definicion
 El problema de nesting se puede definir como encontrar una dispocision de
@@ -87,7 +106,7 @@ int main(int argc, char **argv)
 
     population_create(p,g, 200);
 
-    int i,j,k;
+    int i,k;
     for (k=0;k<30;k++)
     {
         printf("Iteracion: %i\n",k);
@@ -105,22 +124,22 @@ int main(int argc, char **argv)
                        p->individuos[i].posgen[j].t);
             }
         }
-*/
+        */
         population_evaluate(p);
 
         for (i=0;i<10;i++)
         {
             printf("Individuo %i: [%i] fitness: %f areautil: %f\n",i,p->individuos[i].ngenes,p->individuos[i].fitness,p->individuos[i].areautil);
-/*
-            for (j=0;j<p->individuos[i].ngenes;j++)
-            {
-                printf("Pat[%i] x[%f] y[%f] t[%f]\n",
-                       p->individuos[i].posgen[j].id,
-                       p->individuos[i].posgen[j].x,
-                       p->individuos[i].posgen[j].y,
-                       p->individuos[i].posgen[j].t);
-            }
-*/
+            /*
+                        for (j=0;j<p->individuos[i].ngenes;j++)
+                        {
+                            printf("Pat[%i] x[%f] y[%f] t[%f]\n",
+                                   p->individuos[i].posgen[j].id,
+                                   p->individuos[i].posgen[j].x,
+                                   p->individuos[i].posgen[j].y,
+                                   p->individuos[i].posgen[j].t);
+                        }
+            */
         }
 
         population_generation(p);
