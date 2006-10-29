@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Genesting: Fichero Fuente individuo.c</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.4.7 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="modules.html"><span>Módulos</span></a></li>
+    <li><a href="classes.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+    <li><a href="globals.html"><span>Archivos&nbsp;de&nbsp;los&nbsp;miembros</span></a></li>
+  </ul></div>
+<h1>individuo.c</h1><a href="individuo_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*!\addtogroup genetic</span>
+<a name="l00002"></a>00002 <span class="comment">@{</span>
+<a name="l00003"></a>00003 <span class="comment">*/</span>
+<a name="l00004"></a>00004 <span class="comment"></span>
+<a name="l00005"></a>00005 <span class="comment">/*!\file individuo.c</span>
+<a name="l00006"></a>00006 <span class="comment">Aqui estan las estructuras principales del programa</span>
+<a name="l00007"></a>00007 <span class="comment">la estructura es muy sencilla</span>
+<a name="l00008"></a>00008 <span class="comment">*/</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="preprocessor">#include "<a class="code" href="individuo_8h.html">individuo.h</a>"</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="preprocessor">#include "<a class="code" href="polygon_8h.html">polygon.h</a>"</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include "<a class="code" href="polygon__holes_8h.html">polygon_holes.h</a>"</span>
+<a name="l00016"></a>00016 <span class="comment"></span>
+<a name="l00017"></a>00017 <span class="comment">/*!\fn float individuo_fitness(individuo *ind)</span>
+<a name="l00018"></a>00018 <span class="comment">Esta funcion evalua que tan bueno es un individuo en la poblacion. retorna</span>
+<a name="l00019"></a>00019 <span class="comment">un valor entre 0 y 1, y entre mas cercano a 0, mejor es el individuo</span>
+<a name="l00020"></a>00020 <span class="comment">\param [in] ind Individuo</span>
+<a name="l00021"></a>00021 <span class="comment">*/</span>
+<a name="l00022"></a>00022 <span class="comment"></span>
+<a name="l00023"></a>00023 <span class="comment">/*!\todo</span>
+<a name="l00024"></a>00024 <span class="comment">No es necesario recalcular el fitness de un individuo si este no ha cambiado</span>
+<a name="l00025"></a>00025 <span class="comment">*/</span>
+<a name="l00026"></a><a class="code" href="group__genetic_gf152bd4602acec2166cc4b91e8c8919a.html#gf152bd4602acec2166cc4b91e8c8919a">00026</a> <span class="keywordtype">float</span> <a class="code" href="group__genetic_gf152bd4602acec2166cc4b91e8c8919a.html#gf152bd4602acec2166cc4b91e8c8919a">individuo_fitness</a>(<a class="code" href="struct__individuo.html">individuo</a> *ind)
+<a name="l00027"></a>00027 {
+<a name="l00028"></a>00028     <span class="keywordtype">int</span> i,j,cont;
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030     <a class="code" href="struct__polygon__holes.html">polygon_holes</a> temp;
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032     temp.<a class="code" href="struct__polygon__holes_90635c34b3613c8cf8cdda5bebe99638.html#90635c34b3613c8cf8cdda5bebe99638">p</a> = &amp;(ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_c660e2710da2db9469813d0a14981cef.html#c660e2710da2db9469813d0a14981cef">plantilla</a>);
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034     temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a> = (<a class="code" href="struct__polygon.html">polygon</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct__polygon.html">polygon</a>)*(ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>+ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_87ae802e5ffa06a1b38ce4337eadbcda.html#87ae802e5ffa06a1b38ce4337eadbcda">nhuecos</a>));
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036     temp.<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a> = ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>+ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_87ae802e5ffa06a1b38ce4337eadbcda.html#87ae802e5ffa06a1b38ce4337eadbcda">nhuecos</a>;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038     <span class="keywordflow">for</span> (i=0,cont=0;i&lt;ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_87ae802e5ffa06a1b38ce4337eadbcda.html#87ae802e5ffa06a1b38ce4337eadbcda">nhuecos</a>;i++)
+<a name="l00039"></a>00039     {
+<a name="l00040"></a>00040         temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[cont].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a> = ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_3affb28e2ad244f35baed248e3c230f6.html#3affb28e2ad244f35baed248e3c230f6">huecos</a>[i].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>;
+<a name="l00041"></a>00041         temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[cont].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>=(<a class="code" href="struct__point.html">point</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct__point.html">point</a>)*temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>);
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043         for (j=0;j&lt;temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[cont].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>;j++)
+<a name="l00044"></a>00044         {
+<a name="l00045"></a>00045             temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[cont].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a>=ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_3affb28e2ad244f35baed248e3c230f6.html#3affb28e2ad244f35baed248e3c230f6">huecos</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a>;
+<a name="l00046"></a>00046             temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[cont].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a>=ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_3affb28e2ad244f35baed248e3c230f6.html#3affb28e2ad244f35baed248e3c230f6">huecos</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a>;
+<a name="l00047"></a>00047         }
+<a name="l00048"></a>00048         cont++;
+<a name="l00049"></a>00049     }
+<a name="l00050"></a>00050     <span class="keywordflow">for</span> (i=0;i&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>;i++)
+<a name="l00051"></a>00051     {
+<a name="l00052"></a>00052         temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[cont].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a> = ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_c4b1743e42547577dbb6d7238ad4db17.html#c4b1743e42547577dbb6d7238ad4db17">patrones</a>[ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>].nvertices;
+<a name="l00053"></a>00053         temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[cont].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a> = (<a class="code" href="struct__point.html">point</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct__point.html">point</a>)*temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[cont].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>);
+<a name="l00054"></a>00054         for (j=0;j&lt;temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[cont].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>;j++)
+<a name="l00055"></a>00055         {
+<a name="l00056"></a>00056             temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[cont].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a>=ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_c4b1743e42547577dbb6d7238ad4db17.html#c4b1743e42547577dbb6d7238ad4db17">patrones</a>[ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>].v[j].x;
+<a name="l00057"></a>00057             temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[cont].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a>=ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_c4b1743e42547577dbb6d7238ad4db17.html#c4b1743e42547577dbb6d7238ad4db17">patrones</a>[ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>].v[j].y;
+<a name="l00058"></a>00058         }
+<a name="l00059"></a>00059         <a class="code" href="group__geometry_g95276abee7240f116afaf80a3e1f23c4.html#g95276abee7240f116afaf80a3e1f23c4">polygon_rotate</a>(&amp;(temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[cont]),ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_f0ba9aedeb816d241a108033f8421536.html#f0ba9aedeb816d241a108033f8421536">t</a>);
+<a name="l00060"></a>00060         <a class="code" href="group__geometry_g7538c2bf0d1e8acc0cfc055b6bf3a96b.html#g7538c2bf0d1e8acc0cfc055b6bf3a96b">polygon_translate</a>(&amp;(temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[cont]),ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_71ad085b0f981b64ff6c9736979cf4d0.html#71ad085b0f981b64ff6c9736979cf4d0">x</a>, ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_82d516a3aa89949f81676cc9bb3bdcab.html#82d516a3aa89949f81676cc9bb3bdcab">y</a>);
+<a name="l00061"></a>00061         cont++;
+<a name="l00062"></a>00062     }
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064     ind-&gt;<a class="code" href="struct__individuo_afa717374da03fa5ef2c5ac8c08e1daa.html#afa717374da03fa5ef2c5ac8c08e1daa">fitness</a> = <a class="code" href="group__geometry_g7cf8b3f8c76179bb936754bbbf510999.html#g7cf8b3f8c76179bb936754bbbf510999">polygonholes_volumen</a>(&amp;temp)/(ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_313b6909792763a5381ce7ff14830d6d.html#313b6909792763a5381ce7ff14830d6d">volumen</a>);
+<a name="l00065"></a>00065 
+<a name="l00066"></a>00066     ind-&gt;<a class="code" href="struct__individuo_81afc3d6d6f5394611dcd09a418ee828.html#81afc3d6d6f5394611dcd09a418ee828">areautil</a> = <a class="code" href="group__geometry_g380cdcfa6caf51828c8d06f4518a4084.html#g380cdcfa6caf51828c8d06f4518a4084">polygonholes_area</a>(&amp;temp);
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068     <span class="keywordflow">for</span> (i=0;i&lt;temp.<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a>;i++)
+<a name="l00069"></a>00069     {
+<a name="l00070"></a>00070         free(temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>);
+<a name="l00071"></a>00071     }
+<a name="l00072"></a>00072     free (temp.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>);
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074     <span class="keywordflow">return</span> (ind-&gt;<a class="code" href="struct__individuo_afa717374da03fa5ef2c5ac8c08e1daa.html#afa717374da03fa5ef2c5ac8c08e1daa">fitness</a>);
+<a name="l00075"></a>00075 }
+<a name="l00076"></a>00076 <span class="comment"></span>
+<a name="l00077"></a>00077 <span class="comment">/*!\fn void individuo_create(genesting *g,individuo *ind)</span>
+<a name="l00078"></a>00078 <span class="comment">Esta funcion crea un individuo de configuracion aleatoria.</span>
+<a name="l00079"></a>00079 <span class="comment"></span>
+<a name="l00080"></a>00080 <span class="comment">El individuo con el ambiente definido en el objeto genesting y en</span>
+<a name="l00081"></a>00081 <span class="comment">una posicion aleatoria entre el rectangulo creado por la plantilla,</span>
+<a name="l00082"></a>00082 <span class="comment">Ademas se selecciona solo un patron que conforma inicialmente el</span>
+<a name="l00083"></a>00083 <span class="comment">individuo, es posible que la configuracion obtenido genere un individuo</span>
+<a name="l00084"></a>00084 <span class="comment">no valido, pero esto debera ser verificado posteriormente por el algoritmo</span>
+<a name="l00085"></a>00085 <span class="comment">genetico.</span>
+<a name="l00086"></a>00086 <span class="comment"></span>
+<a name="l00087"></a>00087 <span class="comment">\param [in] g Obtiene el contexto del individuo</span>
+<a name="l00088"></a>00088 <span class="comment">\param [out] ind Una direccion de memoria donde esta el individuo</span>
+<a name="l00089"></a>00089 <span class="comment">*/</span>
+<a name="l00090"></a>00090 
+<a name="l00091"></a><a class="code" href="group__genetic_gf4e60223d27c85a5f6166e35ecafe641.html#gf4e60223d27c85a5f6166e35ecafe641">00091</a> <span class="keywordtype">void</span> <a class="code" href="group__genetic_gf4e60223d27c85a5f6166e35ecafe641.html#gf4e60223d27c85a5f6166e35ecafe641">individuo_create</a>(<a class="code" href="struct__genesting.html">genesting</a> *g,<a class="code" href="struct__individuo.html">individuo</a> *ind)
+<a name="l00092"></a>00092 {
+<a name="l00093"></a>00093     <span class="keywordtype">float</span> maxx,maxy,minx,miny;
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095     ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a> = g;
+<a name="l00096"></a>00096     ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a> = 1;
+<a name="l00097"></a>00097     ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a> = (<a class="code" href="struct__posicion.html">posicion</a>*) malloc (<span class="keyword">sizeof</span>(<a class="code" href="struct__posicion.html">posicion</a>));
+<a name="l00098"></a>00098     <a class="code" href="group__geometry_g137ef6f552a0a04c5ae0493690088f3f.html#g137ef6f552a0a04c5ae0493690088f3f">polygon_minbox</a>(&amp;(g-&gt;<a class="code" href="struct__genesting_c660e2710da2db9469813d0a14981cef.html#c660e2710da2db9469813d0a14981cef">plantilla</a>), &amp;minx, &amp;miny, &amp;maxx, &amp;maxy);
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100     <span class="keywordflow">do</span>{
+<a name="l00101"></a>00101     ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>-&gt;<a class="code" href="struct__posicion_71ad085b0f981b64ff6c9736979cf4d0.html#71ad085b0f981b64ff6c9736979cf4d0">x</a> = (rand()%(int)(maxx-minx))+minx;
+<a name="l00102"></a>00102     ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>-&gt;<a class="code" href="struct__posicion_82d516a3aa89949f81676cc9bb3bdcab.html#82d516a3aa89949f81676cc9bb3bdcab">y</a> = (rand()%(int)(maxy-miny))+miny;
+<a name="l00103"></a>00103     ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>-&gt;<a class="code" href="struct__posicion_f0ba9aedeb816d241a108033f8421536.html#f0ba9aedeb816d241a108033f8421536">t</a> = (rand()%628)/100.0;
+<a name="l00104"></a>00104     ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>-&gt;<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>= rand()%g-&gt;<a class="code" href="struct__genesting_a5ebd60476ce0253be4e5a09349433e1.html#a5ebd60476ce0253be4e5a09349433e1">npatrones</a>;
+<a name="l00105"></a>00105     } <span class="keywordflow">while</span> (!<a class="code" href="group__genetic_gf80cc38ea4d590f6c45215f770d63778.html#gf80cc38ea4d590f6c45215f770d63778">individuo_validate</a>(ind));
+<a name="l00106"></a>00106 }
+<a name="l00107"></a>00107 <span class="comment"></span>
+<a name="l00108"></a>00108 <span class="comment">/*!\fn void individuo_mutate(individuo *ind)</span>
+<a name="l00109"></a>00109 <span class="comment">Esta funcion modifica un individuo aleatoriamente.</span>
+<a name="l00110"></a>00110 <span class="comment"></span>
+<a name="l00111"></a>00111 <span class="comment">\param [in,out] ind Individuo</span>
+<a name="l00112"></a>00112 <span class="comment">*/</span>
+<a name="l00113"></a><a class="code" href="group__genetic_g05b6d3d7a4be17c9cbf479f424edd01b.html#g05b6d3d7a4be17c9cbf479f424edd01b">00113</a> <span class="keywordtype">void</span> <a class="code" href="group__genetic_g05b6d3d7a4be17c9cbf479f424edd01b.html#g05b6d3d7a4be17c9cbf479f424edd01b">individuo_mutate</a>(<a class="code" href="struct__individuo.html">individuo</a> *ind)
+<a name="l00114"></a>00114 {
+<a name="l00115"></a>00115     <span class="keywordtype">int</span> i;
+<a name="l00116"></a>00116     <span class="keywordflow">for</span> (i=0;i&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>;i++){
+<a name="l00117"></a>00117         ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_71ad085b0f981b64ff6c9736979cf4d0.html#71ad085b0f981b64ff6c9736979cf4d0">x</a> += (rand()%4)-2;
+<a name="l00118"></a>00118         ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_82d516a3aa89949f81676cc9bb3bdcab.html#82d516a3aa89949f81676cc9bb3bdcab">y</a> += (rand()%4)-2;
+<a name="l00119"></a>00119         ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_f0ba9aedeb816d241a108033f8421536.html#f0ba9aedeb816d241a108033f8421536">t</a> += ((rand()%100)-50)/100.0;
+<a name="l00120"></a>00120     }
+<a name="l00121"></a><a class="code" href="group__genetic_g18105662f4835e24cf3b8fc40ed63b33.html#g18105662f4835e24cf3b8fc40ed63b33">00121</a> };
+<a name="l00122"></a>00122 <span class="comment"></span>
+<a name="l00123"></a>00123 <span class="comment">/*!\fn void individuo_procreate(individuo *p, individuo *m, individuo *ind)</span>
+<a name="l00124"></a>00124 <span class="comment">Esta funcion crea un nuevo individuo partiendo de los individuos</span>
+<a name="l00125"></a>00125 <span class="comment">padres. La mescla se hace de la siguiente manera, se toman los</span>
+<a name="l00126"></a>00126 <span class="comment">patrones del padre y luego los patrones de la madre si ya no</span>
+<a name="l00127"></a>00127 <span class="comment">estan ya colocados, si hay patrones comunes de forma cuasi aleatoria</span>
+<a name="l00128"></a>00128 <span class="comment">se escoge cual de las posiciones del patron es heredada.</span>
+<a name="l00129"></a>00129 <span class="comment"></span>
+<a name="l00130"></a>00130 <span class="comment">\param [in] p Individuo padre</span>
+<a name="l00131"></a>00131 <span class="comment">\param [in] m Individuo madre</span>
+<a name="l00132"></a>00132 <span class="comment">\param [out] ind Nuevo individuo</span>
+<a name="l00133"></a>00133 <span class="comment">*/</span>
+<a name="l00134"></a>00134 <span class="keywordtype">void</span> <a class="code" href="group__genetic_g18105662f4835e24cf3b8fc40ed63b33.html#g18105662f4835e24cf3b8fc40ed63b33">individuo_procreate</a>(<a class="code" href="struct__individuo.html">individuo</a> *p, <a class="code" href="struct__individuo.html">individuo</a> *m, <a class="code" href="struct__individuo.html">individuo</a> *ind)
+<a name="l00135"></a>00135 {
+<a name="l00136"></a>00136     <span class="keywordtype">int</span> i,j,cont;
+<a name="l00137"></a>00137 
+<a name="l00138"></a>00138     ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a> = (<a class="code" href="struct__posicion.html">posicion</a>*) realloc(ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>,<span class="keyword">sizeof</span>(<a class="code" href="struct__posicion.html">posicion</a>)*(p-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>+m-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>));
+<a name="l00139"></a>00139 
+<a name="l00140"></a>00140     <span class="keywordflow">for</span> (i=0,cont=0;i&lt;p-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>;i++,cont++)
+<a name="l00141"></a>00141     {
+<a name="l00142"></a>00142         ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[cont].<a class="code" href="struct__posicion_71ad085b0f981b64ff6c9736979cf4d0.html#71ad085b0f981b64ff6c9736979cf4d0">x</a> = p-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_71ad085b0f981b64ff6c9736979cf4d0.html#71ad085b0f981b64ff6c9736979cf4d0">x</a>;
+<a name="l00143"></a>00143         ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[cont].<a class="code" href="struct__posicion_82d516a3aa89949f81676cc9bb3bdcab.html#82d516a3aa89949f81676cc9bb3bdcab">y</a> = p-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_82d516a3aa89949f81676cc9bb3bdcab.html#82d516a3aa89949f81676cc9bb3bdcab">y</a>;
+<a name="l00144"></a>00144         ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[cont].<a class="code" href="struct__posicion_f0ba9aedeb816d241a108033f8421536.html#f0ba9aedeb816d241a108033f8421536">t</a> = p-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_f0ba9aedeb816d241a108033f8421536.html#f0ba9aedeb816d241a108033f8421536">t</a>;
+<a name="l00145"></a>00145         ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[cont].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a> = p-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>;
+<a name="l00146"></a>00146     }
+<a name="l00147"></a>00147 
+<a name="l00148"></a>00148     <span class="keywordflow">for</span> (i=0;i&lt;m-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>;i++)
+<a name="l00149"></a>00149     {
+<a name="l00150"></a>00150         <span class="keywordtype">bool</span> nuevo=<span class="keyword">true</span>;
+<a name="l00151"></a>00151         <span class="keywordflow">for</span> (j=0;j&lt;p-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a> &amp;&amp; nuevo;j++)
+<a name="l00152"></a>00152         {
+<a name="l00153"></a>00153             <span class="keywordflow">if</span> (m-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a> == p-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[j].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>)
+<a name="l00154"></a>00154             {
+<a name="l00155"></a>00155                 nuevo = <span class="keyword">false</span>;
+<a name="l00156"></a>00156                 if ((i+j)%2==0)
+<a name="l00157"></a>00157                 {
+<a name="l00158"></a>00158                     ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[j].<a class="code" href="struct__posicion_71ad085b0f981b64ff6c9736979cf4d0.html#71ad085b0f981b64ff6c9736979cf4d0">x</a> = m-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_71ad085b0f981b64ff6c9736979cf4d0.html#71ad085b0f981b64ff6c9736979cf4d0">x</a>;
+<a name="l00159"></a>00159                     ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[j].<a class="code" href="struct__posicion_82d516a3aa89949f81676cc9bb3bdcab.html#82d516a3aa89949f81676cc9bb3bdcab">y</a> = m-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_82d516a3aa89949f81676cc9bb3bdcab.html#82d516a3aa89949f81676cc9bb3bdcab">y</a>;
+<a name="l00160"></a>00160                     ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[j].<a class="code" href="struct__posicion_f0ba9aedeb816d241a108033f8421536.html#f0ba9aedeb816d241a108033f8421536">t</a> = m-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_f0ba9aedeb816d241a108033f8421536.html#f0ba9aedeb816d241a108033f8421536">t</a>;
+<a name="l00161"></a>00161                 }
+<a name="l00162"></a>00162             }
+<a name="l00163"></a>00163         }
+<a name="l00164"></a>00164         <span class="keywordflow">if</span> (nuevo)
+<a name="l00165"></a>00165         {
+<a name="l00166"></a>00166             ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[cont].<a class="code" href="struct__posicion_71ad085b0f981b64ff6c9736979cf4d0.html#71ad085b0f981b64ff6c9736979cf4d0">x</a> = m-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_71ad085b0f981b64ff6c9736979cf4d0.html#71ad085b0f981b64ff6c9736979cf4d0">x</a>;
+<a name="l00167"></a>00167             ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[cont].<a class="code" href="struct__posicion_82d516a3aa89949f81676cc9bb3bdcab.html#82d516a3aa89949f81676cc9bb3bdcab">y</a> = m-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_82d516a3aa89949f81676cc9bb3bdcab.html#82d516a3aa89949f81676cc9bb3bdcab">y</a>;
+<a name="l00168"></a>00168             ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[cont].<a class="code" href="struct__posicion_f0ba9aedeb816d241a108033f8421536.html#f0ba9aedeb816d241a108033f8421536">t</a> = m-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_f0ba9aedeb816d241a108033f8421536.html#f0ba9aedeb816d241a108033f8421536">t</a>;
+<a name="l00169"></a>00169             ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[cont].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a> = m-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>;
+<a name="l00170"></a>00170             cont++;
+<a name="l00171"></a>00171         }
+<a name="l00172"></a>00172     }
+<a name="l00173"></a>00173     ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a> = p-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>;
+<a name="l00174"></a>00174     ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a> = cont;
+<a name="l00175"></a>00175     ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a> = (posicion*) realloc(ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>,<span class="keyword">sizeof</span>(posicion)*cont);
+<a name="l00176"></a>00176 }
+<a name="l00177"></a>00177 
+<a name="l00178"></a>00178 <span class="comment"></span>
+<a name="l00179"></a>00179 <span class="comment">/*!\fn bool individuo_validate(individuo *ind)</span>
+<a name="l00180"></a>00180 <span class="comment">Esta funcion identifica si un individuo es una solucion validad, esto es</span>
+<a name="l00181"></a>00181 <span class="comment">verdadero si se cumplen las siguientes condiciones:</span>
+<a name="l00182"></a>00182 <span class="comment">    - No se repite ningun patron dentro de la solucion</span>
+<a name="l00183"></a>00183 <span class="comment">    - Todos los patrones estan dentro de la plantilla</span>
+<a name="l00184"></a>00184 <span class="comment">    - Ningun patron se solapa con la plantilla, huecos u otro patron</span>
+<a name="l00185"></a>00185 <span class="comment">En caso contrario el individuo no es valido.</span>
+<a name="l00186"></a>00186 <span class="comment"></span>
+<a name="l00187"></a>00187 <span class="comment">\param [in] ind Individuo a validar</span>
+<a name="l00188"></a>00188 <span class="comment">\return Verdadero si es un individuo valido, falso en caso contrario.</span>
+<a name="l00189"></a>00189 <span class="comment">*/</span>
+<a name="l00190"></a><a class="code" href="group__genetic_gf80cc38ea4d590f6c45215f770d63778.html#gf80cc38ea4d590f6c45215f770d63778">00190</a> <span class="keywordtype">bool</span> <a class="code" href="group__genetic_gf80cc38ea4d590f6c45215f770d63778.html#gf80cc38ea4d590f6c45215f770d63778">individuo_validate</a>(<a class="code" href="struct__individuo.html">individuo</a> *ind)
+<a name="l00191"></a>00191 {
+<a name="l00192"></a>00192     <span class="keywordtype">bool</span> valido = <span class="keyword">true</span>;
+<a name="l00193"></a>00193     <span class="keywordtype">int</span> i,j;
+<a name="l00194"></a>00194     <a class="code" href="struct__polygon__holes.html">polygon_holes</a> ph;
+<a name="l00195"></a>00195     <a class="code" href="struct__polygon.html">polygon</a> *pat;
+<a name="l00196"></a>00196 
+<a name="l00197"></a>00197     <span class="keywordflow">for</span> (i=0;i&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>-1 &amp;&amp; valido;i++)
+<a name="l00198"></a>00198     {
+<a name="l00199"></a>00199         <span class="keywordflow">for</span> (j=i+1;j&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a> &amp;&amp; valido;j++)
+<a name="l00200"></a>00200         {
+<a name="l00201"></a>00201             <span class="keywordflow">if</span> (ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a> == ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[j].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>)
+<a name="l00202"></a>00202                 valido = <span class="keyword">false</span>;
+<a name="l00203"></a>00203         }
+<a name="l00204"></a>00204     }
+<a name="l00205"></a>00205 
+<a name="l00206"></a>00206     ph.<a class="code" href="struct__polygon__holes_90635c34b3613c8cf8cdda5bebe99638.html#90635c34b3613c8cf8cdda5bebe99638">p</a> = &amp;(ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_c660e2710da2db9469813d0a14981cef.html#c660e2710da2db9469813d0a14981cef">plantilla</a>);
+<a name="l00207"></a>00207     ph.<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a> = ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_87ae802e5ffa06a1b38ce4337eadbcda.html#87ae802e5ffa06a1b38ce4337eadbcda">nhuecos</a>;
+<a name="l00208"></a>00208     ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a> = (<a class="code" href="struct__polygon.html">polygon</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct__polygon.html">polygon</a>)*ph.<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a>);
+<a name="l00209"></a>00209 
+<a name="l00210"></a>00210     for (i=0;i&lt;ph.<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a>;i++)
+<a name="l00211"></a>00211     {
+<a name="l00212"></a>00212         ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a> = ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_3affb28e2ad244f35baed248e3c230f6.html#3affb28e2ad244f35baed248e3c230f6">huecos</a>[i].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>;
+<a name="l00213"></a>00213         ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>=(<a class="code" href="struct__point.html">point</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct__point.html">point</a>)*ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>);
+<a name="l00214"></a>00214 
+<a name="l00215"></a>00215         for (j=0;j&lt;ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>;j++)
+<a name="l00216"></a>00216         {
+<a name="l00217"></a>00217             ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a>=ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_3affb28e2ad244f35baed248e3c230f6.html#3affb28e2ad244f35baed248e3c230f6">huecos</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a>;
+<a name="l00218"></a>00218             ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a>=ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_3affb28e2ad244f35baed248e3c230f6.html#3affb28e2ad244f35baed248e3c230f6">huecos</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a>;
+<a name="l00219"></a>00219         }
+<a name="l00220"></a>00220     }
+<a name="l00221"></a>00221 
+<a name="l00222"></a>00222     pat = (polygon*) malloc(<span class="keyword">sizeof</span>(polygon)*ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>);
+<a name="l00223"></a>00223 
+<a name="l00224"></a>00224     for (i=0;i&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>;i++)
+<a name="l00225"></a>00225     {
+<a name="l00226"></a>00226         pat[i].nvertices = ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_c4b1743e42547577dbb6d7238ad4db17.html#c4b1743e42547577dbb6d7238ad4db17">patrones</a>[ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>].nvertices;
+<a name="l00227"></a>00227         pat[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a> = (<a class="code" href="struct__point.html">point</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct__point.html">point</a>)*pat[i].nvertices);
+<a name="l00228"></a>00228         <span class="keywordflow">for</span> (j=0;j&lt;pat[i].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>;j++)
+<a name="l00229"></a>00229         {
+<a name="l00230"></a>00230             pat[i].v[j].x=ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_c4b1743e42547577dbb6d7238ad4db17.html#c4b1743e42547577dbb6d7238ad4db17">patrones</a>[ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>].v[j].x;
+<a name="l00231"></a>00231             pat[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a>=ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_c4b1743e42547577dbb6d7238ad4db17.html#c4b1743e42547577dbb6d7238ad4db17">patrones</a>[ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>].v[j].y;
+<a name="l00232"></a>00232         }
+<a name="l00233"></a>00233         <a class="code" href="group__geometry_g95276abee7240f116afaf80a3e1f23c4.html#g95276abee7240f116afaf80a3e1f23c4">polygon_rotate</a>(&amp;(pat[i]),ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_f0ba9aedeb816d241a108033f8421536.html#f0ba9aedeb816d241a108033f8421536">t</a>);
+<a name="l00234"></a>00234         <a class="code" href="group__geometry_g7538c2bf0d1e8acc0cfc055b6bf3a96b.html#g7538c2bf0d1e8acc0cfc055b6bf3a96b">polygon_translate</a>(&amp;(pat[i]),ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_71ad085b0f981b64ff6c9736979cf4d0.html#71ad085b0f981b64ff6c9736979cf4d0">x</a>, ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_82d516a3aa89949f81676cc9bb3bdcab.html#82d516a3aa89949f81676cc9bb3bdcab">y</a>);
+<a name="l00235"></a>00235     }
+<a name="l00236"></a>00236 
+<a name="l00237"></a>00237     <span class="keywordflow">for</span> (i=0;i&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a> &amp;&amp; valido;i++)
+<a name="l00238"></a>00238     {
+<a name="l00239"></a>00239         <span class="keywordflow">if</span>(!<a class="code" href="group__geometry_g496bae87588cb5710ced80f713da98ad.html#g496bae87588cb5710ced80f713da98ad">polygonholes_polygonin</a>(&amp;ph, &amp;(pat[i])))
+<a name="l00240"></a>00240         {
+<a name="l00241"></a>00241             valido=<span class="keyword">false</span>;
+<a name="l00242"></a>00242         }
+<a name="l00243"></a>00243     }
+<a name="l00244"></a>00244 
+<a name="l00245"></a>00245     <span class="keywordflow">for</span> (i=0;i&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>-1 &amp;&amp; valido;i++)
+<a name="l00246"></a>00246     {
+<a name="l00247"></a>00247         <span class="keywordflow">for</span> (j=i+1;j&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a> &amp;&amp; valido;j++)
+<a name="l00248"></a>00248         {
+<a name="l00249"></a>00249             <span class="keywordflow">if</span> (<a class="code" href="group__geometry_g2be6101a257ea8896e61e93d14b22b89.html#g2be6101a257ea8896e61e93d14b22b89">polygon_overlapping</a>(&amp;(pat[i]),&amp;(pat[j])))
+<a name="l00250"></a>00250             {
+<a name="l00251"></a>00251                 valido=<span class="keyword">false</span>;
+<a name="l00252"></a>00252             }
+<a name="l00253"></a>00253         }
+<a name="l00254"></a>00254     }
+<a name="l00255"></a>00255 
+<a name="l00256"></a>00256     <span class="keywordflow">for</span> (i=0;i&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>;i++)
+<a name="l00257"></a>00257     {
+<a name="l00258"></a>00258         free(pat[i].v);
+<a name="l00259"></a>00259     }
+<a name="l00260"></a>00260     free(pat);
+<a name="l00261"></a>00261 
+<a name="l00262"></a>00262     <span class="keywordflow">for</span> (i=0;i&lt;ph.<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a>;i++)
+<a name="l00263"></a>00263     {
+<a name="l00264"></a>00264         free(ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>);
+<a name="l00265"></a>00265     }
+<a name="l00266"></a>00266     free(ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>);
+<a name="l00267"></a>00267 
+<a name="l00268"></a>00268     <span class="keywordflow">return</span> valido;
+<a name="l00269"></a>00269 }
+<a name="l00270"></a>00270 <span class="comment"></span>
+<a name="l00271"></a>00271 <span class="comment">/*!\fn int comparar_individuos(individuo *ind1,individuo *ind2)</span>
+<a name="l00272"></a>00272 <span class="comment">Compara entre los dos individuos cual es mejor segun su fitness</span>
+<a name="l00273"></a>00273 <span class="comment">*/</span>
+<a name="l00274"></a>00274 
+<a name="l00275"></a><a class="code" href="group__genetic_gd9507b892f115e76cd4162059839370c.html#gd9507b892f115e76cd4162059839370c">00275</a> <span class="keywordtype">int</span> <a class="code" href="group__genetic_gd9507b892f115e76cd4162059839370c.html#gd9507b892f115e76cd4162059839370c">comparar_individuos</a>(<a class="code" href="struct__individuo.html">individuo</a> *ind1,<a class="code" href="struct__individuo.html">individuo</a> *ind2)
+<a name="l00276"></a>00276 {
+<a name="l00277"></a>00277     <span class="keywordflow">return</span> ((<span class="keywordtype">int</span>)(((ind1-&gt;<a class="code" href="struct__individuo_afa717374da03fa5ef2c5ac8c08e1daa.html#afa717374da03fa5ef2c5ac8c08e1daa">fitness</a>)-(ind2-&gt;<a class="code" href="struct__individuo_afa717374da03fa5ef2c5ac8c08e1daa.html#afa717374da03fa5ef2c5ac8c08e1daa">fitness</a>))*10000.0));
+<a name="l00278"></a>00278 }
+<a name="l00279"></a>00279 <span class="comment"></span>
+<a name="l00280"></a>00280 <span class="comment">/*!@}*/</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Sun Oct 29 11:19:30 2006 para Genesting por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
+</body>
+</html>

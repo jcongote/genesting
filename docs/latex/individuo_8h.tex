@@ -1,0 +1,57 @@
+\hypertarget{individuo_8h}{
+\section{Referencia del Archivo individuo.h}
+\label{individuo_8h}\index{individuo.h@{individuo.h}}
+}
+
+
+\subsection{Descripci\'{o}n detallada}
+Declaraciones del Objeto Individuo 
+
+Definici\'{o}n en el archivo \hyperlink{individuo_8h-source}{individuo.h}.
+
+{\tt \#include \char`\"{}genesting.h\char`\"{}}\par
+
+
+Dependencia gr\'{a}fica adjunta para individuo.h:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=106pt]{individuo_8h__incl}
+\end{center}
+\end{figure}
+
+
+Este gr\'{a}fico muestra que archivos directa o indirectamente incluyen a este archivo:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{individuo_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Clases}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct__posicion}{\_\-posicion}
+\item 
+struct \hyperlink{struct__individuo}{\_\-individuo}
+\end{CompactItemize}
+\subsection*{Tipos definidos}
+\begin{CompactItemize}
+\item 
+typedef \hyperlink{struct__posicion}{\_\-posicion} \hyperlink{group__genetic_ge2fa8f912ec24aab702abf9b76489462_ge2fa8f912ec24aab702abf9b76489462}{posicion}
+\item 
+typedef \hyperlink{struct__individuo}{\_\-individuo} \hyperlink{group__genetic_g86fcc12a3e2577bedca3b8364e722da3_g86fcc12a3e2577bedca3b8364e722da3}{individuo}
+\end{CompactItemize}
+\subsection*{Funciones}
+\begin{CompactItemize}
+\item 
+float \hyperlink{group__genetic_gf152bd4602acec2166cc4b91e8c8919a_gf152bd4602acec2166cc4b91e8c8919a}{individuo\_\-fitness} (\hyperlink{struct__individuo}{individuo} $\ast$ind)
+\item 
+void \hyperlink{group__genetic_gf4e60223d27c85a5f6166e35ecafe641_gf4e60223d27c85a5f6166e35ecafe641}{individuo\_\-create} (\hyperlink{struct__genesting}{genesting} $\ast$g, \hyperlink{struct__individuo}{individuo} $\ast$ind)
+\item 
+void \hyperlink{group__genetic_g05b6d3d7a4be17c9cbf479f424edd01b_g05b6d3d7a4be17c9cbf479f424edd01b}{individuo\_\-mutate} (\hyperlink{struct__individuo}{individuo} $\ast$ind)
+\item 
+void \hyperlink{group__genetic_g18105662f4835e24cf3b8fc40ed63b33_g18105662f4835e24cf3b8fc40ed63b33}{individuo\_\-procreate} (\hyperlink{struct__individuo}{individuo} $\ast$p, \hyperlink{struct__individuo}{individuo} $\ast$m, \hyperlink{struct__individuo}{individuo} $\ast$ind)
+\item 
+bool \hyperlink{group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f770d63778}{individuo\_\-validate} (\hyperlink{struct__individuo}{individuo} $\ast$ind)
+\item 
+int \hyperlink{group__genetic_gd9507b892f115e76cd4162059839370c_gd9507b892f115e76cd4162059839370c}{comparar\_\-individuos} (\hyperlink{struct__individuo}{individuo} $\ast$ind1, \hyperlink{struct__individuo}{individuo} $\ast$ind2)
+\end{CompactItemize}

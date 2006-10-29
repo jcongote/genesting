@@ -1,0 +1,38 @@
+\hypertarget{individuo_8c}{
+\section{Referencia del Archivo individuo.c}
+\label{individuo_8c}\index{individuo.c@{individuo.c}}
+}
+
+
+\subsection{Descripci\'{o}n detallada}
+Aqui estan las estructuras principales del programa la estructura es muy sencilla 
+
+Definici\'{o}n en el archivo \hyperlink{individuo_8c-source}{individuo.c}.
+
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include \char`\"{}individuo.h\char`\"{}}\par
+{\tt \#include \char`\"{}polygon.h\char`\"{}}\par
+{\tt \#include \char`\"{}polygon\_\-holes.h\char`\"{}}\par
+
+
+Dependencia gr\'{a}fica adjunta para individuo.c:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=165pt]{individuo_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Funciones}
+\begin{CompactItemize}
+\item 
+float \hyperlink{group__genetic_gf152bd4602acec2166cc4b91e8c8919a_gf152bd4602acec2166cc4b91e8c8919a}{individuo\_\-fitness} (\hyperlink{struct__individuo}{individuo} $\ast$ind)
+\item 
+void \hyperlink{group__genetic_gf4e60223d27c85a5f6166e35ecafe641_gf4e60223d27c85a5f6166e35ecafe641}{individuo\_\-create} (\hyperlink{struct__genesting}{genesting} $\ast$g, \hyperlink{struct__individuo}{individuo} $\ast$ind)
+\item 
+void \hyperlink{group__genetic_g05b6d3d7a4be17c9cbf479f424edd01b_g05b6d3d7a4be17c9cbf479f424edd01b}{individuo\_\-mutate} (\hyperlink{struct__individuo}{individuo} $\ast$ind)
+\item 
+void \hyperlink{group__genetic_g18105662f4835e24cf3b8fc40ed63b33_g18105662f4835e24cf3b8fc40ed63b33}{individuo\_\-procreate} (\hyperlink{struct__individuo}{individuo} $\ast$p, \hyperlink{struct__individuo}{individuo} $\ast$m, \hyperlink{struct__individuo}{individuo} $\ast$ind)
+\item 
+bool \hyperlink{group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f770d63778}{individuo\_\-validate} (\hyperlink{struct__individuo}{individuo} $\ast$ind)
+\item 
+int \hyperlink{group__genetic_gd9507b892f115e76cd4162059839370c_gd9507b892f115e76cd4162059839370c}{comparar\_\-individuos} (\hyperlink{struct__individuo}{individuo} $\ast$ind1, \hyperlink{struct__individuo}{individuo} $\ast$ind2)
+\end{CompactItemize}

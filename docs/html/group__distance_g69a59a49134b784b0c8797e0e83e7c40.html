@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Genesting: distance_pointline</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.4.7 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="modules.html"><span>Módulos</span></a></li>
+    <li><a href="classes.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+  </ul></div>
+<div class="nav">
+<a class="el" href="group__distance.html">Distancias</a></div>
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+   <td valign="top">
+      <div class="navtab">
+        <table>
+          <tr><td class="navtab"><a class="qindexHL" href="group__distance_g69a59a49134b784b0c8797e0e83e7c40.html#g69a59a49134b784b0c8797e0e83e7c40">distance_pointline</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__distance_g3b2b03f846e6b587be683ec8b853e774.html#g3b2b03f846e6b587be683ec8b853e774">distance_pointpoint</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5.html#g25716e8d1c8abaf08903bbcd08b8d6e5">distance_pointpolygon</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__distance_gc837f0084791f42936ade857a0cce3af.html#gc837f0084791f42936ade857a0cce3af">distance_pointpolygonholes</a></td></tr>
+        </table>
+      </div>
+   </td>
+   <td valign="top">
+<a class="anchor" name="g69a59a49134b784b0c8797e0e83e7c40"></a><!-- doxytag: member="distance.h::distance_pointline" ref="g69a59a49134b784b0c8797e0e83e7c40" args="(point *f, line *l, int *seg)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float distance_pointline           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__point.html">point</a> *&nbsp;</td>
+          <td class="paramname"> <em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct__line.html">line</a> *&nbsp;</td>
+          <td class="paramname"> <em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&nbsp;</td>
+          <td class="paramname"> <em>seg</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+La funcion calcula la distancia entre un punto un segmento de linea, se pueden dar dos casos:<ul>
+<li>La perpendicular del punto a la recta intersecta el segmento de recta, en esta caso la distancia es la longitud del punto al punto de interseccion de la recta con la perpendicular que pasa por el punto</li></ul>
+<p>
+<ul>
+<li>La perpendicular del punto a la recta no intersecta el segmente, en este caso la distancia entre el punto y la recta es igual a la minima distancia entre el punto y los puntos extremos del segmento de recta.</li></ul>
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>f</em>&nbsp;</td><td>Punto en 2 dimensiones </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>l</em>&nbsp;</td><td>Segmento de recta que tiene definido los dos puntos extremos </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>seg</em>&nbsp;</td><td>Indica cual fue la refencia para tomar la distancia puede tomar tres valores:0 cuando la distancia es respecto a la perpendicular de la linea, 1 cuando la distancia es respecto al punto extremo 1 y 2 cuando la distancia es respecto al punto extremo 2 </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>La distancia entre el segmento de recta y el punto </dd></dl>
+
+<p>
+Definición en la línea <a class="el" href="distance_8c-source.html#l00054">54</a> del archivo <a class="el" href="distance_8c-source.html">distance.c</a>.<div class="fragment"><pre class="fragment"><a name="l00055"></a>00055 {
+<a name="l00056"></a>00056     <span class="keywordflow">if</span>(<a class="code" href="group__geometry_ga7ae8d919209fea43e8a61215398bbbe.html#ga7ae8d919209fea43e8a61215398bbbe">point_dot</a>(&amp;(l-&gt;<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a>),&amp;(l-&gt;<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a>),f) &gt; 0)
+<a name="l00057"></a>00057     {
+<a name="l00058"></a>00058         *seg = 2;
+<a name="l00059"></a>00059         <span class="keywordflow">return</span> <a class="code" href="group__distance_g3b2b03f846e6b587be683ec8b853e774.html#g3b2b03f846e6b587be683ec8b853e774">distance_pointpoint</a>(&amp;(l-&gt;<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a>),f);
+<a name="l00060"></a>00060     }
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062     <span class="keywordflow">if</span>(<a class="code" href="group__geometry_ga7ae8d919209fea43e8a61215398bbbe.html#ga7ae8d919209fea43e8a61215398bbbe">point_dot</a>(&amp;(l-&gt;<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a>),&amp;(l-&gt;<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a>),f) &gt; 0)
+<a name="l00063"></a>00063     {
+<a name="l00064"></a>00064         *seg =1;
+<a name="l00065"></a>00065         <span class="keywordflow">return</span> <a class="code" href="group__distance_g3b2b03f846e6b587be683ec8b853e774.html#g3b2b03f846e6b587be683ec8b853e774">distance_pointpoint</a>(&amp;(l-&gt;<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a>),f);
+<a name="l00066"></a>00066     }
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068     *seg =0;
+<a name="l00069"></a>00069     <span class="keywordflow">return</span> fabsf(<a class="code" href="group__geometry_gb97527165a510655ee37cd3ccfa8d932.html#gb97527165a510655ee37cd3ccfa8d932">point_cross</a>(&amp;(l-&gt;<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a>),&amp;(l-&gt;<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a>),f) / <a class="code" href="group__distance_g3b2b03f846e6b587be683ec8b853e774.html#g3b2b03f846e6b587be683ec8b853e774">distance_pointpoint</a>(&amp;(l-&gt;<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a>),&amp;(l-&gt;<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a>)));
+<a name="l00070"></a>00070 }
+</pre></div>
+<p>
+
+<p>
+Gráfico de llamadas para esta función:<p><center><img src="group__distance_g69a59a49134b784b0c8797e0e83e7c40_g69a59a49134b784b0c8797e0e83e7c40_cgraph.png" border="0" usemap="#group__distance_g69a59a49134b784b0c8797e0e83e7c40_g69a59a49134b784b0c8797e0e83e7c40_cgraph_map" alt=""></center>
+<map name="group__distance_g69a59a49134b784b0c8797e0e83e7c40_g69a59a49134b784b0c8797e0e83e7c40_cgraph_map">
+<area href="group__distance_g3b2b03f846e6b587be683ec8b853e774.html#g3b2b03f846e6b587be683ec8b853e774" shape="rect" coords="183,6,319,32" alt="">
+<area href="group__geometry_gb97527165a510655ee37cd3ccfa8d932.html#gb97527165a510655ee37cd3ccfa8d932" shape="rect" coords="205,56,296,83" alt="">
+<area href="group__geometry_ga7ae8d919209fea43e8a61215398bbbe.html#ga7ae8d919209fea43e8a61215398bbbe" shape="rect" coords="212,107,289,134" alt="">
+</map>
+
+<p>
+Here is the caller graph for this function:<p><center><img src="group__distance_g69a59a49134b784b0c8797e0e83e7c40_g69a59a49134b784b0c8797e0e83e7c40_icgraph.png" border="0" usemap="#group__distance_g69a59a49134b784b0c8797e0e83e7c40_g69a59a49134b784b0c8797e0e83e7c40_icgraph_map" alt=""></center>
+<map name="group__distance_g69a59a49134b784b0c8797e0e83e7c40_g69a59a49134b784b0c8797e0e83e7c40_icgraph_map">
+<area href="group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5.html#g25716e8d1c8abaf08903bbcd08b8d6e5" shape="rect" coords="181,5,336,32" alt="">
+</map>
+
+</div>
+</div><p>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Generado el Sun Oct 29 11:20:02 2006 para Genesting por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
+</body>
+</html>

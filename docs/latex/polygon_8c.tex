@@ -1,0 +1,38 @@
+\hypertarget{polygon_8c}{
+\section{Referencia del Archivo polygon.c}
+\label{polygon_8c}\index{polygon.c@{polygon.c}}
+}
+
+
+\subsection{Descripci\'{o}n detallada}
+Este archivo define las funciones utilizadas por el objeto poligono 
+
+Definici\'{o}n en el archivo \hyperlink{polygon_8c-source}{polygon.c}.
+
+{\tt \#include $<$math.h$>$}\par
+{\tt \#include \char`\"{}polygon.h\char`\"{}}\par
+
+
+Dependencia gr\'{a}fica adjunta para polygon.c:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=100pt]{polygon_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Funciones}
+\begin{CompactItemize}
+\item 
+float \hyperlink{group__geometry_gcfbc9e7772d80361768bc0b65cebbca1_gcfbc9e7772d80361768bc0b65cebbca1}{polygon\_\-area} (\hyperlink{struct__polygon}{polygon} $\ast$p)
+\item 
+bool \hyperlink{group__geometry_geab0a1d6da7c44ae49494958bb885504_geab0a1d6da7c44ae49494958bb885504}{polygon\_\-pointin} (\hyperlink{struct__polygon}{polygon} $\ast$p, \hyperlink{struct__point}{point} $\ast$f)
+\item 
+bool \hyperlink{group__geometry_g2be6101a257ea8896e61e93d14b22b89_g2be6101a257ea8896e61e93d14b22b89}{polygon\_\-overlapping} (\hyperlink{struct__polygon}{polygon} $\ast$p, \hyperlink{struct__polygon}{polygon} $\ast$q)
+\item 
+void \hyperlink{group__geometry_g95276abee7240f116afaf80a3e1f23c4_g95276abee7240f116afaf80a3e1f23c4}{polygon\_\-rotate} (\hyperlink{struct__polygon}{polygon} $\ast$p, float t)
+\item 
+\hyperlink{struct__point}{point} \hyperlink{group__geometry_ge39fef354e4411678ec081c197b29825_ge39fef354e4411678ec081c197b29825}{polygon\_\-center} (\hyperlink{struct__polygon}{polygon} $\ast$p)
+\item 
+void \hyperlink{group__geometry_g137ef6f552a0a04c5ae0493690088f3f_g137ef6f552a0a04c5ae0493690088f3f}{polygon\_\-minbox} (\hyperlink{struct__polygon}{polygon} $\ast$p, float $\ast$minx, float $\ast$miny, float $\ast$maxx, float $\ast$maxy)
+\item 
+void \hyperlink{group__geometry_g7538c2bf0d1e8acc0cfc055b6bf3a96b_g7538c2bf0d1e8acc0cfc055b6bf3a96b}{polygon\_\-translate} (\hyperlink{struct__polygon}{polygon} $\ast$p, float x, float y)
+\end{CompactItemize}

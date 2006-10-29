@@ -1,0 +1,92 @@
+\documentclass[letterpaper]{book}
+\usepackage{makeidx}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{times}
+\ifx\pdfoutput\undefined
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue
+           ]{hyperref}
+\usepackage{pspicture}
+\else
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue
+           ]{hyperref}
+\fi
+\usepackage[spanish]{babel}
+\usepackage{doxygen}
+\makeindex
+\setcounter{tocdepth}{1}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large Genesting Manual de referencia\\[1ex]\large 0.3 }\\
+\vspace*{1cm}
+{\large Generado por Doxygen 1.4.7}\\
+\vspace*{0.5cm}
+{\small Sun Oct 29 11:19:29 2006}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\chapter{Proyecto Genesting }
+\label{index}\hypertarget{index}{}\input{index}
+\chapter{Genesting Indice de m\'{o}dulos}
+\input{modules}
+\chapter{Genesting Indice de clases}
+\input{annotated}
+\chapter{Genesting Indice de archivos}
+\input{files}
+\chapter{Genesting P\'{a}gina indice}
+\input{pages}
+\chapter{Genesting Documentaci\'{o}n de m\'{o}dulos}
+\input{group__distance}
+\include{group__geometry}
+\include{group__genetic}
+\chapter{Genesting Documentaci\'{o}n de clases}
+\input{struct__genesting}
+\include{struct__individuo}
+\include{struct__line}
+\include{struct__point}
+\include{struct__polygon}
+\include{struct__polygon__holes}
+\include{struct__population}
+\include{struct__posicion}
+\chapter{Genesting Documentaci\'{o}n de archivos}
+\input{distance_8c}
+\include{distance_8h}
+\include{genesting_8c}
+\include{genesting_8h}
+\include{graphics_8c}
+\include{graphics_8h}
+\include{individuo_8c}
+\include{individuo_8h}
+\include{line_8c}
+\include{line_8h}
+\include{main_8c}
+\include{point_8c}
+\include{point_8h}
+\include{polygon_8c}
+\include{polygon_8h}
+\include{polygon__holes_8c}
+\include{polygon__holes_8h}
+\include{population_8c}
+\include{population_8h}
+\chapter{Genesting Documentaci\'{o}n de p\'{a}ginas}
+\input{todo}
+\include{bug}
+\printindex
+\end{document}

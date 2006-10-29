@@ -1,0 +1,33 @@
+This is BibTeX, Version 0.99cThe top-level auxiliary file: C:\Documents and Settings\John Edgar\My Documents\My Projects\genesting\docs\latex\refman.aux
+A level-1 auxiliary file: group__geometry.aux
+A level-1 auxiliary file: group__genetic.aux
+A level-1 auxiliary file: struct__individuo.aux
+A level-1 auxiliary file: struct__line.aux
+A level-1 auxiliary file: struct__point.aux
+A level-1 auxiliary file: struct__polygon.aux
+A level-1 auxiliary file: struct__polygon__holes.aux
+A level-1 auxiliary file: struct__population.aux
+A level-1 auxiliary file: struct__posicion.aux
+A level-1 auxiliary file: distance_8h.aux
+A level-1 auxiliary file: genesting_8c.aux
+A level-1 auxiliary file: genesting_8h.aux
+A level-1 auxiliary file: graphics_8c.aux
+A level-1 auxiliary file: graphics_8h.aux
+A level-1 auxiliary file: individuo_8c.aux
+A level-1 auxiliary file: individuo_8h.aux
+A level-1 auxiliary file: line_8c.aux
+A level-1 auxiliary file: line_8h.aux
+A level-1 auxiliary file: main_8c.aux
+A level-1 auxiliary file: point_8c.aux
+A level-1 auxiliary file: point_8h.aux
+A level-1 auxiliary file: polygon_8c.aux
+A level-1 auxiliary file: polygon_8h.aux
+A level-1 auxiliary file: polygon__holes_8c.aux
+A level-1 auxiliary file: polygon__holes_8h.aux
+A level-1 auxiliary file: population_8c.aux
+A level-1 auxiliary file: population_8h.aux
+A level-1 auxiliary file: bug.aux
+I found no \citation commands---while reading file C:\Documents and Settings\John Edgar\My Documents\My Projects\genesting\docs\latex\refman.aux
+I found no \bibdata command---while reading file C:\Documents and Settings\John Edgar\My Documents\My Projects\genesting\docs\latex\refman.aux
+I found no \bibstyle command---while reading file C:\Documents and Settings\John Edgar\My Documents\My Projects\genesting\docs\latex\refman.aux
+(There were 3 error messages)

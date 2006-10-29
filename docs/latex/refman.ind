@@ -1,0 +1,334 @@
+\begin{theindex}
+
+  \item {\_\discretionary {-}{}{}genesting}, \hyperpage{55}
+    \subitem {area}, \hyperpage{56}
+    \subitem {huecos}, \hyperpage{56}
+    \subitem {nhuecos}, \hyperpage{56}
+    \subitem {npatrones}, \hyperpage{56}
+    \subitem {patrones}, \hyperpage{56}
+    \subitem {plantilla}, \hyperpage{56}
+    \subitem {volumen}, \hyperpage{56}
+  \item {\_\discretionary {-}{}{}individuo}, \hyperpage{58}
+    \subitem {ambiente}, \hyperpage{58}
+    \subitem {areautil}, \hyperpage{58}
+    \subitem {fitness}, \hyperpage{59}
+    \subitem {ngenes}, \hyperpage{59}
+    \subitem {posgen}, \hyperpage{59}
+  \item {\_\discretionary {-}{}{}line}, \hyperpage{60}
+    \subitem {v1}, \hyperpage{60}
+    \subitem {v2}, \hyperpage{60}
+  \item {\_\discretionary {-}{}{}point}, \hyperpage{62}
+    \subitem {x}, \hyperpage{62}
+    \subitem {y}, \hyperpage{62}
+  \item {\_\discretionary {-}{}{}polygon}, \hyperpage{63}
+    \subitem {nvertices}, \hyperpage{63}
+    \subitem {v}, \hyperpage{63}
+  \item {\_\discretionary {-}{}{}polygon\_\discretionary {-}{}{}holes}, 
+		\hyperpage{64}
+    \subitem {h}, \hyperpage{64}
+    \subitem {nholes}, \hyperpage{64}
+    \subitem {p}, \hyperpage{64}
+  \item {\_\discretionary {-}{}{}population}, \hyperpage{66}
+    \subitem {ambiente}, \hyperpage{67}
+    \subitem {individuos}, \hyperpage{67}
+    \subitem {nindividuos}, \hyperpage{67}
+  \item {\_\discretionary {-}{}{}posicion}, \hyperpage{68}
+    \subitem {id}, \hyperpage{68}
+    \subitem {t}, \hyperpage{68}
+    \subitem {x}, \hyperpage{68}
+    \subitem {y}, \hyperpage{68}
+
+  \indexspace
+
+  \item {ambiente}
+    \subitem {\_\discretionary {-}{}{}individuo}, \hyperpage{58}
+    \subitem {\_\discretionary {-}{}{}population}, \hyperpage{67}
+  \item {area}
+    \subitem {\_\discretionary {-}{}{}genesting}, \hyperpage{56}
+  \item {areautil}
+    \subitem {\_\discretionary {-}{}{}individuo}, \hyperpage{58}
+
+  \indexspace
+
+  \item {clearscreen}
+    \subitem {graphics.c}, \hyperpage{74}
+  \item {comparar\_\discretionary {-}{}{}individuos}
+    \subitem {genetic}, \hyperpage{42}
+
+  \indexspace
+
+  \item {DELTA}
+    \subitem {graphics.h}, \hyperpage{77}
+  \item {distance}
+    \subitem {distance\_\discretionary {-}{}{}pointline}, 
+		\hyperpage{12}
+    \subitem {distance\_\discretionary {-}{}{}pointpoint}, 
+		\hyperpage{13}
+    \subitem {distance\_\discretionary {-}{}{}pointpolygon}, 
+		\hyperpage{13}
+    \subitem {distance\_\discretionary {-}{}{}pointpolygonholes}, 
+		\hyperpage{15}
+  \item {distance.c}, \hyperpage{69}
+  \item {distance.h}, \hyperpage{71}
+  \item {distance\_\discretionary {-}{}{}pointline}
+    \subitem {distance}, \hyperpage{12}
+  \item {distance\_\discretionary {-}{}{}pointpoint}
+    \subitem {distance}, \hyperpage{13}
+  \item {distance\_\discretionary {-}{}{}pointpolygon}
+    \subitem {distance}, \hyperpage{13}
+  \item {distance\_\discretionary {-}{}{}pointpolygonholes}
+    \subitem {distance}, \hyperpage{15}
+  \item {Distancias}, \hyperpage{11}
+  \item {draw\_\discretionary {-}{}{}line}
+    \subitem {graphics.c}, \hyperpage{74}
+  \item {draw\_\discretionary {-}{}{}rect}
+    \subitem {graphics.c}, \hyperpage{75}
+
+  \indexspace
+
+  \item {fitness}
+    \subitem {\_\discretionary {-}{}{}individuo}, \hyperpage{59}
+
+  \indexspace
+
+  \item {genesting}
+    \subitem {genetic}, \hyperpage{42}
+  \item {genesting.c}, \hyperpage{72}
+  \item {genesting.h}, \hyperpage{73}
+  \item {genesting\_\discretionary {-}{}{}init}
+    \subitem {genetic}, \hyperpage{42}
+  \item {genesting\_\discretionary {-}{}{}show}
+    \subitem {genetic}, \hyperpage{43}
+  \item {genetic}
+    \subitem {comparar\_\discretionary {-}{}{}individuos}, 
+		\hyperpage{42}
+    \subitem {genesting}, \hyperpage{42}
+    \subitem {genesting\_\discretionary {-}{}{}init}, \hyperpage{42}
+    \subitem {genesting\_\discretionary {-}{}{}show}, \hyperpage{43}
+    \subitem {individuo}, \hyperpage{42}
+    \subitem {individuo\_\discretionary {-}{}{}create}, \hyperpage{44}
+    \subitem {individuo\_\discretionary {-}{}{}fitness}, \hyperpage{45}
+    \subitem {individuo\_\discretionary {-}{}{}mutate}, \hyperpage{47}
+    \subitem {individuo\_\discretionary {-}{}{}procreate}, 
+		\hyperpage{47}
+    \subitem {individuo\_\discretionary {-}{}{}validate}, 
+		\hyperpage{47}
+    \subitem {leer\_\discretionary {-}{}{}archivo}, \hyperpage{50}
+    \subitem {population}, \hyperpage{42}
+    \subitem {population\_\discretionary {-}{}{}create}, \hyperpage{51}
+    \subitem {population\_\discretionary {-}{}{}evaluate}, 
+		\hyperpage{52}
+    \subitem {population\_\discretionary {-}{}{}generation}, 
+		\hyperpage{52}
+    \subitem {posicion}, \hyperpage{42}
+  \item {Genetico}, \hyperpage{41}
+  \item {Geometria}, \hyperpage{17}
+  \item {geometry}
+    \subitem {line}, \hyperpage{18}
+    \subitem {line\_\discretionary {-}{}{}equal}, \hyperpage{18}
+    \subitem {line\_\discretionary {-}{}{}intersection}, \hyperpage{19}
+    \subitem {line\_\discretionary {-}{}{}ispoint}, \hyperpage{21}
+    \subitem {point}, \hyperpage{18}
+    \subitem {point\_\discretionary {-}{}{}cross}, \hyperpage{21}
+    \subitem {point\_\discretionary {-}{}{}dot}, \hyperpage{22}
+    \subitem {polygon}, \hyperpage{18}
+    \subitem {polygon\_\discretionary {-}{}{}area}, \hyperpage{23}
+    \subitem {polygon\_\discretionary {-}{}{}center}, \hyperpage{23}
+    \subitem {polygon\_\discretionary {-}{}{}holes}, \hyperpage{18}
+    \subitem {polygon\_\discretionary {-}{}{}minbox}, \hyperpage{24}
+    \subitem {polygon\_\discretionary {-}{}{}overlapping}, 
+		\hyperpage{25}
+    \subitem {polygon\_\discretionary {-}{}{}pointin}, \hyperpage{27}
+    \subitem {polygon\_\discretionary {-}{}{}rotate}, \hyperpage{27}
+    \subitem {polygon\_\discretionary {-}{}{}translate}, \hyperpage{28}
+    \subitem {polygonholes\_\discretionary {-}{}{}area}, \hyperpage{29}
+    \subitem {polygonholes\_\discretionary {-}{}{}pointin}, 
+		\hyperpage{30}
+    \subitem {polygonholes\_\discretionary {-}{}{}pointinhole}, 
+		\hyperpage{31}
+    \subitem {polygonholes\_\discretionary {-}{}{}polygonin}, 
+		\hyperpage{32}
+    \subitem {polygonholes\_\discretionary {-}{}{}volumen}, 
+		\hyperpage{33}
+  \item {getscreen}
+    \subitem {graphics.c}, \hyperpage{75}
+  \item {graphics}
+    \subitem {graphics.h}, \hyperpage{77}
+  \item {graphics.c}, \hyperpage{74}
+    \subitem {clearscreen}, \hyperpage{74}
+    \subitem {draw\_\discretionary {-}{}{}line}, \hyperpage{74}
+    \subitem {draw\_\discretionary {-}{}{}rect}, \hyperpage{75}
+    \subitem {getscreen}, \hyperpage{75}
+    \subitem {init\_\discretionary {-}{}{}graphics}, \hyperpage{75}
+    \subitem {relscreen}, \hyperpage{76}
+  \item {graphics.h}, \hyperpage{77}
+    \subitem {DELTA}, \hyperpage{77}
+    \subitem {graphics}, \hyperpage{77}
+
+  \indexspace
+
+  \item {h}
+    \subitem {\_\discretionary {-}{}{}polygon\_\discretionary {-}{}{}holes}, 
+		\hyperpage{64}
+  \item {huecos}
+    \subitem {\_\discretionary {-}{}{}genesting}, \hyperpage{56}
+
+  \indexspace
+
+  \item {id}
+    \subitem {\_\discretionary {-}{}{}posicion}, \hyperpage{68}
+  \item {individuo}
+    \subitem {genetic}, \hyperpage{42}
+  \item {individuo.c}, \hyperpage{78}
+  \item {individuo.h}, \hyperpage{79}
+  \item {individuo\_\discretionary {-}{}{}create}
+    \subitem {genetic}, \hyperpage{44}
+  \item {individuo\_\discretionary {-}{}{}fitness}
+    \subitem {genetic}, \hyperpage{45}
+  \item {individuo\_\discretionary {-}{}{}mutate}
+    \subitem {genetic}, \hyperpage{47}
+  \item {individuo\_\discretionary {-}{}{}procreate}
+    \subitem {genetic}, \hyperpage{47}
+  \item {individuo\_\discretionary {-}{}{}validate}
+    \subitem {genetic}, \hyperpage{47}
+  \item {individuos}
+    \subitem {\_\discretionary {-}{}{}population}, \hyperpage{67}
+  \item {init\_\discretionary {-}{}{}graphics}
+    \subitem {graphics.c}, \hyperpage{75}
+
+  \indexspace
+
+  \item {leer\_\discretionary {-}{}{}archivo}
+    \subitem {genetic}, \hyperpage{50}
+  \item {line}
+    \subitem {geometry}, \hyperpage{18}
+  \item {line.c}, \hyperpage{80}
+  \item {line.h}, \hyperpage{81}
+  \item {line\_\discretionary {-}{}{}equal}
+    \subitem {geometry}, \hyperpage{18}
+  \item {line\_\discretionary {-}{}{}intersection}
+    \subitem {geometry}, \hyperpage{19}
+  \item {line\_\discretionary {-}{}{}ispoint}
+    \subitem {geometry}, \hyperpage{21}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.c}, \hyperpage{82}
+  \item {main.c}, \hyperpage{82}
+    \subitem {main}, \hyperpage{82}
+
+  \indexspace
+
+  \item {ngenes}
+    \subitem {\_\discretionary {-}{}{}individuo}, \hyperpage{59}
+  \item {nholes}
+    \subitem {\_\discretionary {-}{}{}polygon\_\discretionary {-}{}{}holes}, 
+		\hyperpage{64}
+  \item {nhuecos}
+    \subitem {\_\discretionary {-}{}{}genesting}, \hyperpage{56}
+  \item {nindividuos}
+    \subitem {\_\discretionary {-}{}{}population}, \hyperpage{67}
+  \item {npatrones}
+    \subitem {\_\discretionary {-}{}{}genesting}, \hyperpage{56}
+  \item {nvertices}
+    \subitem {\_\discretionary {-}{}{}polygon}, \hyperpage{63}
+
+  \indexspace
+
+  \item {p}
+    \subitem {\_\discretionary {-}{}{}polygon\_\discretionary {-}{}{}holes}, 
+		\hyperpage{64}
+  \item {patrones}
+    \subitem {\_\discretionary {-}{}{}genesting}, \hyperpage{56}
+  \item {plantilla}
+    \subitem {\_\discretionary {-}{}{}genesting}, \hyperpage{56}
+  \item {point}
+    \subitem {geometry}, \hyperpage{18}
+  \item {point.c}, \hyperpage{85}
+  \item {point.h}, \hyperpage{86}
+  \item {point\_\discretionary {-}{}{}cross}
+    \subitem {geometry}, \hyperpage{21}
+  \item {point\_\discretionary {-}{}{}dot}
+    \subitem {geometry}, \hyperpage{22}
+  \item {polygon}
+    \subitem {geometry}, \hyperpage{18}
+  \item {polygon.c}, \hyperpage{87}
+  \item {polygon.h}, \hyperpage{88}
+  \item {polygon\_\discretionary {-}{}{}area}
+    \subitem {geometry}, \hyperpage{23}
+  \item {polygon\_\discretionary {-}{}{}center}
+    \subitem {geometry}, \hyperpage{23}
+  \item {polygon\_\discretionary {-}{}{}holes}
+    \subitem {geometry}, \hyperpage{18}
+  \item {polygon\_\discretionary {-}{}{}holes.c}, \hyperpage{90}
+  \item {polygon\_\discretionary {-}{}{}holes.h}, \hyperpage{91}
+  \item {polygon\_\discretionary {-}{}{}minbox}
+    \subitem {geometry}, \hyperpage{24}
+  \item {polygon\_\discretionary {-}{}{}overlapping}
+    \subitem {geometry}, \hyperpage{25}
+  \item {polygon\_\discretionary {-}{}{}pointin}
+    \subitem {geometry}, \hyperpage{27}
+  \item {polygon\_\discretionary {-}{}{}rotate}
+    \subitem {geometry}, \hyperpage{27}
+  \item {polygon\_\discretionary {-}{}{}translate}
+    \subitem {geometry}, \hyperpage{28}
+  \item {polygonholes\_\discretionary {-}{}{}area}
+    \subitem {geometry}, \hyperpage{29}
+  \item {polygonholes\_\discretionary {-}{}{}pointin}
+    \subitem {geometry}, \hyperpage{30}
+  \item {polygonholes\_\discretionary {-}{}{}pointinhole}
+    \subitem {geometry}, \hyperpage{31}
+  \item {polygonholes\_\discretionary {-}{}{}polygonin}
+    \subitem {geometry}, \hyperpage{32}
+  \item {polygonholes\_\discretionary {-}{}{}volumen}
+    \subitem {geometry}, \hyperpage{33}
+  \item {population}
+    \subitem {genetic}, \hyperpage{42}
+  \item {population.c}, \hyperpage{93}
+  \item {population.h}, \hyperpage{94}
+  \item {population\_\discretionary {-}{}{}create}
+    \subitem {genetic}, \hyperpage{51}
+  \item {population\_\discretionary {-}{}{}evaluate}
+    \subitem {genetic}, \hyperpage{52}
+  \item {population\_\discretionary {-}{}{}generation}
+    \subitem {genetic}, \hyperpage{52}
+  \item {posgen}
+    \subitem {\_\discretionary {-}{}{}individuo}, \hyperpage{59}
+  \item {posicion}
+    \subitem {genetic}, \hyperpage{42}
+
+  \indexspace
+
+  \item {relscreen}
+    \subitem {graphics.c}, \hyperpage{76}
+
+  \indexspace
+
+  \item {t}
+    \subitem {\_\discretionary {-}{}{}posicion}, \hyperpage{68}
+
+  \indexspace
+
+  \item {v}
+    \subitem {\_\discretionary {-}{}{}polygon}, \hyperpage{63}
+  \item {v1}
+    \subitem {\_\discretionary {-}{}{}line}, \hyperpage{60}
+  \item {v2}
+    \subitem {\_\discretionary {-}{}{}line}, \hyperpage{60}
+  \item {volumen}
+    \subitem {\_\discretionary {-}{}{}genesting}, \hyperpage{56}
+
+  \indexspace
+
+  \item {x}
+    \subitem {\_\discretionary {-}{}{}point}, \hyperpage{62}
+    \subitem {\_\discretionary {-}{}{}posicion}, \hyperpage{68}
+
+  \indexspace
+
+  \item {y}
+    \subitem {\_\discretionary {-}{}{}point}, \hyperpage{62}
+    \subitem {\_\discretionary {-}{}{}posicion}, \hyperpage{68}
+
+\end{theindex}

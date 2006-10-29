@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Genesting: distance_pointpolygonholes</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.4.7 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="modules.html"><span>Módulos</span></a></li>
+    <li><a href="classes.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+  </ul></div>
+<div class="nav">
+<a class="el" href="group__distance.html">Distancias</a></div>
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+   <td valign="top">
+      <div class="navtab">
+        <table>
+          <tr><td class="navtab"><a class="qindex" href="group__distance_g69a59a49134b784b0c8797e0e83e7c40.html#g69a59a49134b784b0c8797e0e83e7c40">distance_pointline</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__distance_g3b2b03f846e6b587be683ec8b853e774.html#g3b2b03f846e6b587be683ec8b853e774">distance_pointpoint</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5.html#g25716e8d1c8abaf08903bbcd08b8d6e5">distance_pointpolygon</a></td></tr>
+          <tr><td class="navtab"><a class="qindexHL" href="group__distance_gc837f0084791f42936ade857a0cce3af.html#gc837f0084791f42936ade857a0cce3af">distance_pointpolygonholes</a></td></tr>
+        </table>
+      </div>
+   </td>
+   <td valign="top">
+<a class="anchor" name="gc837f0084791f42936ade857a0cce3af"></a><!-- doxytag: member="distance.h::distance_pointpolygonholes" ref="gc837f0084791f42936ade857a0cce3af" args="(point *f, polygon_holes *p, line *ref)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float distance_pointpolygonholes           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__point.html">point</a> *&nbsp;</td>
+          <td class="paramname"> <em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct__polygon__holes.html">polygon_holes</a> *&nbsp;</td>
+          <td class="paramname"> <em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct__line.html">line</a> *&nbsp;</td>
+          <td class="paramname"> <em>ref</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+La funcion calcula la distancia entre un punto y un poligono con huecos, para esto calcula la distancia del punto con el borde del poligono y posteriormente con cada uno de los huecos de este, seleccionado la distancia minima <dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>f</em>&nbsp;</td><td>Punto en 2 dimensiones </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>p</em>&nbsp;</td><td>Poligono con huecos </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>ref</em>&nbsp;</td><td>Escribe en la memoria el segmento de recta que define la menor distancia entre el poligono y sus huecos con el punto, si la distancia fue tomada respecto a un punto extremo, entonces el segmento de recta es un punto, el extremo. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>La distancia entre un punto y un poligono con huecos </dd></dl>
+
+<p>
+Definición en la línea <a class="el" href="distance_8c-source.html#l00139">139</a> del archivo <a class="el" href="distance_8c-source.html">distance.c</a>.<div class="fragment"><pre class="fragment"><a name="l00140"></a>00140 {
+<a name="l00141"></a>00141     <span class="keywordtype">int</span> i;
+<a name="l00142"></a>00142     <span class="keywordtype">float</span> min;
+<a name="l00143"></a>00143 
+<a name="l00144"></a>00144     min = <a class="code" href="group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5.html#g25716e8d1c8abaf08903bbcd08b8d6e5">distance_pointpolygon</a>(f,p-&gt;<a class="code" href="struct__polygon__holes_90635c34b3613c8cf8cdda5bebe99638.html#90635c34b3613c8cf8cdda5bebe99638">p</a>,ref);
+<a name="l00145"></a>00145     <span class="keywordflow">for</span> (i=0;i&lt;p-&gt;<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a>;i++)
+<a name="l00146"></a>00146     {
+<a name="l00147"></a>00147         <span class="keywordtype">float</span> min2;
+<a name="l00148"></a>00148         <a class="code" href="struct__line.html">line</a> ref2;
+<a name="l00149"></a>00149         min2 = <a class="code" href="group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5.html#g25716e8d1c8abaf08903bbcd08b8d6e5">distance_pointpolygon</a>(f,&amp;(p-&gt;<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i]),&amp;ref2);
+<a name="l00150"></a>00150         <span class="keywordflow">if</span> (min2 &lt; min)
+<a name="l00151"></a>00151         {
+<a name="l00152"></a>00152             min = min2;
+<a name="l00153"></a>00153             <span class="keywordflow">if</span> (ref!=NULL)
+<a name="l00154"></a>00154             {
+<a name="l00155"></a>00155                 ref-&gt;<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a> = ref2.<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a>;
+<a name="l00156"></a>00156                 ref-&gt;<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a> = ref2.<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a>;
+<a name="l00157"></a>00157             }
+<a name="l00158"></a>00158         }
+<a name="l00159"></a>00159     }
+<a name="l00160"></a>00160     <span class="keywordflow">return</span> min;
+<a name="l00161"></a>00161 }
+</pre></div>
+<p>
+
+<p>
+Gráfico de llamadas para esta función:<p><center><img src="group__distance_gc837f0084791f42936ade857a0cce3af_gc837f0084791f42936ade857a0cce3af_cgraph.png" border="0" usemap="#group__distance_gc837f0084791f42936ade857a0cce3af_gc837f0084791f42936ade857a0cce3af_cgraph_map" alt=""></center>
+<map name="group__distance_gc837f0084791f42936ade857a0cce3af_gc837f0084791f42936ade857a0cce3af_cgraph_map">
+<area href="group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5.html#g25716e8d1c8abaf08903bbcd08b8d6e5" shape="rect" coords="240,5,395,32" alt="">
+</map>
+
+<p>
+Here is the caller graph for this function:<p><center><img src="group__distance_gc837f0084791f42936ade857a0cce3af_gc837f0084791f42936ade857a0cce3af_icgraph.png" border="0" usemap="#group__distance_gc837f0084791f42936ade857a0cce3af_gc837f0084791f42936ade857a0cce3af_icgraph_map" alt=""></center>
+<map name="group__distance_gc837f0084791f42936ade857a0cce3af_gc837f0084791f42936ade857a0cce3af_icgraph_map">
+<area href="group__geometry_g7cf8b3f8c76179bb936754bbbf510999.html#g7cf8b3f8c76179bb936754bbbf510999" shape="rect" coords="240,5,398,32" alt="">
+</map>
+
+</div>
+</div><p>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Generado el Sun Oct 29 11:20:03 2006 para Genesting por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
+</body>
+</html>

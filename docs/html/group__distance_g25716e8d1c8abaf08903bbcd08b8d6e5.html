@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Genesting: distance_pointpolygon</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.4.7 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="modules.html"><span>Módulos</span></a></li>
+    <li><a href="classes.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+  </ul></div>
+<div class="nav">
+<a class="el" href="group__distance.html">Distancias</a></div>
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+   <td valign="top">
+      <div class="navtab">
+        <table>
+          <tr><td class="navtab"><a class="qindex" href="group__distance_g69a59a49134b784b0c8797e0e83e7c40.html#g69a59a49134b784b0c8797e0e83e7c40">distance_pointline</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__distance_g3b2b03f846e6b587be683ec8b853e774.html#g3b2b03f846e6b587be683ec8b853e774">distance_pointpoint</a></td></tr>
+          <tr><td class="navtab"><a class="qindexHL" href="group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5.html#g25716e8d1c8abaf08903bbcd08b8d6e5">distance_pointpolygon</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__distance_gc837f0084791f42936ade857a0cce3af.html#gc837f0084791f42936ade857a0cce3af">distance_pointpolygonholes</a></td></tr>
+        </table>
+      </div>
+   </td>
+   <td valign="top">
+<a class="anchor" name="g25716e8d1c8abaf08903bbcd08b8d6e5"></a><!-- doxytag: member="distance.h::distance_pointpolygon" ref="g25716e8d1c8abaf08903bbcd08b8d6e5" args="(point *f, polygon *p, line *ref)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float distance_pointpolygon           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__point.html">point</a> *&nbsp;</td>
+          <td class="paramname"> <em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct__polygon.html">polygon</a> *&nbsp;</td>
+          <td class="paramname"> <em>p</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct__line.html">line</a> *&nbsp;</td>
+          <td class="paramname"> <em>ref</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+La funcion calcula la distancia entre un punto y el borde de un poligono simple, para esto calcula la distancia del punto contra todos los segmentos de linea que conforma el poligono y retorna la menor distancia, esta funcion no tiene consideracion si el punto esta adentro o afuera del poligono porque calcula la distancia al borde.<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>f</em>&nbsp;</td><td>Punto en 2 dimensiones </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>p</em>&nbsp;</td><td>Poligono simple </td></tr>
+    <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>ref</em>&nbsp;</td><td>Escribe en la memoria el segmento de recta que define la menor distancia entre el poligono y el punto, si la distancia fue tomada respecto a un punto extremo, entonces el segmento de recta es un punto, el extremo. </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>La distancia entre el punto y el poligono </dd></dl>
+
+<p>
+Definición en la línea <a class="el" href="distance_8c-source.html#l00087">87</a> del archivo <a class="el" href="distance_8c-source.html">distance.c</a>.<div class="fragment"><pre class="fragment"><a name="l00088"></a>00088 {
+<a name="l00089"></a>00089     <span class="keywordtype">int</span> seg,i;
+<a name="l00090"></a>00090     <span class="keywordtype">float</span> min=FLT_MAX;
+<a name="l00091"></a>00091 
+<a name="l00092"></a>00092     <span class="keywordflow">for</span> (i=0;i&lt;p-&gt;<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>;i++)
+<a name="l00093"></a>00093     {
+<a name="l00094"></a>00094         <span class="keywordtype">float</span> d;
+<a name="l00095"></a>00095         <a class="code" href="struct__line.html">line</a> l;
+<a name="l00096"></a>00096 
+<a name="l00097"></a>00097         l.<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a>=p-&gt;<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[i];
+<a name="l00098"></a>00098         l.<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a>=p-&gt;<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[(i+1)%(p-&gt;<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>)];
+<a name="l00099"></a>00099         d=<a class="code" href="group__distance_g69a59a49134b784b0c8797e0e83e7c40.html#g69a59a49134b784b0c8797e0e83e7c40">distance_pointline</a>(f,&amp;l,&amp;seg);
+<a name="l00100"></a>00100         <span class="keywordflow">if</span> (i==0 || min&gt;d)
+<a name="l00101"></a>00101         {
+<a name="l00102"></a>00102             min = d;
+<a name="l00103"></a>00103             <span class="keywordflow">if</span> (ref!=NULL)
+<a name="l00104"></a>00104             {
+<a name="l00105"></a>00105                 <span class="keywordflow">switch</span> (seg)
+<a name="l00106"></a>00106                 {
+<a name="l00107"></a>00107                     <span class="keywordflow">case</span> 0:
+<a name="l00108"></a>00108                     ref-&gt;<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a> = l.<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a>;
+<a name="l00109"></a>00109                     ref-&gt;<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a> = l.<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a>;
+<a name="l00110"></a>00110                     <span class="keywordflow">break</span>;
+<a name="l00111"></a>00111                     <span class="keywordflow">case</span> 1:
+<a name="l00112"></a>00112                     ref-&gt;<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a> = l.<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a>;
+<a name="l00113"></a>00113                     ref-&gt;<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a> = l.<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a>;
+<a name="l00114"></a>00114                     <span class="keywordflow">break</span>;
+<a name="l00115"></a>00115                     <span class="keywordflow">case</span> 2:
+<a name="l00116"></a>00116                     ref-&gt;<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a> = l.<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a>;
+<a name="l00117"></a>00117                     ref-&gt;<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a> = l.<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a>;
+<a name="l00118"></a>00118                     <span class="keywordflow">break</span>;
+<a name="l00119"></a>00119                 }
+<a name="l00120"></a>00120             }
+<a name="l00121"></a>00121         }
+<a name="l00122"></a>00122     }
+<a name="l00123"></a>00123     <span class="keywordflow">return</span> min;
+<a name="l00124"></a>00124 }
+</pre></div>
+<p>
+
+<p>
+Gráfico de llamadas para esta función:<p><center><img src="group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g25716e8d1c8abaf08903bbcd08b8d6e5_cgraph.png" border="0" usemap="#group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g25716e8d1c8abaf08903bbcd08b8d6e5_cgraph_map" alt=""></center>
+<map name="group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g25716e8d1c8abaf08903bbcd08b8d6e5_cgraph_map">
+<area href="group__distance_g69a59a49134b784b0c8797e0e83e7c40.html#g69a59a49134b784b0c8797e0e83e7c40" shape="rect" coords="208,5,336,32" alt="">
+</map>
+
+<p>
+Here is the caller graph for this function:<p><center><img src="group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g25716e8d1c8abaf08903bbcd08b8d6e5_icgraph.png" border="0" usemap="#group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g25716e8d1c8abaf08903bbcd08b8d6e5_icgraph_map" alt=""></center>
+<map name="group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g25716e8d1c8abaf08903bbcd08b8d6e5_icgraph_map">
+<area href="group__distance_gc837f0084791f42936ade857a0cce3af.html#gc837f0084791f42936ade857a0cce3af" shape="rect" coords="208,5,395,32" alt="">
+</map>
+
+</div>
+</div><p>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Generado el Sun Oct 29 11:20:02 2006 para Genesting por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
+</body>
+</html>

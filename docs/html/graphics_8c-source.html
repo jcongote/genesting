@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Genesting: Fichero Fuente graphics.c</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.4.7 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="modules.html"><span>Módulos</span></a></li>
+    <li><a href="classes.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+    <li><a href="globals.html"><span>Archivos&nbsp;de&nbsp;los&nbsp;miembros</span></a></li>
+  </ul></div>
+<h1>graphics.c</h1><a href="graphics_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#include &lt;allegro.h&gt;</span>
+<a name="l00002"></a>00002 
+<a name="l00003"></a>00003 <span class="preprocessor">#include "<a class="code" href="graphics_8h.html">graphics.h</a>"</span>
+<a name="l00004"></a>00004 
+<a name="l00005"></a>00005 
+<a name="l00006"></a><a class="code" href="graphics_8c_c792bc74222685f93edc651253c59ed0.html#c792bc74222685f93edc651253c59ed0">00006</a> <span class="keywordtype">void</span> <a class="code" href="graphics_8c_c792bc74222685f93edc651253c59ed0.html#c792bc74222685f93edc651253c59ed0">init_graphics</a>()
+<a name="l00007"></a>00007 {
+<a name="l00008"></a>00008 <span class="preprocessor">#if graphics</span>
+<a name="l00009"></a>00009 <span class="preprocessor"></span>    <span class="keywordtype">int</span> depth, res;
+<a name="l00010"></a>00010     allegro_init();
+<a name="l00011"></a>00011     depth = desktop_color_depth();
+<a name="l00012"></a>00012     <span class="keywordflow">if</span> (depth == 0)
+<a name="l00013"></a>00013         depth = 32;
+<a name="l00014"></a>00014     set_color_depth(depth);
+<a name="l00015"></a>00015     res = set_gfx_mode(GFX_AUTODETECT_WINDOWED, 640, 480, 0, 0);
+<a name="l00016"></a>00016     <span class="keywordflow">if</span> (res != 0)
+<a name="l00017"></a>00017     {
+<a name="l00018"></a>00018         allegro_message(allegro_error);
+<a name="l00019"></a>00019         exit(-1);
+<a name="l00020"></a>00020     }
+<a name="l00021"></a>00021 
+<a name="l00022"></a>00022     install_timer();
+<a name="l00023"></a>00023     <span class="comment">//install_keyboard();</span>
+<a name="l00024"></a>00024     <span class="comment">//install_mouse();</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#endif</span>
+<a name="l00026"></a>00026 <span class="preprocessor"></span>}
+<a name="l00027"></a>00027 
+<a name="l00028"></a><a class="code" href="graphics_8c_e3919e2797a81eb7088a6b6f6b33bea7.html#e3919e2797a81eb7088a6b6f6b33bea7">00028</a> <span class="keywordtype">void</span> <a class="code" href="graphics_8c_e3919e2797a81eb7088a6b6f6b33bea7.html#e3919e2797a81eb7088a6b6f6b33bea7">draw_rect</a>(<span class="keywordtype">float</span> minx, <span class="keywordtype">float</span> miny, <span class="keywordtype">float</span> maxx, <span class="keywordtype">float</span> maxy,<span class="keywordtype">int</span> r, <span class="keywordtype">int</span> g, <span class="keywordtype">int</span> b){
+<a name="l00029"></a>00029 <span class="preprocessor">#if graphics</span>
+<a name="l00030"></a>00030 <span class="preprocessor"></span><span class="comment">//    rect(screen, (int)minx, (int)miny, (int) maxx, (int) maxy, makecol(r,g,b));</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#endif</span>
+<a name="l00032"></a>00032 <span class="preprocessor"></span>}
+<a name="l00033"></a>00033 
+<a name="l00034"></a><a class="code" href="graphics_8c_a4f2f5f853228f62323d3c4d81c34a13.html#a4f2f5f853228f62323d3c4d81c34a13">00034</a> <span class="keywordtype">void</span> <a class="code" href="graphics_8c_a4f2f5f853228f62323d3c4d81c34a13.html#a4f2f5f853228f62323d3c4d81c34a13">draw_line</a>(<span class="keywordtype">float</span> x1, <span class="keywordtype">float</span> y1, <span class="keywordtype">float</span> x2, <span class="keywordtype">float</span> y2){
+<a name="l00035"></a>00035 <span class="preprocessor">#if graphics</span>
+<a name="l00036"></a>00036 <span class="preprocessor"></span>    <a class="code" href="group__geometry_gbb4d6a1464226fe9b7c0d80348e5eb98.html#gbb4d6a1464226fe9b7c0d80348e5eb98">line</a>(screen,(<span class="keywordtype">int</span>)x1,(<span class="keywordtype">int</span>)y1,(<span class="keywordtype">int</span>)x2,(<span class="keywordtype">int</span>)y2,makecol(255,0,0));
+<a name="l00037"></a>00037 <span class="preprocessor">#endif</span>
+<a name="l00038"></a>00038 <span class="preprocessor"></span>}
+<a name="l00039"></a>00039 
+<a name="l00040"></a><a class="code" href="graphics_8c_9a7e11a2a03b0db3ab57985098c3f8fe.html#9a7e11a2a03b0db3ab57985098c3f8fe">00040</a> <span class="keywordtype">void</span> <a class="code" href="graphics_8c_9a7e11a2a03b0db3ab57985098c3f8fe.html#9a7e11a2a03b0db3ab57985098c3f8fe">getscreen</a>(){
+<a name="l00041"></a>00041 <span class="preprocessor">#if graphics</span>
+<a name="l00042"></a>00042 <span class="preprocessor"></span>     acquire_screen();
+<a name="l00043"></a>00043 <span class="preprocessor">#endif</span>
+<a name="l00044"></a>00044 <span class="preprocessor"></span>}
+<a name="l00045"></a>00045 
+<a name="l00046"></a><a class="code" href="graphics_8c_7a2327678651d3939af5eec9503333e8.html#7a2327678651d3939af5eec9503333e8">00046</a> <span class="keywordtype">void</span> <a class="code" href="graphics_8c_7a2327678651d3939af5eec9503333e8.html#7a2327678651d3939af5eec9503333e8">relscreen</a>(){
+<a name="l00047"></a>00047 <span class="preprocessor">#if graphics</span>
+<a name="l00048"></a>00048 <span class="preprocessor"></span>    release_screen();
+<a name="l00049"></a>00049 <span class="preprocessor">#endif</span>
+<a name="l00050"></a>00050 <span class="preprocessor"></span>}
+<a name="l00051"></a>00051 
+<a name="l00052"></a><a class="code" href="graphics_8c_ff4bc17c602603d120756f52e18ebb96.html#ff4bc17c602603d120756f52e18ebb96">00052</a> <span class="keywordtype">void</span> <a class="code" href="graphics_8c_ff4bc17c602603d120756f52e18ebb96.html#ff4bc17c602603d120756f52e18ebb96">clearscreen</a>(){
+<a name="l00053"></a>00053 <span class="preprocessor">#if graphics</span>
+<a name="l00054"></a>00054 <span class="preprocessor"></span>clear_bitmap(screen);
+<a name="l00055"></a>00055 <span class="preprocessor">#endif</span>
+<a name="l00056"></a>00056 <span class="preprocessor"></span>}
+<a name="l00057"></a>00057 
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Sun Oct 29 11:19:29 2006 para Genesting por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Genesting: main</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.4.7 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="modules.html"><span>Módulos</span></a></li>
+    <li><a href="classes.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+  </ul></div>
+<div class="nav">
+<a class="el" href="main_8c.html">main.c</a></div>
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+   <td valign="top">
+      <div class="navtab">
+        <table>
+          <tr><td class="navtab"><a class="qindexHL" href="main_8c_3c04138a5bfe5d72780bb7e82a18e627.html#3c04138a5bfe5d72780bb7e82a18e627">main</a></td></tr>
+        </table>
+      </div>
+   </td>
+   <td valign="top">
+<a class="anchor" name="3c04138a5bfe5d72780bb7e82a18e627"></a><!-- doxytag: member="main.c::main" ref="3c04138a5bfe5d72780bb7e82a18e627" args="(int argc, char **argv)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&nbsp;</td>
+          <td class="paramname"> <em>argv</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+
+<p>
+Definición en la línea <a class="el" href="main_8c-source.html#l00082">82</a> del archivo <a class="el" href="main_8c-source.html">main.c</a>.<div class="fragment"><pre class="fragment"><a name="l00083"></a>00083 {
+<a name="l00084"></a>00084     <a class="code" href="struct__genesting.html">genesting</a> *g;
+<a name="l00085"></a>00085     <a class="code" href="struct__population.html">population</a> *p;
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087 <span class="preprocessor">#if graphics</span>
+<a name="l00088"></a>00088 <span class="preprocessor"></span>
+<a name="l00089"></a>00089     <a class="code" href="graphics_8c_c792bc74222685f93edc651253c59ed0.html#c792bc74222685f93edc651253c59ed0">init_graphics</a>();
+<a name="l00090"></a>00090 <span class="preprocessor">#endif</span>
+<a name="l00091"></a>00091 <span class="preprocessor"></span>
+<a name="l00092"></a>00092     <span class="keywordflow">if</span> (argc&lt;2)
+<a name="l00093"></a>00093     {
+<a name="l00094"></a>00094         fprintf(stderr,<span class="stringliteral">"Se deben entrar ingresar el nombre del archivo a leer\n"</span>);
+<a name="l00095"></a>00095         <span class="keywordflow">return</span> 1;
+<a name="l00096"></a>00096     }
+<a name="l00097"></a>00097 
+<a name="l00098"></a>00098     g=<a class="code" href="group__genetic_g6fed4910dd1f6172bb5a4e35a97bbe56.html#g6fed4910dd1f6172bb5a4e35a97bbe56">leer_archivo</a>(argv[1]);
+<a name="l00099"></a>00099     p=(<a class="code" href="struct__population.html">population</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct__population.html">population</a>));
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101     srand((<span class="keywordtype">int</span>)p);
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103     <a class="code" href="group__genetic_g1daa6a4e8af34b8b16a48fc2f3701f1c.html#g1daa6a4e8af34b8b16a48fc2f3701f1c">genesting_init</a>(g);
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105     <a class="code" href="group__genetic_g3f63f4034274d731cb3fdf3200c64d41.html#g3f63f4034274d731cb3fdf3200c64d41">genesting_show</a>(g);
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107     <a class="code" href="group__genetic_gc7ba874876f18abab66f0a42f32b98cc.html#gc7ba874876f18abab66f0a42f32b98cc">population_create</a>(p,g, 200);
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109     <span class="keywordtype">int</span> i,k;
+<a name="l00110"></a>00110     <span class="keywordflow">for</span> (k=0;k&lt;30;k++)
+<a name="l00111"></a>00111     {
+<a name="l00112"></a>00112         printf(<span class="stringliteral">"Iteracion: %i\n"</span>,k);
+<a name="l00113"></a>00113 
+<a name="l00114"></a>00114         <span class="comment">/*</span>
+<a name="l00115"></a>00115 <span class="comment">        for (i=0;i&lt;5;i++)</span>
+<a name="l00116"></a>00116 <span class="comment">        {</span>
+<a name="l00117"></a>00117 <span class="comment">            printf("Individuo %i: [%i] \n",i,p-&gt;individuos[i].ngenes);</span>
+<a name="l00118"></a>00118 <span class="comment">            for (j=0;j&lt;p-&gt;individuos[i].ngenes;j++)</span>
+<a name="l00119"></a>00119 <span class="comment">            {</span>
+<a name="l00120"></a>00120 <span class="comment">                printf("Pat[%i] x[%f] y[%f] t[%f]\n",</span>
+<a name="l00121"></a>00121 <span class="comment">                       p-&gt;individuos[i].posgen[j].id,</span>
+<a name="l00122"></a>00122 <span class="comment">                       p-&gt;individuos[i].posgen[j].x,</span>
+<a name="l00123"></a>00123 <span class="comment">                       p-&gt;individuos[i].posgen[j].y,</span>
+<a name="l00124"></a>00124 <span class="comment">                       p-&gt;individuos[i].posgen[j].t);</span>
+<a name="l00125"></a>00125 <span class="comment">            }</span>
+<a name="l00126"></a>00126 <span class="comment">        }</span>
+<a name="l00127"></a>00127 <span class="comment">        */</span>
+<a name="l00128"></a>00128         <a class="code" href="group__genetic_g229293c432c5ef4f70b1ee94c109bb1a.html#g229293c432c5ef4f70b1ee94c109bb1a">population_evaluate</a>(p);
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130         <span class="keywordflow">for</span> (i=0;i&lt;10;i++)
+<a name="l00131"></a>00131         {
+<a name="l00132"></a>00132             printf(<span class="stringliteral">"Individuo %i: [%i] fitness: %f areautil: %f\n"</span>,i,p-&gt;<a class="code" href="struct__population_3c05b6054f79c3c7993559e3148752a9.html#3c05b6054f79c3c7993559e3148752a9">individuos</a>[i].<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>,p-&gt;<a class="code" href="struct__population_3c05b6054f79c3c7993559e3148752a9.html#3c05b6054f79c3c7993559e3148752a9">individuos</a>[i].<a class="code" href="struct__individuo_afa717374da03fa5ef2c5ac8c08e1daa.html#afa717374da03fa5ef2c5ac8c08e1daa">fitness</a>,p-&gt;<a class="code" href="struct__population_3c05b6054f79c3c7993559e3148752a9.html#3c05b6054f79c3c7993559e3148752a9">individuos</a>[i].<a class="code" href="struct__individuo_81afc3d6d6f5394611dcd09a418ee828.html#81afc3d6d6f5394611dcd09a418ee828">areautil</a>);
+<a name="l00133"></a>00133             <span class="comment">/*</span>
+<a name="l00134"></a>00134 <span class="comment">                        for (j=0;j&lt;p-&gt;individuos[i].ngenes;j++)</span>
+<a name="l00135"></a>00135 <span class="comment">                        {</span>
+<a name="l00136"></a>00136 <span class="comment">                            printf("Pat[%i] x[%f] y[%f] t[%f]\n",</span>
+<a name="l00137"></a>00137 <span class="comment">                                   p-&gt;individuos[i].posgen[j].id,</span>
+<a name="l00138"></a>00138 <span class="comment">                                   p-&gt;individuos[i].posgen[j].x,</span>
+<a name="l00139"></a>00139 <span class="comment">                                   p-&gt;individuos[i].posgen[j].y,</span>
+<a name="l00140"></a>00140 <span class="comment">                                   p-&gt;individuos[i].posgen[j].t);</span>
+<a name="l00141"></a>00141 <span class="comment">                        }</span>
+<a name="l00142"></a>00142 <span class="comment">            */</span>
+<a name="l00143"></a>00143         }
+<a name="l00144"></a>00144 
+<a name="l00145"></a>00145         <a class="code" href="group__genetic_g5b3202f02e14d7fb3eb1f729d1250243.html#g5b3202f02e14d7fb3eb1f729d1250243">population_generation</a>(p);
+<a name="l00146"></a>00146     }
+<a name="l00147"></a>00147     free(p);
+<a name="l00148"></a>00148 
+<a name="l00149"></a>00149     <span class="keywordflow">return</span> 0;
+<a name="l00150"></a>00150 }
+</pre></div>
+<p>
+
+<p>
+Gráfico de llamadas para esta función:<p><center><img src="main_8c_3c04138a5bfe5d72780bb7e82a18e627_3c04138a5bfe5d72780bb7e82a18e627_cgraph.png" border="0" usemap="#main_8c_3c04138a5bfe5d72780bb7e82a18e627_3c04138a5bfe5d72780bb7e82a18e627_cgraph_map" alt=""></center>
+<map name="main_8c_3c04138a5bfe5d72780bb7e82a18e627_3c04138a5bfe5d72780bb7e82a18e627_cgraph_map">
+<area href="group__genetic_g1daa6a4e8af34b8b16a48fc2f3701f1c.html#g1daa6a4e8af34b8b16a48fc2f3701f1c" shape="rect" coords="129,5,233,32" alt="">
+<area href="group__genetic_g3f63f4034274d731cb3fdf3200c64d41.html#g3f63f4034274d731cb3fdf3200c64d41" shape="rect" coords="123,56,240,83" alt="">
+<area href="graphics_8c_c792bc74222685f93edc651253c59ed0.html#c792bc74222685f93edc651253c59ed0" shape="rect" coords="133,107,229,133" alt="">
+<area href="group__genetic_g6fed4910dd1f6172bb5a4e35a97bbe56.html#g6fed4910dd1f6172bb5a4e35a97bbe56" shape="rect" coords="135,157,228,184" alt="">
+<area href="group__genetic_gc7ba874876f18abab66f0a42f32b98cc.html#gc7ba874876f18abab66f0a42f32b98cc" shape="rect" coords="117,208,245,235" alt="">
+<area href="group__genetic_g229293c432c5ef4f70b1ee94c109bb1a.html#g229293c432c5ef4f70b1ee94c109bb1a" shape="rect" coords="111,259,252,285" alt="">
+<area href="group__genetic_g5b3202f02e14d7fb3eb1f729d1250243.html#g5b3202f02e14d7fb3eb1f729d1250243" shape="rect" coords="105,309,257,336" alt="">
+</map>
+
+</div>
+</div><p>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Generado el Sun Oct 29 11:19:49 2006 para Genesting por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
+</body>
+</html>

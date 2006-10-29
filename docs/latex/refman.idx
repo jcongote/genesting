@@ -1,0 +1,186 @@
+\indexentry{Distancias@{Distancias}|hyperpage}{11}
+\indexentry{distance@{distance}!distance_pointline@{distance\_\discretionary {-}{}{}pointline}|hyperpage}{12}
+\indexentry{distance_pointline@{distance\_\discretionary {-}{}{}pointline}!distance@{distance}|hyperpage}{12}
+\indexentry{distance@{distance}!distance_pointpoint@{distance\_\discretionary {-}{}{}pointpoint}|hyperpage}{13}
+\indexentry{distance_pointpoint@{distance\_\discretionary {-}{}{}pointpoint}!distance@{distance}|hyperpage}{13}
+\indexentry{distance@{distance}!distance_pointpolygon@{distance\_\discretionary {-}{}{}pointpolygon}|hyperpage}{13}
+\indexentry{distance_pointpolygon@{distance\_\discretionary {-}{}{}pointpolygon}!distance@{distance}|hyperpage}{13}
+\indexentry{distance@{distance}!distance_pointpolygonholes@{distance\_\discretionary {-}{}{}pointpolygonholes}|hyperpage}{15}
+\indexentry{distance_pointpolygonholes@{distance\_\discretionary {-}{}{}pointpolygonholes}!distance@{distance}|hyperpage}{15}
+\indexentry{Geometria@{Geometria}|hyperpage}{17}
+\indexentry{geometry@{geometry}!line@{line}|hyperpage}{18}
+\indexentry{line@{line}!geometry@{geometry}|hyperpage}{18}
+\indexentry{geometry@{geometry}!point@{point}|hyperpage}{18}
+\indexentry{point@{point}!geometry@{geometry}|hyperpage}{18}
+\indexentry{geometry@{geometry}!polygon@{polygon}|hyperpage}{18}
+\indexentry{polygon@{polygon}!geometry@{geometry}|hyperpage}{18}
+\indexentry{geometry@{geometry}!polygon_holes@{polygon\_\discretionary {-}{}{}holes}|hyperpage}{18}
+\indexentry{polygon_holes@{polygon\_\discretionary {-}{}{}holes}!geometry@{geometry}|hyperpage}{18}
+\indexentry{geometry@{geometry}!line_equal@{line\_\discretionary {-}{}{}equal}|hyperpage}{18}
+\indexentry{line_equal@{line\_\discretionary {-}{}{}equal}!geometry@{geometry}|hyperpage}{18}
+\indexentry{geometry@{geometry}!line_intersection@{line\_\discretionary {-}{}{}intersection}|hyperpage}{19}
+\indexentry{line_intersection@{line\_\discretionary {-}{}{}intersection}!geometry@{geometry}|hyperpage}{19}
+\indexentry{geometry@{geometry}!line_ispoint@{line\_\discretionary {-}{}{}ispoint}|hyperpage}{21}
+\indexentry{line_ispoint@{line\_\discretionary {-}{}{}ispoint}!geometry@{geometry}|hyperpage}{21}
+\indexentry{geometry@{geometry}!point_cross@{point\_\discretionary {-}{}{}cross}|hyperpage}{21}
+\indexentry{point_cross@{point\_\discretionary {-}{}{}cross}!geometry@{geometry}|hyperpage}{21}
+\indexentry{geometry@{geometry}!point_dot@{point\_\discretionary {-}{}{}dot}|hyperpage}{22}
+\indexentry{point_dot@{point\_\discretionary {-}{}{}dot}!geometry@{geometry}|hyperpage}{22}
+\indexentry{geometry@{geometry}!polygon_area@{polygon\_\discretionary {-}{}{}area}|hyperpage}{23}
+\indexentry{polygon_area@{polygon\_\discretionary {-}{}{}area}!geometry@{geometry}|hyperpage}{23}
+\indexentry{geometry@{geometry}!polygon_center@{polygon\_\discretionary {-}{}{}center}|hyperpage}{23}
+\indexentry{polygon_center@{polygon\_\discretionary {-}{}{}center}!geometry@{geometry}|hyperpage}{23}
+\indexentry{geometry@{geometry}!polygon_minbox@{polygon\_\discretionary {-}{}{}minbox}|hyperpage}{24}
+\indexentry{polygon_minbox@{polygon\_\discretionary {-}{}{}minbox}!geometry@{geometry}|hyperpage}{24}
+\indexentry{geometry@{geometry}!polygon_overlapping@{polygon\_\discretionary {-}{}{}overlapping}|hyperpage}{25}
+\indexentry{polygon_overlapping@{polygon\_\discretionary {-}{}{}overlapping}!geometry@{geometry}|hyperpage}{25}
+\indexentry{geometry@{geometry}!polygon_pointin@{polygon\_\discretionary {-}{}{}pointin}|hyperpage}{27}
+\indexentry{polygon_pointin@{polygon\_\discretionary {-}{}{}pointin}!geometry@{geometry}|hyperpage}{27}
+\indexentry{geometry@{geometry}!polygon_rotate@{polygon\_\discretionary {-}{}{}rotate}|hyperpage}{27}
+\indexentry{polygon_rotate@{polygon\_\discretionary {-}{}{}rotate}!geometry@{geometry}|hyperpage}{27}
+\indexentry{geometry@{geometry}!polygon_translate@{polygon\_\discretionary {-}{}{}translate}|hyperpage}{28}
+\indexentry{polygon_translate@{polygon\_\discretionary {-}{}{}translate}!geometry@{geometry}|hyperpage}{28}
+\indexentry{geometry@{geometry}!polygonholes_area@{polygonholes\_\discretionary {-}{}{}area}|hyperpage}{29}
+\indexentry{polygonholes_area@{polygonholes\_\discretionary {-}{}{}area}!geometry@{geometry}|hyperpage}{29}
+\indexentry{geometry@{geometry}!polygonholes_pointin@{polygonholes\_\discretionary {-}{}{}pointin}|hyperpage}{30}
+\indexentry{polygonholes_pointin@{polygonholes\_\discretionary {-}{}{}pointin}!geometry@{geometry}|hyperpage}{30}
+\indexentry{geometry@{geometry}!polygonholes_pointinhole@{polygonholes\_\discretionary {-}{}{}pointinhole}|hyperpage}{31}
+\indexentry{polygonholes_pointinhole@{polygonholes\_\discretionary {-}{}{}pointinhole}!geometry@{geometry}|hyperpage}{31}
+\indexentry{geometry@{geometry}!polygonholes_polygonin@{polygonholes\_\discretionary {-}{}{}polygonin}|hyperpage}{32}
+\indexentry{polygonholes_polygonin@{polygonholes\_\discretionary {-}{}{}polygonin}!geometry@{geometry}|hyperpage}{32}
+\indexentry{geometry@{geometry}!polygonholes_volumen@{polygonholes\_\discretionary {-}{}{}volumen}|hyperpage}{33}
+\indexentry{polygonholes_volumen@{polygonholes\_\discretionary {-}{}{}volumen}!geometry@{geometry}|hyperpage}{33}
+\indexentry{Genetico@{Genetico}|hyperpage}{41}
+\indexentry{genetic@{genetic}!genesting@{genesting}|hyperpage}{42}
+\indexentry{genesting@{genesting}!genetic@{genetic}|hyperpage}{42}
+\indexentry{genetic@{genetic}!individuo@{individuo}|hyperpage}{42}
+\indexentry{individuo@{individuo}!genetic@{genetic}|hyperpage}{42}
+\indexentry{genetic@{genetic}!population@{population}|hyperpage}{42}
+\indexentry{population@{population}!genetic@{genetic}|hyperpage}{42}
+\indexentry{genetic@{genetic}!posicion@{posicion}|hyperpage}{42}
+\indexentry{posicion@{posicion}!genetic@{genetic}|hyperpage}{42}
+\indexentry{genetic@{genetic}!comparar_individuos@{comparar\_\discretionary {-}{}{}individuos}|hyperpage}{42}
+\indexentry{comparar_individuos@{comparar\_\discretionary {-}{}{}individuos}!genetic@{genetic}|hyperpage}{42}
+\indexentry{genetic@{genetic}!genesting_init@{genesting\_\discretionary {-}{}{}init}|hyperpage}{42}
+\indexentry{genesting_init@{genesting\_\discretionary {-}{}{}init}!genetic@{genetic}|hyperpage}{42}
+\indexentry{genetic@{genetic}!genesting_show@{genesting\_\discretionary {-}{}{}show}|hyperpage}{43}
+\indexentry{genesting_show@{genesting\_\discretionary {-}{}{}show}!genetic@{genetic}|hyperpage}{43}
+\indexentry{genetic@{genetic}!individuo_create@{individuo\_\discretionary {-}{}{}create}|hyperpage}{44}
+\indexentry{individuo_create@{individuo\_\discretionary {-}{}{}create}!genetic@{genetic}|hyperpage}{44}
+\indexentry{genetic@{genetic}!individuo_fitness@{individuo\_\discretionary {-}{}{}fitness}|hyperpage}{45}
+\indexentry{individuo_fitness@{individuo\_\discretionary {-}{}{}fitness}!genetic@{genetic}|hyperpage}{45}
+\indexentry{genetic@{genetic}!individuo_mutate@{individuo\_\discretionary {-}{}{}mutate}|hyperpage}{47}
+\indexentry{individuo_mutate@{individuo\_\discretionary {-}{}{}mutate}!genetic@{genetic}|hyperpage}{47}
+\indexentry{genetic@{genetic}!individuo_procreate@{individuo\_\discretionary {-}{}{}procreate}|hyperpage}{47}
+\indexentry{individuo_procreate@{individuo\_\discretionary {-}{}{}procreate}!genetic@{genetic}|hyperpage}{47}
+\indexentry{genetic@{genetic}!individuo_validate@{individuo\_\discretionary {-}{}{}validate}|hyperpage}{47}
+\indexentry{individuo_validate@{individuo\_\discretionary {-}{}{}validate}!genetic@{genetic}|hyperpage}{47}
+\indexentry{genetic@{genetic}!leer_archivo@{leer\_\discretionary {-}{}{}archivo}|hyperpage}{50}
+\indexentry{leer_archivo@{leer\_\discretionary {-}{}{}archivo}!genetic@{genetic}|hyperpage}{50}
+\indexentry{genetic@{genetic}!population_create@{population\_\discretionary {-}{}{}create}|hyperpage}{51}
+\indexentry{population_create@{population\_\discretionary {-}{}{}create}!genetic@{genetic}|hyperpage}{51}
+\indexentry{genetic@{genetic}!population_evaluate@{population\_\discretionary {-}{}{}evaluate}|hyperpage}{52}
+\indexentry{population_evaluate@{population\_\discretionary {-}{}{}evaluate}!genetic@{genetic}|hyperpage}{52}
+\indexentry{genetic@{genetic}!population_generation@{population\_\discretionary {-}{}{}generation}|hyperpage}{52}
+\indexentry{population_generation@{population\_\discretionary {-}{}{}generation}!genetic@{genetic}|hyperpage}{52}
+\indexentry{_genesting@{\_\discretionary {-}{}{}genesting}|hyperpage}{55}
+\indexentry{_genesting@{\_\discretionary {-}{}{}genesting}!area@{area}|hyperpage}{56}
+\indexentry{area@{area}!_genesting@{\_\discretionary {-}{}{}genesting}|hyperpage}{56}
+\indexentry{_genesting@{\_\discretionary {-}{}{}genesting}!huecos@{huecos}|hyperpage}{56}
+\indexentry{huecos@{huecos}!_genesting@{\_\discretionary {-}{}{}genesting}|hyperpage}{56}
+\indexentry{_genesting@{\_\discretionary {-}{}{}genesting}!nhuecos@{nhuecos}|hyperpage}{56}
+\indexentry{nhuecos@{nhuecos}!_genesting@{\_\discretionary {-}{}{}genesting}|hyperpage}{56}
+\indexentry{_genesting@{\_\discretionary {-}{}{}genesting}!npatrones@{npatrones}|hyperpage}{56}
+\indexentry{npatrones@{npatrones}!_genesting@{\_\discretionary {-}{}{}genesting}|hyperpage}{56}
+\indexentry{_genesting@{\_\discretionary {-}{}{}genesting}!patrones@{patrones}|hyperpage}{56}
+\indexentry{patrones@{patrones}!_genesting@{\_\discretionary {-}{}{}genesting}|hyperpage}{56}
+\indexentry{_genesting@{\_\discretionary {-}{}{}genesting}!plantilla@{plantilla}|hyperpage}{56}
+\indexentry{plantilla@{plantilla}!_genesting@{\_\discretionary {-}{}{}genesting}|hyperpage}{56}
+\indexentry{_genesting@{\_\discretionary {-}{}{}genesting}!volumen@{volumen}|hyperpage}{56}
+\indexentry{volumen@{volumen}!_genesting@{\_\discretionary {-}{}{}genesting}|hyperpage}{56}
+\indexentry{_individuo@{\_\discretionary {-}{}{}individuo}|hyperpage}{58}
+\indexentry{_individuo@{\_\discretionary {-}{}{}individuo}!ambiente@{ambiente}|hyperpage}{58}
+\indexentry{ambiente@{ambiente}!_individuo@{\_\discretionary {-}{}{}individuo}|hyperpage}{58}
+\indexentry{_individuo@{\_\discretionary {-}{}{}individuo}!areautil@{areautil}|hyperpage}{58}
+\indexentry{areautil@{areautil}!_individuo@{\_\discretionary {-}{}{}individuo}|hyperpage}{58}
+\indexentry{_individuo@{\_\discretionary {-}{}{}individuo}!fitness@{fitness}|hyperpage}{59}
+\indexentry{fitness@{fitness}!_individuo@{\_\discretionary {-}{}{}individuo}|hyperpage}{59}
+\indexentry{_individuo@{\_\discretionary {-}{}{}individuo}!ngenes@{ngenes}|hyperpage}{59}
+\indexentry{ngenes@{ngenes}!_individuo@{\_\discretionary {-}{}{}individuo}|hyperpage}{59}
+\indexentry{_individuo@{\_\discretionary {-}{}{}individuo}!posgen@{posgen}|hyperpage}{59}
+\indexentry{posgen@{posgen}!_individuo@{\_\discretionary {-}{}{}individuo}|hyperpage}{59}
+\indexentry{_line@{\_\discretionary {-}{}{}line}|hyperpage}{60}
+\indexentry{_line@{\_\discretionary {-}{}{}line}!v1@{v1}|hyperpage}{60}
+\indexentry{v1@{v1}!_line@{\_\discretionary {-}{}{}line}|hyperpage}{60}
+\indexentry{_line@{\_\discretionary {-}{}{}line}!v2@{v2}|hyperpage}{60}
+\indexentry{v2@{v2}!_line@{\_\discretionary {-}{}{}line}|hyperpage}{60}
+\indexentry{_point@{\_\discretionary {-}{}{}point}|hyperpage}{62}
+\indexentry{_point@{\_\discretionary {-}{}{}point}!x@{x}|hyperpage}{62}
+\indexentry{x@{x}!_point@{\_\discretionary {-}{}{}point}|hyperpage}{62}
+\indexentry{_point@{\_\discretionary {-}{}{}point}!y@{y}|hyperpage}{62}
+\indexentry{y@{y}!_point@{\_\discretionary {-}{}{}point}|hyperpage}{62}
+\indexentry{_polygon@{\_\discretionary {-}{}{}polygon}|hyperpage}{63}
+\indexentry{_polygon@{\_\discretionary {-}{}{}polygon}!nvertices@{nvertices}|hyperpage}{63}
+\indexentry{nvertices@{nvertices}!_polygon@{\_\discretionary {-}{}{}polygon}|hyperpage}{63}
+\indexentry{_polygon@{\_\discretionary {-}{}{}polygon}!v@{v}|hyperpage}{63}
+\indexentry{v@{v}!_polygon@{\_\discretionary {-}{}{}polygon}|hyperpage}{63}
+\indexentry{_polygon_holes@{\_\discretionary {-}{}{}polygon\_\discretionary {-}{}{}holes}|hyperpage}{64}
+\indexentry{_polygon_holes@{\_\discretionary {-}{}{}polygon\_\discretionary {-}{}{}holes}!h@{h}|hyperpage}{64}
+\indexentry{h@{h}!_polygon_holes@{\_\discretionary {-}{}{}polygon\_\discretionary {-}{}{}holes}|hyperpage}{64}
+\indexentry{_polygon_holes@{\_\discretionary {-}{}{}polygon\_\discretionary {-}{}{}holes}!nholes@{nholes}|hyperpage}{64}
+\indexentry{nholes@{nholes}!_polygon_holes@{\_\discretionary {-}{}{}polygon\_\discretionary {-}{}{}holes}|hyperpage}{64}
+\indexentry{_polygon_holes@{\_\discretionary {-}{}{}polygon\_\discretionary {-}{}{}holes}!p@{p}|hyperpage}{64}
+\indexentry{p@{p}!_polygon_holes@{\_\discretionary {-}{}{}polygon\_\discretionary {-}{}{}holes}|hyperpage}{64}
+\indexentry{_population@{\_\discretionary {-}{}{}population}|hyperpage}{66}
+\indexentry{_population@{\_\discretionary {-}{}{}population}!ambiente@{ambiente}|hyperpage}{67}
+\indexentry{ambiente@{ambiente}!_population@{\_\discretionary {-}{}{}population}|hyperpage}{67}
+\indexentry{_population@{\_\discretionary {-}{}{}population}!individuos@{individuos}|hyperpage}{67}
+\indexentry{individuos@{individuos}!_population@{\_\discretionary {-}{}{}population}|hyperpage}{67}
+\indexentry{_population@{\_\discretionary {-}{}{}population}!nindividuos@{nindividuos}|hyperpage}{67}
+\indexentry{nindividuos@{nindividuos}!_population@{\_\discretionary {-}{}{}population}|hyperpage}{67}
+\indexentry{_posicion@{\_\discretionary {-}{}{}posicion}|hyperpage}{68}
+\indexentry{_posicion@{\_\discretionary {-}{}{}posicion}!id@{id}|hyperpage}{68}
+\indexentry{id@{id}!_posicion@{\_\discretionary {-}{}{}posicion}|hyperpage}{68}
+\indexentry{_posicion@{\_\discretionary {-}{}{}posicion}!t@{t}|hyperpage}{68}
+\indexentry{t@{t}!_posicion@{\_\discretionary {-}{}{}posicion}|hyperpage}{68}
+\indexentry{_posicion@{\_\discretionary {-}{}{}posicion}!x@{x}|hyperpage}{68}
+\indexentry{x@{x}!_posicion@{\_\discretionary {-}{}{}posicion}|hyperpage}{68}
+\indexentry{_posicion@{\_\discretionary {-}{}{}posicion}!y@{y}|hyperpage}{68}
+\indexentry{y@{y}!_posicion@{\_\discretionary {-}{}{}posicion}|hyperpage}{68}
+\indexentry{distance.c@{distance.c}|hyperpage}{69}
+\indexentry{distance.h@{distance.h}|hyperpage}{71}
+\indexentry{genesting.c@{genesting.c}|hyperpage}{72}
+\indexentry{genesting.h@{genesting.h}|hyperpage}{73}
+\indexentry{graphics.c@{graphics.c}|hyperpage}{74}
+\indexentry{graphics.c@{graphics.c}!clearscreen@{clearscreen}|hyperpage}{74}
+\indexentry{clearscreen@{clearscreen}!graphics.c@{graphics.c}|hyperpage}{74}
+\indexentry{graphics.c@{graphics.c}!draw_line@{draw\_\discretionary {-}{}{}line}|hyperpage}{74}
+\indexentry{draw_line@{draw\_\discretionary {-}{}{}line}!graphics.c@{graphics.c}|hyperpage}{74}
+\indexentry{graphics.c@{graphics.c}!draw_rect@{draw\_\discretionary {-}{}{}rect}|hyperpage}{75}
+\indexentry{draw_rect@{draw\_\discretionary {-}{}{}rect}!graphics.c@{graphics.c}|hyperpage}{75}
+\indexentry{graphics.c@{graphics.c}!getscreen@{getscreen}|hyperpage}{75}
+\indexentry{getscreen@{getscreen}!graphics.c@{graphics.c}|hyperpage}{75}
+\indexentry{graphics.c@{graphics.c}!init_graphics@{init\_\discretionary {-}{}{}graphics}|hyperpage}{75}
+\indexentry{init_graphics@{init\_\discretionary {-}{}{}graphics}!graphics.c@{graphics.c}|hyperpage}{75}
+\indexentry{graphics.c@{graphics.c}!relscreen@{relscreen}|hyperpage}{76}
+\indexentry{relscreen@{relscreen}!graphics.c@{graphics.c}|hyperpage}{76}
+\indexentry{graphics.h@{graphics.h}|hyperpage}{77}
+\indexentry{graphics.h@{graphics.h}!DELTA@{DELTA}|hyperpage}{77}
+\indexentry{DELTA@{DELTA}!graphics.h@{graphics.h}|hyperpage}{77}
+\indexentry{graphics.h@{graphics.h}!graphics@{graphics}|hyperpage}{77}
+\indexentry{graphics@{graphics}!graphics.h@{graphics.h}|hyperpage}{77}
+\indexentry{individuo.c@{individuo.c}|hyperpage}{78}
+\indexentry{individuo.h@{individuo.h}|hyperpage}{79}
+\indexentry{line.c@{line.c}|hyperpage}{80}
+\indexentry{line.h@{line.h}|hyperpage}{81}
+\indexentry{main.c@{main.c}|hyperpage}{82}
+\indexentry{main.c@{main.c}!main@{main}|hyperpage}{82}
+\indexentry{main@{main}!main.c@{main.c}|hyperpage}{82}
+\indexentry{point.c@{point.c}|hyperpage}{85}
+\indexentry{point.h@{point.h}|hyperpage}{86}
+\indexentry{polygon.c@{polygon.c}|hyperpage}{87}
+\indexentry{polygon.h@{polygon.h}|hyperpage}{88}
+\indexentry{polygon_holes.c@{polygon\_\discretionary {-}{}{}holes.c}|hyperpage}{90}
+\indexentry{polygon_holes.h@{polygon\_\discretionary {-}{}{}holes.h}|hyperpage}{91}
+\indexentry{population.c@{population.c}|hyperpage}{93}
+\indexentry{population.h@{population.h}|hyperpage}{94}

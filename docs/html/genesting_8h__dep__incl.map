@@ -1,0 +1,6 @@
+base referer
+rect $individuo_8h.html 147,56 232,83
+rect $population_8h.html 284,31 377,57
+rect $population_8c.html 284,93 377,120
+rect $genesting_8c.html 144,157 235,184
+rect $main_8c.html 159,208 220,235
