@@ -1,0 +1,463 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Genesting: Fichero Fuente polygon_holes.c</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.4.7 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="modules.html"><span>Módulos</span></a></li>
+    <li><a href="classes.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+    <li><a href="globals.html"><span>Archivos&nbsp;de&nbsp;los&nbsp;miembros</span></a></li>
+  </ul></div>
+<h1>polygon_holes.c</h1><a href="polygon__holes_8c.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*!\addtogroup geometry</span>
+<a name="l00002"></a>00002 <span class="comment">@{</span>
+<a name="l00003"></a>00003 <span class="comment">*/</span>
+<a name="l00004"></a>00004 <span class="comment"></span>
+<a name="l00005"></a>00005 <span class="comment">/*!\file polygon_holes.c</span>
+<a name="l00006"></a>00006 <span class="comment">Este archivo define las funciones que se utilizan en el Objeto Poligono con</span>
+<a name="l00007"></a>00007 <span class="comment">huecos</span>
+<a name="l00008"></a>00008 <span class="comment">*/</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;float.h&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;math.h&gt;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="preprocessor">#include "<a class="code" href="polygon__holes_8h.html">polygon_holes.h</a>"</span>
+<a name="l00015"></a>00015 
+<a name="l00016"></a>00016 <span class="preprocessor">#include "<a class="code" href="polygon_8h.html">polygon.h</a>"</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include "<a class="code" href="distance_8h.html">distance.h</a>"</span>
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="preprocessor">#include "<a class="code" href="graphics_8h.html">graphics.h</a>"</span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="comment"></span>
+<a name="l00022"></a>00022 <span class="comment">/*!\fn float polygonholes_area(polygon_holes *p)</span>
+<a name="l00023"></a>00023 <span class="comment">La funcion calcula el area de un Poligono con huecos, para hacer esto</span>
+<a name="l00024"></a>00024 <span class="comment">calculamos el area del poligono formado por el borde exterior y le restamos</span>
+<a name="l00025"></a>00025 <span class="comment">el area de cada uno de los huecos.</span>
+<a name="l00026"></a>00026 <span class="comment"></span>
+<a name="l00027"></a>00027 <span class="comment">\param [in] p Poligono simple en 2 dimensiones</span>
+<a name="l00028"></a>00028 <span class="comment">\return Area del poligono simple con huecos</span>
+<a name="l00029"></a>00029 <span class="comment">*/</span>
+<a name="l00030"></a><a class="code" href="group__geometry_g380cdcfa6caf51828c8d06f4518a4084.html#g380cdcfa6caf51828c8d06f4518a4084">00030</a> <span class="keywordtype">float</span> <a class="code" href="group__geometry_g380cdcfa6caf51828c8d06f4518a4084.html#g380cdcfa6caf51828c8d06f4518a4084">polygonholes_area</a>(<a class="code" href="struct__polygon__holes.html">polygon_holes</a> *p)
+<a name="l00031"></a>00031 {
+<a name="l00032"></a>00032     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i;
+<a name="l00033"></a>00033     <span class="keywordtype">float</span> area;
+<a name="l00034"></a>00034     area = <a class="code" href="group__geometry_gcfbc9e7772d80361768bc0b65cebbca1.html#gcfbc9e7772d80361768bc0b65cebbca1">polygon_area</a>(p-&gt;<a class="code" href="struct__polygon__holes_90635c34b3613c8cf8cdda5bebe99638.html#90635c34b3613c8cf8cdda5bebe99638">p</a>);
+<a name="l00035"></a>00035     <span class="keywordflow">for</span> (i=0;i&lt;p-&gt;<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a>;i++)
+<a name="l00036"></a>00036     {
+<a name="l00037"></a>00037         area -= <a class="code" href="group__geometry_gcfbc9e7772d80361768bc0b65cebbca1.html#gcfbc9e7772d80361768bc0b65cebbca1">polygon_area</a>(&amp;(p-&gt;<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i]));
+<a name="l00038"></a>00038     }
+<a name="l00039"></a>00039     <span class="keywordflow">return</span> area;
+<a name="l00040"></a>00040 }
+<a name="l00041"></a>00041 <span class="comment"></span>
+<a name="l00042"></a>00042 <span class="comment">/*!\fn float polygonholes_volumen(polygon_holes *p)</span>
+<a name="l00043"></a>00043 <span class="comment">Calcula el volumen generado por el poligono con huecos, definiendo asi el</span>
+<a name="l00044"></a>00044 <span class="comment">poligono como una figura tridimensional de la siguiente manera, la base del</span>
+<a name="l00045"></a>00045 <span class="comment">solido esta conformada por el poligono con huecos y la altura del solido</span>
+<a name="l00046"></a>00046 <span class="comment">en cada punto es igual a la distancia del punto a uno de los bordes.</span>
+<a name="l00047"></a>00047 <span class="comment"></span>
+<a name="l00048"></a>00048 <span class="comment">El metodo para calcular el volumen se basa en encerrar el poligono en un</span>
+<a name="l00049"></a>00049 <span class="comment">rectangulo que lo contenga, y sucesivamente partir el poligono en dos</span>
+<a name="l00050"></a>00050 <span class="comment">subrectangulos respecto al lado mas largo calculando el volumen de cada</span>
+<a name="l00051"></a>00051 <span class="comment">uno de los subrectangulos y sumando el valor y esto se hace de manera recursiva.</span>
+<a name="l00052"></a>00052 <span class="comment"></span>
+<a name="l00053"></a>00053 <span class="comment">    - Cuando el subrectangulo esta completamente fuera del poligono no</span>
+<a name="l00054"></a>00054 <span class="comment">      calculamos el volumen y regresamos un valor de 0</span>
+<a name="l00055"></a>00055 <span class="comment"></span>
+<a name="l00056"></a>00056 <span class="comment">    - Cuando el subrectangulo tiene un area muy pequena definida por un da</span>
+<a name="l00057"></a>00057 <span class="comment">      se calcula el centro del subrectangulo y se verifica que este dentro</span>
+<a name="l00058"></a>00058 <span class="comment">      del poligono, si este es el caso, entonces se devuelve el valor del</span>
+<a name="l00059"></a>00059 <span class="comment">      area multiplicada por la distancia del punto medio al borde, si el</span>
+<a name="l00060"></a>00060 <span class="comment">      punto medio es 0 se devuelve 0.</span>
+<a name="l00061"></a>00061 <span class="comment"></span>
+<a name="l00062"></a>00062 <span class="comment">    - Cuando el subrectangulo esta dentro del poligono y los vertices de este</span>
+<a name="l00063"></a>00063 <span class="comment">      tienen su menor distancia respecto a un mismo segmento de recta se</span>
+<a name="l00064"></a>00064 <span class="comment">      calcula el volumen del poliedro formado como el promedio de las distancias</span>
+<a name="l00065"></a>00065 <span class="comment">      de los vertices multiplicados por el area del subrectangulo.</span>
+<a name="l00066"></a>00066 <span class="comment"></span>
+<a name="l00067"></a>00067 <span class="comment">    - Cuando el subrectangulo esta dentro del poligono y los vertices de este</span>
+<a name="l00068"></a>00068 <span class="comment">      tienen su menor distancia respecto a un mismo punto, que se da en el</span>
+<a name="l00069"></a>00069 <span class="comment">      caso de los poligonos concavos, entonces se calcula el volumen como el</span>
+<a name="l00070"></a>00070 <span class="comment">      volumen formado por la interseccion entre el cono que genera el punto y</span>
+<a name="l00071"></a>00071 <span class="comment">      el subrectangulo, la formula que da este volumen es:</span>
+<a name="l00072"></a>00072 <span class="comment">      \f$\int_{a}^{b}\int_{c}^{d}\sqrt{((x-h)^2 + (y-k)^2)} dx dy\f$ donde</span>
+<a name="l00073"></a>00073 <span class="comment">      \f$(h,k)\f$ son las coordenadas del punto con respecto al que se toma la</span>
+<a name="l00074"></a>00074 <span class="comment">      distancia, \f$(a,b)\f$ son los valores en que se desplaza \f$y\f$,</span>
+<a name="l00075"></a>00075 <span class="comment">      \f$(c,d)\f$ son los valores en que se desplaza \f$x\f$.</span>
+<a name="l00076"></a>00076 <span class="comment"></span>
+<a name="l00077"></a>00077 <span class="comment">Esta funcion evalua menos puntos si en ves de dividir el rectangulo en 2 segun</span>
+<a name="l00078"></a>00078 <span class="comment">su lado mas largo, se divide en 4 partes iguales, pero esta aproximacion puede</span>
+<a name="l00079"></a>00079 <span class="comment">tener problemas cuando la proporcion del los lados del subrectangulo es muy</span>
+<a name="l00080"></a>00080 <span class="comment">grande.</span>
+<a name="l00081"></a>00081 <span class="comment"></span>
+<a name="l00082"></a>00082 <span class="comment">\param [in] p Poligono simple con huecos en 2 dimensiones</span>
+<a name="l00083"></a>00083 <span class="comment">\return Volumen generado</span>
+<a name="l00084"></a>00084 <span class="comment">*/</span>
+<a name="l00085"></a>00085 
+<a name="l00086"></a><a class="code" href="group__geometry_g7cf8b3f8c76179bb936754bbbf510999.html#g7cf8b3f8c76179bb936754bbbf510999">00086</a> <span class="keywordtype">float</span> <a class="code" href="group__geometry_g7cf8b3f8c76179bb936754bbbf510999.html#g7cf8b3f8c76179bb936754bbbf510999">polygonholes_volumen</a>(<a class="code" href="struct__polygon__holes.html">polygon_holes</a> *p)
+<a name="l00087"></a>00087 {
+<a name="l00088"></a>00088 <span class="preprocessor">#if graphics</span>
+<a name="l00089"></a>00089 <span class="preprocessor"></span>    <span class="keywordtype">void</span> draw_polygon(<a class="code" href="struct__polygon.html">polygon</a> *p)
+<a name="l00090"></a>00090     {
+<a name="l00091"></a>00091         <span class="keywordtype">int</span> i;
+<a name="l00092"></a>00092         <span class="keywordflow">for</span> (i=0;i&lt;p-&gt;<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>;i++)
+<a name="l00093"></a>00093         {
+<a name="l00094"></a>00094             <a class="code" href="graphics_8c_a4f2f5f853228f62323d3c4d81c34a13.html#a4f2f5f853228f62323d3c4d81c34a13">draw_line</a>(p-&gt;<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[i].<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a>,p-&gt;<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[i].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a>,p-&gt;<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[(i+1)%p-&gt;<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>].x,p-&gt;<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[(i+1)%p-&gt;<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>].y);
+<a name="l00095"></a>00095         }
+<a name="l00096"></a>00096     }
+<a name="l00097"></a>00097 <span class="preprocessor">#endif</span>
+<a name="l00098"></a>00098 <span class="preprocessor"></span>
+<a name="l00099"></a>00099     <span class="keywordtype">float</span> polygonholes_volumen_box( <a class="code" href="struct__polygon__holes.html">polygon_holes</a> *p,
+<a name="l00100"></a>00100                                     <span class="keywordtype">float</span> minx,
+<a name="l00101"></a>00101                                     <span class="keywordtype">float</span> miny,
+<a name="l00102"></a>00102                                     <span class="keywordtype">float</span> maxx,
+<a name="l00103"></a>00103                                     <span class="keywordtype">float</span> maxy)
+<a name="l00104"></a>00104     {
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106         <span class="keywordtype">float</span> vol=0;
+<a name="l00107"></a>00107         <span class="keywordtype">float</span> da;
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109         <a class="code" href="struct__polygon.html">polygon</a> rec;
+<a name="l00110"></a>00110         <a class="code" href="struct__point.html">point</a> q[4];
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112         q[0].<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a> = minx;
+<a name="l00113"></a>00113         q[0].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a> = miny;
+<a name="l00114"></a>00114 
+<a name="l00115"></a>00115         q[1].<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a> = maxx;
+<a name="l00116"></a>00116         q[1].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a> = miny;
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118         q[2].<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a> = maxx;
+<a name="l00119"></a>00119         q[2].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a> = maxy;
+<a name="l00120"></a>00120 
+<a name="l00121"></a>00121         q[3].<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a> = minx;
+<a name="l00122"></a>00122         q[3].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a> = maxy;
+<a name="l00123"></a>00123 
+<a name="l00124"></a>00124         rec.<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a> =(<a class="code" href="struct__point.html">point</a> *) &amp;q;
+<a name="l00125"></a>00125         rec.<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a> = 4;
+<a name="l00126"></a>00126 
+<a name="l00127"></a>00127         da = <a class="code" href="group__geometry_gcfbc9e7772d80361768bc0b65cebbca1.html#gcfbc9e7772d80361768bc0b65cebbca1">polygon_area</a>(&amp;rec);
+<a name="l00128"></a>00128 
+<a name="l00129"></a>00129 
+<a name="l00130"></a>00130         <span class="keywordflow">if</span> (!<a class="code" href="group__geometry_g2be6101a257ea8896e61e93d14b22b89.html#g2be6101a257ea8896e61e93d14b22b89">polygon_overlapping</a>(p-&gt;<a class="code" href="struct__polygon__holes_90635c34b3613c8cf8cdda5bebe99638.html#90635c34b3613c8cf8cdda5bebe99638">p</a>, &amp;rec)) <span class="comment">//OK</span>
+<a name="l00131"></a>00131         {
+<a name="l00132"></a>00132             vol = 0;
+<a name="l00133"></a>00133 <span class="preprocessor">#if graphics</span>
+<a name="l00134"></a>00134 <span class="preprocessor"></span>
+<a name="l00135"></a>00135             <a class="code" href="graphics_8c_e3919e2797a81eb7088a6b6f6b33bea7.html#e3919e2797a81eb7088a6b6f6b33bea7">draw_rect</a>(minx, miny, maxx, maxy,255,255,255);
+<a name="l00136"></a>00136 <span class="preprocessor">#endif</span>
+<a name="l00137"></a>00137 <span class="preprocessor"></span>
+<a name="l00138"></a>00138         }
+<a name="l00139"></a>00139         <span class="keywordflow">else</span> <span class="keywordflow">if</span> (da &lt; <a class="code" href="graphics_8h_3fd2b1bcd7ddcf506237987ad780f495.html#3fd2b1bcd7ddcf506237987ad780f495">DELTA</a>) <span class="comment">// OK</span>
+<a name="l00140"></a>00140         {
+<a name="l00141"></a>00141             <a class="code" href="struct__point.html">point</a> pm;
+<a name="l00142"></a>00142 
+<a name="l00143"></a>00143             pm.<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a>=minx+((maxx-minx)/2.0);
+<a name="l00144"></a>00144             pm.<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a>=miny+((maxy-miny)/2.0);
+<a name="l00145"></a>00145 
+<a name="l00146"></a>00146             <span class="keywordflow">if</span> (<a class="code" href="group__geometry_g35a6dd45f6d0cbed26ef8a69ed34a2e9.html#g35a6dd45f6d0cbed26ef8a69ed34a2e9">polygonholes_pointin</a>(p, &amp;pm))
+<a name="l00147"></a>00147             {
+<a name="l00148"></a>00148                 vol = da * <a class="code" href="group__distance_gc837f0084791f42936ade857a0cce3af.html#gc837f0084791f42936ade857a0cce3af">distance_pointpolygonholes</a>(&amp;pm, p,NULL);
+<a name="l00149"></a>00149 <span class="preprocessor">#if graphics</span>
+<a name="l00150"></a>00150 <span class="preprocessor"></span>
+<a name="l00151"></a>00151                 <a class="code" href="graphics_8c_e3919e2797a81eb7088a6b6f6b33bea7.html#e3919e2797a81eb7088a6b6f6b33bea7">draw_rect</a>(minx, miny, maxx, maxy,128,128,128);
+<a name="l00152"></a>00152 <span class="preprocessor">#endif</span>
+<a name="l00153"></a>00153 <span class="preprocessor"></span>
+<a name="l00154"></a>00154             }
+<a name="l00155"></a>00155             <span class="keywordflow">else</span>
+<a name="l00156"></a>00156             {
+<a name="l00157"></a>00157                 vol = 0;
+<a name="l00158"></a>00158 <span class="preprocessor">#if graphics</span>
+<a name="l00159"></a>00159 <span class="preprocessor"></span>
+<a name="l00160"></a>00160                 <a class="code" href="graphics_8c_e3919e2797a81eb7088a6b6f6b33bea7.html#e3919e2797a81eb7088a6b6f6b33bea7">draw_rect</a>(minx, miny, maxx, maxy,225,255,255);
+<a name="l00161"></a>00161 <span class="preprocessor">#endif</span>
+<a name="l00162"></a>00162 <span class="preprocessor"></span>
+<a name="l00163"></a>00163             }
+<a name="l00164"></a>00164         }
+<a name="l00165"></a>00165         <span class="keywordflow">else</span>
+<a name="l00166"></a>00166         {
+<a name="l00167"></a>00167 
+<a name="l00168"></a>00168             <span class="keywordtype">int</span> i;
+<a name="l00169"></a>00169             <span class="keywordtype">float</span> dis[4];
+<a name="l00170"></a>00170             <a class="code" href="struct__line.html">line</a> ref[4];
+<a name="l00171"></a>00171             <span class="keywordflow">for</span> (i=0;i&lt;4;i++)
+<a name="l00172"></a>00172             {
+<a name="l00173"></a>00173                 dis[i]=<a class="code" href="group__distance_gc837f0084791f42936ade857a0cce3af.html#gc837f0084791f42936ade857a0cce3af">distance_pointpolygonholes</a>(&amp;q[i], p,&amp;ref[i]);
+<a name="l00174"></a>00174             }
+<a name="l00175"></a>00175 
+<a name="l00176"></a>00176             <span class="keywordflow">if</span>( <a class="code" href="group__geometry_g496bae87588cb5710ced80f713da98ad.html#g496bae87588cb5710ced80f713da98ad">polygonholes_polygonin</a>(p, &amp;rec)
+<a name="l00177"></a>00177                     &amp;&amp;
+<a name="l00178"></a>00178                     (<a class="code" href="group__geometry_ga27fbafb04a36a60af7bd5cafbdfd412.html#ga27fbafb04a36a60af7bd5cafbdfd412">line_equal</a>(&amp;ref[0],&amp;ref[1]) &amp;&amp;
+<a name="l00179"></a>00179                      <a class="code" href="group__geometry_ga27fbafb04a36a60af7bd5cafbdfd412.html#ga27fbafb04a36a60af7bd5cafbdfd412">line_equal</a>(&amp;ref[1],&amp;ref[2]) &amp;&amp;
+<a name="l00180"></a>00180                      <a class="code" href="group__geometry_ga27fbafb04a36a60af7bd5cafbdfd412.html#ga27fbafb04a36a60af7bd5cafbdfd412">line_equal</a>(&amp;ref[2],&amp;ref[3]))
+<a name="l00181"></a>00181 
+<a name="l00182"></a>00182               ) <span class="comment">// OK</span>
+<a name="l00183"></a>00183             {
+<a name="l00184"></a>00184                 <span class="keywordflow">if</span> (<a class="code" href="group__geometry_g68d4dad9b8e742b0d63affc853f80391.html#g68d4dad9b8e742b0d63affc853f80391">line_ispoint</a>(&amp;ref[0]))<span class="comment">// Si es un punto entonces se utiliza la formula del cono</span>
+<a name="l00185"></a>00185                 {
+<a name="l00186"></a>00186                     <span class="keywordtype">double</span> a,b,c,d,h,k;
+<a name="l00187"></a>00187                     c=minx;
+<a name="l00188"></a>00188                     d=maxx;
+<a name="l00189"></a>00189                     a=miny;
+<a name="l00190"></a>00190                     b=maxy;
+<a name="l00191"></a>00191                     h=ref[0].v1.x;
+<a name="l00192"></a>00192                     k=ref[0].v1.y;<span class="comment"></span>
+<a name="l00193"></a>00193 <span class="comment">                    /*!\bug</span>
+<a name="l00194"></a>00194 <span class="comment">                    Esta funcion para calcular el volument de un rectangulo que intersecta un</span>
+<a name="l00195"></a>00195 <span class="comment">                    cono tiene valores indeterminados en algunos segmentos del problema, es</span>
+<a name="l00196"></a>00196 <span class="comment">                    posible que este error aparesca solo en algunos casos, pero hay que examinar</span>
+<a name="l00197"></a>00197 <span class="comment">                    mas la funcion.</span>
+<a name="l00198"></a>00198 <span class="comment">                    */</span>
+<a name="l00199"></a>00199 
+<a name="l00200"></a>00200                     vol = (2*a*c*sqrt(pow(-c + h,2) + pow(a - k,2))
+<a name="l00201"></a>00201                            - 2*a*h*sqrt(pow(-c + h,2) + pow(a - k,2))
+<a name="l00202"></a>00202                            - 2*a*d*sqrt(pow(-d + h,2) + pow(a - k,2))
+<a name="l00203"></a>00203                            + 2*a*h*sqrt(pow(-d + h,2) + pow(a - k,2))
+<a name="l00204"></a>00204                            - 2*b*c*sqrt(pow(-c + h,2) + pow(b - k,2))
+<a name="l00205"></a>00205                            + 2*b*h*sqrt(pow(-c + h,2) + pow(b - k,2))
+<a name="l00206"></a>00206                            + 2*b*d*sqrt(pow(-d + h,2) + pow(b - k,2))
+<a name="l00207"></a>00207                            - 2*b*h*sqrt(pow(-d + h,2) + pow(b - k,2))
+<a name="l00208"></a>00208                            - 2*c*k*sqrt(pow(-c + h,2) + pow(a - k,2))
+<a name="l00209"></a>00209                            + 2*h*k*sqrt(pow(-c + h,2) + pow(a - k,2))
+<a name="l00210"></a>00210                            + 2*d*k*sqrt(pow(-d + h,2) + pow(a - k,2))
+<a name="l00211"></a>00211                            - 2*h*k*sqrt(pow(-d + h,2) + pow(a - k,2))
+<a name="l00212"></a>00212                            + 2*c*k*sqrt(pow(-c + h,2) + pow(b - k,2))
+<a name="l00213"></a>00213                            - 2*h*k*sqrt(pow(-c + h,2) + pow(b - k,2))
+<a name="l00214"></a>00214                            - 2*d*k*sqrt(pow(-d + h,2) + pow(b - k,2))
+<a name="l00215"></a>00215                            + 2*h*k*sqrt(pow(-d + h,2) + pow(b - k,2))
+<a name="l00216"></a>00216                            - pow(a,3)*log(-c + h + sqrt(pow(-c + h,2) + pow(a - k,2)))
+<a name="l00217"></a>00217                            + 3*pow(a,2)*k*log(-c + h + sqrt(pow(-c + h,2) + pow(a - k,2)))
+<a name="l00218"></a>00218                            - 3*a*pow(k,2)*log(-c + h + sqrt(pow(-c + h,2) + pow(a - k,2)))
+<a name="l00219"></a>00219                            + pow(k,3)*log(-c + h + sqrt(pow(-c + h,2) + pow(a - k,2)))
+<a name="l00220"></a>00220                            + pow(a,3)*log(-d + h + sqrt(pow(-d + h,2) + pow(a - k,2)))
+<a name="l00221"></a>00221                            - 3*pow(a,2)*k*log(-d + h + sqrt(pow(-d + h,2) + pow(a - k,2)))
+<a name="l00222"></a>00222                            + 3*a*pow(k,2)*log(-d + h + sqrt(pow(-d + h,2) + pow(a - k,2)))
+<a name="l00223"></a>00223                            - pow(k,3)*log(-d + h + sqrt(pow(-d + h,2) + pow(a - k,2)))
+<a name="l00224"></a>00224                            + pow(b,3)*log(-c + h + sqrt(pow(-c + h,2) + pow(b - k,2)))
+<a name="l00225"></a>00225                            - 3*pow(b,2)*k*log(-c + h + sqrt(pow(-c + h,2) + pow(b - k,2)))
+<a name="l00226"></a>00226                            + 3*b*pow(k,2)*log(-c + h + sqrt(pow(-c + h,2) + pow(b - k,2)))
+<a name="l00227"></a>00227                            - pow(k,3)*log(-c + h + sqrt(pow(-c + h,2) + pow(b - k,2)))
+<a name="l00228"></a>00228                            - pow(b,3)*log(-d + h + sqrt(pow(-d + h,2) + pow(b - k,2)))
+<a name="l00229"></a>00229                            + 3*pow(b,2)*k*log(-d + h + sqrt(pow(-d + h,2) + pow(b - k,2)))
+<a name="l00230"></a>00230                            - 3*b*pow(k,2)*log(-d + h + sqrt(pow(-d + h,2) + pow(b - k,2)))
+<a name="l00231"></a>00231                            + pow(k,3)*log(-d + h + sqrt(pow(-d + h,2) + pow(b - k,2)))
+<a name="l00232"></a>00232                            + pow(c,3)*log(a + sqrt(pow(-c + h,2) + pow(a - k,2)) - k)
+<a name="l00233"></a>00233                            - 3*pow(c,2)*h*log(a + sqrt(pow(-c + h,2) + pow(a - k,2)) - k)
+<a name="l00234"></a>00234                            + 3*c*pow(h,2)*log(a + sqrt(pow(-c + h,2) + pow(a - k,2)) - k)
+<a name="l00235"></a>00235                            - pow(h,3)*log(a + sqrt(pow(-c + h,2) + pow(a - k,2)) - k)
+<a name="l00236"></a>00236                            - pow(d,3)*log(a + sqrt(pow(-d + h,2) + pow(a - k,2)) - k)
+<a name="l00237"></a>00237                            + 3*pow(d,2)*h*log(a + sqrt(pow(-d + h,2) + pow(a - k,2)) - k)
+<a name="l00238"></a>00238                            - 3*d*pow(h,2)*log(a + sqrt(pow(-d + h,2) + pow(a - k,2)) - k)
+<a name="l00239"></a>00239                            + pow(h,3)*log(a + sqrt(pow(-d + h,2) + pow(a - k,2)) - k)
+<a name="l00240"></a>00240                            - pow(c,3)*log(b + sqrt(pow(-c + h,2) + pow(b - k,2)) - k)
+<a name="l00241"></a>00241                            + 3*pow(c,2)*h*log(b + sqrt(pow(-c + h,2) + pow(b - k,2)) - k)
+<a name="l00242"></a>00242                            - 3*c*pow(h,2)*log(b + sqrt(pow(-c + h,2) + pow(b - k,2)) - k)
+<a name="l00243"></a>00243                            + pow(h,3)*log(b + sqrt(pow(-c + h,2) + pow(b - k,2)) - k)
+<a name="l00244"></a>00244                            + pow(d,3)*log(b + sqrt(pow(-d + h,2) + pow(b - k,2)) - k)
+<a name="l00245"></a>00245                            - 3*pow(d,2)*h*log(b + sqrt(pow(-d + h,2) + pow(b - k,2)) - k)
+<a name="l00246"></a>00246                            + 3*d*pow(h,2)*log(b + sqrt(pow(-d + h,2) + pow(b - k,2)) - k)
+<a name="l00247"></a>00247                            - pow(h,3)*log(b + sqrt(pow(-d + h,2) + pow(b - k,2)) - k))/6;
+<a name="l00248"></a>00248 <span class="preprocessor">#if graphics</span>
+<a name="l00249"></a>00249 <span class="preprocessor"></span>
+<a name="l00250"></a>00250                     <a class="code" href="graphics_8c_e3919e2797a81eb7088a6b6f6b33bea7.html#e3919e2797a81eb7088a6b6f6b33bea7">draw_rect</a>(minx, miny, maxx, maxy,0,128,0);
+<a name="l00251"></a>00251 <span class="preprocessor">#endif</span>
+<a name="l00252"></a>00252 <span class="preprocessor"></span>
+<a name="l00253"></a>00253                 }
+<a name="l00254"></a>00254                 <span class="keywordflow">else</span> <span class="comment">// Si es una linea se utiliza la formula de la cuna</span>
+<a name="l00255"></a>00255                 {
+<a name="l00256"></a>00256                     vol = (dis[0]+dis[1]+dis[2]+dis[3])/4.0 * da;
+<a name="l00257"></a>00257 <span class="preprocessor">#if graphics</span>
+<a name="l00258"></a>00258 <span class="preprocessor"></span>
+<a name="l00259"></a>00259                     <a class="code" href="graphics_8c_e3919e2797a81eb7088a6b6f6b33bea7.html#e3919e2797a81eb7088a6b6f6b33bea7">draw_rect</a>(minx, miny, maxx, maxy,0,0,128);
+<a name="l00260"></a>00260 <span class="preprocessor">#endif</span>
+<a name="l00261"></a>00261 <span class="preprocessor"></span>
+<a name="l00262"></a>00262                 }
+<a name="l00263"></a>00263             }
+<a name="l00264"></a>00264             <span class="keywordflow">else</span>
+<a name="l00265"></a>00265             {
+<a name="l00266"></a>00266                 <span class="keywordflow">if</span> (!(
+<a name="l00267"></a>00267                             <a class="code" href="group__geometry_g139317720b027c782db9424256ba2c2d.html#g139317720b027c782db9424256ba2c2d">polygonholes_pointinhole</a>(p, &amp;q[0]) &amp;&amp;
+<a name="l00268"></a>00268                             <a class="code" href="group__geometry_g139317720b027c782db9424256ba2c2d.html#g139317720b027c782db9424256ba2c2d">polygonholes_pointinhole</a>(p, &amp;q[1]) &amp;&amp;
+<a name="l00269"></a>00269                             <a class="code" href="group__geometry_g139317720b027c782db9424256ba2c2d.html#g139317720b027c782db9424256ba2c2d">polygonholes_pointinhole</a>(p, &amp;q[2]) &amp;&amp;
+<a name="l00270"></a>00270                             <a class="code" href="group__geometry_g139317720b027c782db9424256ba2c2d.html#g139317720b027c782db9424256ba2c2d">polygonholes_pointinhole</a>(p, &amp;q[3])
+<a name="l00271"></a>00271                         )) <span class="comment">// el poligono esta dentro de p pero no en un hueco</span>
+<a name="l00272"></a>00272                 {
+<a name="l00273"></a>00273                     <span class="comment">//Opcion de corte 1</span>
+<a name="l00274"></a>00274                     <span class="comment">/*</span>
+<a name="l00275"></a>00275 <span class="comment">                                        vol+= polygonholes_volumen_box(p, minx, miny, (minx+maxx)/2.0, (miny+maxy)/2.0);</span>
+<a name="l00276"></a>00276 <span class="comment">                                        vol+= polygonholes_volumen_box(p, (minx+maxx)/2.0, miny, maxx, (miny+maxy)/2.0);</span>
+<a name="l00277"></a>00277 <span class="comment">                                        vol+= polygonholes_volumen_box(p, minx, (miny+maxy)/2.0, (minx+maxx)/2.0, maxy);</span>
+<a name="l00278"></a>00278 <span class="comment">                                        vol+= polygonholes_volumen_box(p, (minx+maxx)/2.0, (miny+maxy)/2.0, maxx, maxy);</span>
+<a name="l00279"></a>00279 <span class="comment">                    */</span>
+<a name="l00280"></a>00280 
+<a name="l00281"></a>00281                     <span class="keywordflow">if</span> (maxx-minx &gt; maxy-miny)
+<a name="l00282"></a>00282                     {
+<a name="l00283"></a>00283                         vol+= polygonholes_volumen_box(p, minx, miny, (minx+maxx)/2.0, maxy);
+<a name="l00284"></a>00284                         vol+= polygonholes_volumen_box(p, (minx+maxx)/2.0, miny, maxx, maxy);
+<a name="l00285"></a>00285                     }
+<a name="l00286"></a>00286                     <span class="keywordflow">else</span>
+<a name="l00287"></a>00287                     {
+<a name="l00288"></a>00288                         vol+= polygonholes_volumen_box(p, minx, miny, maxx, (miny+maxy)/2.0);
+<a name="l00289"></a>00289                         vol+= polygonholes_volumen_box(p, minx, (miny+maxy)/2.0, maxx, maxy);
+<a name="l00290"></a>00290                     }
+<a name="l00291"></a>00291 
+<a name="l00292"></a>00292                 }
+<a name="l00293"></a>00293 <span class="preprocessor">#if graphics</span>
+<a name="l00294"></a>00294 <span class="preprocessor"></span>                <span class="keywordflow">else</span>
+<a name="l00295"></a>00295                 {
+<a name="l00296"></a>00296                     <a class="code" href="graphics_8c_e3919e2797a81eb7088a6b6f6b33bea7.html#e3919e2797a81eb7088a6b6f6b33bea7">draw_rect</a>(minx, miny, maxx, maxy,0,0,255);
+<a name="l00297"></a>00297                 }
+<a name="l00298"></a>00298 <span class="preprocessor">#endif</span>
+<a name="l00299"></a>00299 <span class="preprocessor"></span>
+<a name="l00300"></a>00300             }
+<a name="l00301"></a>00301         }
+<a name="l00302"></a>00302         <span class="keywordflow">if</span> (isnan(vol))
+<a name="l00303"></a>00303         {
+<a name="l00304"></a>00304 <span class="preprocessor">#if graphics</span>
+<a name="l00305"></a>00305 <span class="preprocessor"></span>            <a class="code" href="graphics_8c_e3919e2797a81eb7088a6b6f6b33bea7.html#e3919e2797a81eb7088a6b6f6b33bea7">draw_rect</a>(minx, miny, maxx, maxy,255,0,0);
+<a name="l00306"></a>00306 <span class="preprocessor">#endif</span>
+<a name="l00307"></a>00307 <span class="preprocessor"></span>
+<a name="l00308"></a>00308             fprintf(stderr,<span class="stringliteral">"Error: (%f, %f) (%f, %f)\n"</span>,minx,miny,maxx,maxy);
+<a name="l00309"></a>00309             vol=0;
+<a name="l00310"></a>00310         }
+<a name="l00311"></a>00311         <span class="keywordflow">return</span> vol;
+<a name="l00312"></a>00312     }
+<a name="l00313"></a>00313 
+<a name="l00314"></a>00314     <span class="keywordtype">float</span> minx, miny, maxx, maxy;
+<a name="l00315"></a>00315     <a class="code" href="group__geometry_g137ef6f552a0a04c5ae0493690088f3f.html#g137ef6f552a0a04c5ae0493690088f3f">polygon_minbox</a>(p-&gt;<a class="code" href="struct__polygon__holes_90635c34b3613c8cf8cdda5bebe99638.html#90635c34b3613c8cf8cdda5bebe99638">p</a>, &amp;minx, &amp;miny, &amp;maxx, &amp;maxy);
+<a name="l00316"></a>00316 
+<a name="l00317"></a>00317 <span class="preprocessor">#if graphics</span>
+<a name="l00318"></a>00318 <span class="preprocessor"></span>    <a class="code" href="graphics_8c_9a7e11a2a03b0db3ab57985098c3f8fe.html#9a7e11a2a03b0db3ab57985098c3f8fe">getscreen</a>();
+<a name="l00319"></a>00319     <a class="code" href="graphics_8c_ff4bc17c602603d120756f52e18ebb96.html#ff4bc17c602603d120756f52e18ebb96">clearscreen</a>();
+<a name="l00320"></a>00320     draw_polygon(p-&gt;<a class="code" href="struct__polygon__holes_90635c34b3613c8cf8cdda5bebe99638.html#90635c34b3613c8cf8cdda5bebe99638">p</a>);
+<a name="l00321"></a>00321 
+<a name="l00322"></a>00322     {
+<a name="l00323"></a>00323         <span class="keywordtype">int</span> j;
+<a name="l00324"></a>00324         <span class="keywordflow">for</span> (j=0;j&lt;p-&gt;<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a>;j++)
+<a name="l00325"></a>00325         {
+<a name="l00326"></a>00326             draw_polygon(&amp;(p-&gt;<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[j]));
+<a name="l00327"></a>00327         }
+<a name="l00328"></a>00328     }
+<a name="l00329"></a>00329     <a class="code" href="graphics_8c_7a2327678651d3939af5eec9503333e8.html#7a2327678651d3939af5eec9503333e8">relscreen</a>();
+<a name="l00330"></a>00330 <span class="preprocessor">#endif</span>
+<a name="l00331"></a>00331 <span class="preprocessor"></span>
+<a name="l00332"></a>00332     <span class="keywordflow">return</span> polygonholes_volumen_box(p,minx,miny,maxx,maxy);
+<a name="l00333"></a>00333 }
+<a name="l00334"></a>00334 <span class="comment"></span>
+<a name="l00335"></a>00335 <span class="comment">/*!\fn bool polygonholes_pointin(polygon_holes *p, point *f)</span>
+<a name="l00336"></a>00336 <span class="comment">Esta funcion identifica si un punto esta dentro de un poligono con huecos</span>
+<a name="l00337"></a>00337 <span class="comment">por lo tanto evalua inicialmente que el punto este dentro del poligono</span>
+<a name="l00338"></a>00338 <span class="comment">exterior y posterioremente que no se encuentre dentro de los huecos</span>
+<a name="l00339"></a>00339 <span class="comment"></span>
+<a name="l00340"></a>00340 <span class="comment">\param [in] p Poligono simple con huecos en 2 dimensiones</span>
+<a name="l00341"></a>00341 <span class="comment">\param [in] f Punto en 2 dimensiones</span>
+<a name="l00342"></a>00342 <span class="comment">\return Verdadero en caso que el punto este dentro del poligono, falso en</span>
+<a name="l00343"></a>00343 <span class="comment">        caso contrario</span>
+<a name="l00344"></a>00344 <span class="comment">*/</span>
+<a name="l00345"></a><a class="code" href="group__geometry_g35a6dd45f6d0cbed26ef8a69ed34a2e9.html#g35a6dd45f6d0cbed26ef8a69ed34a2e9">00345</a> <span class="keywordtype">bool</span> <a class="code" href="group__geometry_g35a6dd45f6d0cbed26ef8a69ed34a2e9.html#g35a6dd45f6d0cbed26ef8a69ed34a2e9">polygonholes_pointin</a>(<a class="code" href="struct__polygon__holes.html">polygon_holes</a> *p, <a class="code" href="struct__point.html">point</a> *f)
+<a name="l00346"></a>00346 {
+<a name="l00347"></a>00347     <span class="keywordtype">bool</span> valido=<span class="keyword">false</span>;
+<a name="l00348"></a>00348     <span class="keywordflow">if</span> (<a class="code" href="group__geometry_geab0a1d6da7c44ae49494958bb885504.html#geab0a1d6da7c44ae49494958bb885504">polygon_pointin</a>(p-&gt;<a class="code" href="struct__polygon__holes_90635c34b3613c8cf8cdda5bebe99638.html#90635c34b3613c8cf8cdda5bebe99638">p</a>, f))
+<a name="l00349"></a>00349     {
+<a name="l00350"></a>00350         <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i;
+<a name="l00351"></a>00351         valido=<span class="keyword">true</span>;
+<a name="l00352"></a>00352 
+<a name="l00353"></a>00353         <span class="keywordflow">for</span> (i=0;i&lt;p-&gt;<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a> &amp;&amp; valido;i++)
+<a name="l00354"></a>00354         {
+<a name="l00355"></a>00355             <span class="keywordflow">if</span> (<a class="code" href="group__geometry_geab0a1d6da7c44ae49494958bb885504.html#geab0a1d6da7c44ae49494958bb885504">polygon_pointin</a>(&amp;(p-&gt;<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i]), f))
+<a name="l00356"></a>00356             {
+<a name="l00357"></a>00357                 valido=<span class="keyword">false</span>;
+<a name="l00358"></a>00358             }
+<a name="l00359"></a>00359         }
+<a name="l00360"></a>00360     }
+<a name="l00361"></a>00361     <span class="keywordflow">return</span> valido;
+<a name="l00362"></a>00362 }
+<a name="l00363"></a>00363 <span class="comment"></span>
+<a name="l00364"></a>00364 <span class="comment">/*!\fn bool polygonholes_pointinhole(polygon_holes *p, point *f)</span>
+<a name="l00365"></a>00365 <span class="comment">Identifica si un punto esta dentro de un hueco del poligono.</span>
+<a name="l00366"></a>00366 <span class="comment"></span>
+<a name="l00367"></a>00367 <span class="comment">\param [in] p Poligono Simple con huecos</span>
+<a name="l00368"></a>00368 <span class="comment">\param [in] f Punto en 2 dimensiones</span>
+<a name="l00369"></a>00369 <span class="comment">\return Verdadero si el punto esta dentro de uno de los huecos, falso en</span>
+<a name="l00370"></a>00370 <span class="comment">caso contrario</span>
+<a name="l00371"></a>00371 <span class="comment">*/</span>
+<a name="l00372"></a>00372 
+<a name="l00373"></a><a class="code" href="group__geometry_g139317720b027c782db9424256ba2c2d.html#g139317720b027c782db9424256ba2c2d">00373</a> <span class="keywordtype">bool</span> <a class="code" href="group__geometry_g139317720b027c782db9424256ba2c2d.html#g139317720b027c782db9424256ba2c2d">polygonholes_pointinhole</a>(<a class="code" href="struct__polygon__holes.html">polygon_holes</a> *p, <a class="code" href="struct__point.html">point</a> *f)
+<a name="l00374"></a>00374 {
+<a name="l00375"></a>00375     <span class="keywordtype">bool</span> valido=<span class="keyword">false</span>;
+<a name="l00376"></a>00376     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> i;
+<a name="l00377"></a>00377 
+<a name="l00378"></a>00378     <span class="keywordflow">for</span> (i=0;i&lt;p-&gt;<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a> &amp;&amp; !valido;i++)
+<a name="l00379"></a>00379     {
+<a name="l00380"></a>00380         <span class="keywordflow">if</span> (<a class="code" href="group__geometry_geab0a1d6da7c44ae49494958bb885504.html#geab0a1d6da7c44ae49494958bb885504">polygon_pointin</a>(&amp;(p-&gt;<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i]), f))
+<a name="l00381"></a>00381         {
+<a name="l00382"></a>00382             valido=<span class="keyword">true</span>;
+<a name="l00383"></a>00383         }
+<a name="l00384"></a>00384     }
+<a name="l00385"></a>00385     <span class="keywordflow">return</span> valido;
+<a name="l00386"></a>00386 }
+<a name="l00387"></a>00387 
+<a name="l00388"></a>00388 <span class="comment"></span>
+<a name="l00389"></a>00389 <span class="comment">/*!\fn bool polygonholes_polygonin(polygon_holes *p, polygon *q)</span>
+<a name="l00390"></a>00390 <span class="comment">La funcion evalua que el poligono q esta completamente adentro del poligono p</span>
+<a name="l00391"></a>00391 <span class="comment">entonces todos los puntos de q deben estar dentro de p y no se deben intersectar</span>
+<a name="l00392"></a>00392 <span class="comment">las lineas que los conforman</span>
+<a name="l00393"></a>00393 <span class="comment"></span>
+<a name="l00394"></a>00394 <span class="comment">\param [in] p Poligono Simple con huecos</span>
+<a name="l00395"></a>00395 <span class="comment">\param [in] q Poligono Simple</span>
+<a name="l00396"></a>00396 <span class="comment">\return Verdadero en caso del que poligono q este dentro del poligono p, falso</span>
+<a name="l00397"></a>00397 <span class="comment">        en caso contrario</span>
+<a name="l00398"></a>00398 <span class="comment">*/</span>
+<a name="l00399"></a><a class="code" href="group__geometry_g496bae87588cb5710ced80f713da98ad.html#g496bae87588cb5710ced80f713da98ad">00399</a> <span class="keywordtype">bool</span> <a class="code" href="group__geometry_g496bae87588cb5710ced80f713da98ad.html#g496bae87588cb5710ced80f713da98ad">polygonholes_polygonin</a>(<a class="code" href="struct__polygon__holes.html">polygon_holes</a> *p, <a class="code" href="struct__polygon.html">polygon</a> *q)
+<a name="l00400"></a>00400 {
+<a name="l00401"></a>00401     <span class="keywordtype">int</span> i,j,k;
+<a name="l00402"></a>00402     <span class="keywordtype">bool</span> adentro = <span class="keyword">true</span>;
+<a name="l00403"></a>00403 
+<a name="l00404"></a>00404     <span class="keywordflow">for</span> (i=0;i&lt;q-&gt;<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a> &amp;&amp; adentro;i++)
+<a name="l00405"></a>00405     {
+<a name="l00406"></a>00406         <a class="code" href="struct__line.html">line</a> t1,t2;
+<a name="l00407"></a>00407         t1.<a class="code" href="struct__line_b70e9dced9e0d20c06fa5bdbb1e7be2d.html#b70e9dced9e0d20c06fa5bdbb1e7be2d">v1</a>=q-&gt;<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[i];
+<a name="l00408"></a>00408         t1.<a class="code" href="struct__line_5701d84b34e7ca18c5a246d8f18239c2.html#5701d84b34e7ca18c5a246d8f18239c2">v2</a>=q-&gt;<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[(i+1)%(q-&gt;<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>)];
+<a name="l00409"></a>00409 
+<a name="l00410"></a>00410         if (!<a class="code" href="group__geometry_g35a6dd45f6d0cbed26ef8a69ed34a2e9.html#g35a6dd45f6d0cbed26ef8a69ed34a2e9">polygonholes_pointin</a>(p,&amp;q-&gt;<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[i]))
+<a name="l00411"></a>00411             adentro = <span class="keyword">false</span>;
+<a name="l00412"></a>00412 
+<a name="l00413"></a>00413         if (!<a class="code" href="group__geometry_g35a6dd45f6d0cbed26ef8a69ed34a2e9.html#g35a6dd45f6d0cbed26ef8a69ed34a2e9">polygonholes_pointin</a>(p,&amp;q-&gt;<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[(i+1)%(q-&gt;<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>)]))
+<a name="l00414"></a>00414             adentro = <span class="keyword">false</span>;
+<a name="l00415"></a>00415 
+<a name="l00416"></a>00416         for (j=0;j&lt;p-&gt;<a class="code" href="struct__polygon__holes_90635c34b3613c8cf8cdda5bebe99638.html#90635c34b3613c8cf8cdda5bebe99638">p</a>-&gt;<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a> &amp;&amp; adentro;j++)
+<a name="l00417"></a>00417         {
+<a name="l00418"></a>00418             t2.v1=p-&gt;<a class="code" href="struct__polygon__holes_90635c34b3613c8cf8cdda5bebe99638.html#90635c34b3613c8cf8cdda5bebe99638">p</a>-&gt;<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j];
+<a name="l00419"></a>00419             t2.v2=p-&gt;<a class="code" href="struct__polygon__holes_90635c34b3613c8cf8cdda5bebe99638.html#90635c34b3613c8cf8cdda5bebe99638">p</a>-&gt;<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[(j+1)%p-&gt;<a class="code" href="struct__polygon__holes_90635c34b3613c8cf8cdda5bebe99638.html#90635c34b3613c8cf8cdda5bebe99638">p</a>-&gt;<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>];
+<a name="l00420"></a>00420             if (<a class="code" href="group__geometry_g95f804c79e71c1ca62453b6f0123e307.html#g95f804c79e71c1ca62453b6f0123e307">line_intersection</a>(&amp;t1,&amp;t2))
+<a name="l00421"></a>00421                 adentro = <span class="keyword">false</span>;
+<a name="l00422"></a>00422         }
+<a name="l00423"></a>00423 
+<a name="l00424"></a>00424         <span class="keywordflow">for</span> (j=0;j&lt;p-&gt;<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a> &amp;&amp; adentro; j++)
+<a name="l00425"></a>00425         {
+<a name="l00426"></a>00426             <span class="keywordflow">for</span> (k=0;k&lt;p-&gt;<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[j].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a> &amp;&amp; adentro; k++)
+<a name="l00427"></a>00427             {
+<a name="l00428"></a>00428                 t2.v1 = p-&gt;<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[j].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[k];
+<a name="l00429"></a>00429                 t2.v2 = p-&gt;<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[j].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[(k+1)%p-&gt;<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[j].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>];
+<a name="l00430"></a>00430                 if (<a class="code" href="group__geometry_g95f804c79e71c1ca62453b6f0123e307.html#g95f804c79e71c1ca62453b6f0123e307">line_intersection</a>(&amp;t1,&amp;t2))
+<a name="l00431"></a>00431                     adentro = <span class="keyword">false</span>;
+<a name="l00432"></a>00432             }
+<a name="l00433"></a>00433         }
+<a name="l00434"></a>00434     }
+<a name="l00435"></a>00435     <span class="keywordflow">return</span> adentro;
+<a name="l00436"></a>00436 }
+<a name="l00437"></a>00437 <span class="comment"></span>
+<a name="l00438"></a>00438 <span class="comment">/*!@}*/</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Sun Oct 29 11:19:30 2006 para Genesting por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
+</body>
+</html>

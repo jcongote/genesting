@@ -1,0 +1,40 @@
+\hypertarget{polygon__holes_8c}{
+\section{Referencia del Archivo polygon\_\-holes.c}
+\label{polygon__holes_8c}\index{polygon_holes.c@{polygon\_\-holes.c}}
+}
+
+
+\subsection{Descripci\'{o}n detallada}
+Este archivo define las funciones que se utilizan en el Objeto Poligono con huecos 
+
+Definici\'{o}n en el archivo \hyperlink{polygon__holes_8c-source}{polygon\_\-holes.c}.
+
+{\tt \#include $<$float.h$>$}\par
+{\tt \#include $<$stdio.h$>$}\par
+{\tt \#include $<$stdlib.h$>$}\par
+{\tt \#include $<$math.h$>$}\par
+{\tt \#include \char`\"{}polygon\_\-holes.h\char`\"{}}\par
+{\tt \#include \char`\"{}polygon.h\char`\"{}}\par
+{\tt \#include \char`\"{}distance.h\char`\"{}}\par
+{\tt \#include \char`\"{}graphics.h\char`\"{}}\par
+
+
+Dependencia gr\'{a}fica adjunta para polygon\_\-holes.c:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{polygon__holes_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Funciones}
+\begin{CompactItemize}
+\item 
+float \hyperlink{group__geometry_g380cdcfa6caf51828c8d06f4518a4084_g380cdcfa6caf51828c8d06f4518a4084}{polygonholes\_\-area} (\hyperlink{struct__polygon__holes}{polygon\_\-holes} $\ast$p)
+\item 
+float \hyperlink{group__geometry_g7cf8b3f8c76179bb936754bbbf510999_g7cf8b3f8c76179bb936754bbbf510999}{polygonholes\_\-volumen} (\hyperlink{struct__polygon__holes}{polygon\_\-holes} $\ast$p)
+\item 
+bool \hyperlink{group__geometry_g35a6dd45f6d0cbed26ef8a69ed34a2e9_g35a6dd45f6d0cbed26ef8a69ed34a2e9}{polygonholes\_\-pointin} (\hyperlink{struct__polygon__holes}{polygon\_\-holes} $\ast$p, \hyperlink{struct__point}{point} $\ast$f)
+\item 
+bool \hyperlink{group__geometry_g139317720b027c782db9424256ba2c2d_g139317720b027c782db9424256ba2c2d}{polygonholes\_\-pointinhole} (\hyperlink{struct__polygon__holes}{polygon\_\-holes} $\ast$p, \hyperlink{struct__point}{point} $\ast$f)
+\item 
+bool \hyperlink{group__geometry_g496bae87588cb5710ced80f713da98ad_g496bae87588cb5710ced80f713da98ad}{polygonholes\_\-polygonin} (\hyperlink{struct__polygon__holes}{polygon\_\-holes} $\ast$p, \hyperlink{struct__polygon}{polygon} $\ast$q)
+\end{CompactItemize}

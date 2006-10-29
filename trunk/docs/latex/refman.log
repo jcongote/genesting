@@ -1,0 +1,1839 @@
+This is pdfeTeX, Version 3.141592-1.30.6-2.2 (MiKTeX 2.5) (preloaded format=pdflatex 2006.9.5)  29 OCT 2006 11:27
+entering extended mode
+**C:/Documents*and*Settings/John*Edgar/My*Documents/My*Projects/genesting/docs/
+latex/refman.tex
+
+("C:\Documents and Settings\John Edgar\My Documents\My Projects\genesting\docs\
+latex\refman.tex"
+LaTeX2e <2005/12/01>
+Babel <v3.8g> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman, ngerman, french, loaded.
+("C:\Program Files\MiKTeX 2.5\tex\latex\base\book.cls"
+Document Class: book 2005/09/16 v1.4f Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.5\tex\latex\base\bk10.clo"
+File: bk10.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\base\makeidx.sty"
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\fancyhdr\fancyhdr.sty"
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.5\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\graphics\graphics.sty"
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.5\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2005/12/29 v1.2 MiKTeX 'graphics' configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 90.
+
+("C:\Program Files\MiKTeX 2.5\tex\latex\graphics\pdftex.def"
+File: pdftex.def 2006/08/14 v0.03t Graphics/color for pdfTeX
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\tools\multicol.sty"
+Package: multicol 2006/05/18 v1.6g multicolumn formatting (FMi)
+\c@tracingmulticols=\count89
+\mult@box=\box26
+\multicol@leftmargin=\dimen105
+\c@unbalance=\count90
+\c@collectmore=\count91
+\doublecol@number=\count92
+\multicoltolerance=\count93
+\multicolpretolerance=\count94
+\full@width=\dimen106
+\page@free=\dimen107
+\premulticols=\dimen108
+\postmulticols=\dimen109
+\multicolsep=\skip52
+\multicolbaselineskip=\skip53
+\partial@page=\box27
+\last@line=\box28
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count95
+\c@finalcolumnbadness=\count96
+\last@try=\dimen110
+\multicolovershoot=\dimen111
+\multicolundershoot=\dimen112
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count97
+\float@exts=\toks15
+\float@box=\box52
+\@float@everytoks=\toks16
+\@floatcapt=\box53
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\base\textcomp.sty"
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+("C:\Program Files\MiKTeX 2.5\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\base\alltt.sty"
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\psnfss\times.sty"
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2006/08/16 v6.75c Hypertext links for LaTeX
+\@linkdim=\dimen113
+\Hy@linkcounter=\count98
+\Hy@pagecounter=\count99
+
+("C:\Program Files\MiKTeX 2.5\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2006/08/16 v6.75c Hyperref: PDFDocEncoding definition (HO)
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2006/02/14 v1.1 MiKTeX 'hyperref' configuration
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2006/06/01 v2.2 Connects package keyval with LaTeX options (
+HO)
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 2068.
+Package hyperref Info: Hyper figures OFF on input line 2118.
+Package hyperref Info: Link nesting OFF on input line 2123.
+Package hyperref Info: Hyper index ON on input line 2126.
+Package hyperref Info: Plain pages OFF on input line 2133.
+Package hyperref Info: Backreferencing ON on input line 2136.
+
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 2268.
+("C:\Program Files\MiKTeX 2.5\tex\latex\hyperref\backref.sty"
+Package: backref 2006/08/01 v1.26 Bibliographical back referencing
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 2423.
+\Fld@menulength=\count100
+\Field@Width=\dimen114
+\Fld@charsize=\dimen115
+\Choice@toks=\toks17
+\Field@toks=\toks18
+Package hyperref Info: Hyper figures OFF on input line 2901.
+Package hyperref Info: Link nesting OFF on input line 2906.
+Package hyperref Info: Hyper index ON on input line 2909.
+Package hyperref Info: backreferencing ON on input line 2914.
+Package hyperref Info: Link coloring ON on input line 2919.
+\Hy@abspage=\count101
+\c@Item=\count102
+\c@Hfootnote=\count103
+)
+*hyperref using driver hpdftex*
+("C:\Program Files\MiKTeX 2.5\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2006/08/16 v6.75c Hyperref driver for pdfTeX
+\Fld@listcount=\count104
+)
+("C:\Program Files\MiKTeX 2.5\tex\generic\babel\babel.sty"
+Package: babel 2005/05/21 v3.8g The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.5\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files\MiKTeX 2.5\tex\generic\babel\spanish.ldf"
+Language: spanish.ldf 2005/03/31 v4.2b Spanish support from the babel system
+
+("C:\Program Files\MiKTeX 2.5\tex\generic\babel\babel.def"
+File: babel.def 2005/05/21 v3.8g Babel common definitions
+\babel@savecnt=\count105
+\U@D=\dimen116
+)
+
+Package babel Warning: No hyphenation patterns were loaded for
+(babel)                the language `Spanish'
+(babel)                I will use the patterns loaded for \language=0 instead.
+
+\l@spanish = a dialect from \language0
+\es@quottoks=\toks19
+\es@quotdepth=\count106
+Package babel Info: Making . an active character on input line 509.
+Package babel Info: Making " an active character on input line 540.
+Package babel Info: Making < an active character on input line 641.
+Package babel Info: Making > an active character on input line 642.
+)) (doxygen.sty
+Package: doxygen 
+ ("C:\Program Files\MiKTeX 2.5\tex\latex\tools\calc.sty"
+Package: calc 2005/08/06 v4.2 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count107
+\calc@Bcount=\count108
+\calc@Adimen=\dimen117
+\calc@Bdimen=\dimen118
+\calc@Askip=\skip54
+\calc@Bskip=\skip55
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
+\calc@Ccount=\count109
+\calc@Cskip=\skip56
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\tools\array.sty"
+Package: array 2005/08/23 v2.4b Tabular extension package (FMi)
+\col@sep=\dimen119
+\extrarowheight=\dimen120
+\NC@list=\toks20
+\extratabsurround=\skip57
+\backup@length=\skip58
+)
+\tmplength=\skip59
+)
+("C:\Program Files\MiKTeX 2.5\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files\MiKTeX 2.5\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+\@indexfile=\write3
+
+Writing index file refman.idx
+(refman.aux (group__geometry.aux) (group__genetic.aux) (struct__individuo.aux)
+(struct__line.aux) (struct__point.aux) (struct__polygon.aux)
+(struct__polygon__holes.aux) (struct__population.aux) (struct__posicion.aux)
+(distance_8h.aux) (genesting_8c.aux) (genesting_8h.aux) (graphics_8c.aux)
+(graphics_8h.aux) (individuo_8c.aux) (individuo_8h.aux) (line_8c.aux)
+(line_8h.aux) (main_8c.aux) (point_8c.aux) (point_8h.aux) (polygon_8c.aux)
+(polygon_8h.aux) (polygon__holes_8c.aux) (polygon__holes_8h.aux)
+(population_8c.aux) (population_8h.aux) (bug.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 29.
+
+("C:\Program Files\MiKTeX 2.5\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 29.
+
+("C:\Program Files\MiKTeX 2.5\tex\latex\psnfss\t1ptm.fd"
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+("C:\Program Files\MiKTeX 2.5\tex\context\base\supp-pdf.tex"
+("C:\Program Files\MiKTeX 2.5\tex\context\base\supp-mis.tex"
+loading : Context Support Macros / Miscellaneous (2004.10.26)
+\protectiondepth=\count110
+\scratchcounter=\count111
+\scratchtoks=\toks21
+\scratchdimen=\dimen121
+\scratchskip=\skip60
+\scratchmuskip=\muskip11
+\scratchbox=\box54
+\scratchread=\read1
+\scratchwrite=\write4
+\zeropoint=\dimen122
+\onepoint=\dimen123
+\onebasepoint=\dimen124
+\minusone=\count112
+\thousandpoint=\dimen125
+\onerealpoint=\dimen126
+\emptytoks=\toks22
+\nextbox=\box55
+\nextdepth=\dimen127
+\everyline=\toks23
+\!!counta=\count113
+\!!countb=\count114
+\recursecounter=\count115
+)
+loading : Context Support Macros / PDF (2004.03.26)
+\nofMPsegments=\count116
+\nofMParguments=\count117
+\MPscratchCnt=\count118
+\MPscratchDim=\dimen128
+\MPnumerator=\count119
+\everyMPtoPDFconversion=\toks24
+) ("C:\Program Files\MiKTeX 2.5\tex\latex\graphics\color.sty"
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.5\tex\latex\00miktex\color.cfg"
+File: color.cfg 2005/12/29 v1.1 MiKTeX 'color' configuration
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
+Package hyperref Info: Link coloring ON on input line 29.
+
+("C:\Program Files\MiKTeX 2.5\tex\latex\hyperref\nameref.sty"
+Package: nameref 2006/08/15 v2.26 Cross-referencing by name of section
+
+("C:\Program Files\MiKTeX 2.5\tex\latex\oberdiek\refcount.sty"
+Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
+)
+\c@section@level=\count120
+)
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+ (refman.out)
+(refman.out)
+\@outlinefile=\write5
+ [1
+
+
+{psfonts.map}] [2
+
+]
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 42.
+ (refman.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+ [1
+
+])
+\tf@toc=\write6
+LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <10> not available
+(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 43.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.96997pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 43.
+[2]
+Cap\'{\i }tulo 1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 45.
+(index.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 5.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+! pdfTeX warning (ext4): destination with the same identifier (name{page.1}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.9 ...ack.\hypertarget{index_objective}{}\section
+                                                  {Objetivo}\label{index_obj...
+[1
+
+
+])
+! pdfTeX warning (ext4): destination with the same identifier (name{page.2}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.47 \chapter
+             {Genesting Indice de m\'{o}dulos} [2]
+Cap\'{\i }tulo 2.
+(modules.tex) [3
+
+] [4
+
+]
+Cap\'{\i }tulo 3.
+(annotated.tex) [5] [6
+
+]
+Cap\'{\i }tulo 4.
+(files.tex) [7] [8
+
+]
+Cap\'{\i }tulo 5.
+(pages.tex) [9] [10
+
+]
+Cap\'{\i }tulo 6.
+(group__distance.tex
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 34.
+
+Underfull \vbox (badness 2846) has occurred while \output is active []
+
+ [11]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 57.
+
+("C:\Program Files\MiKTeX 2.5\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+Overfull \hbox (111.00029pt too wide) in paragraph at lines 73--73
+[]\T1/pcr/m/n/8 69     return fabsf(point_cross(&(l->v1),&(l->v2),f) / distance
+_pointpoint(&(l->v1),&(l->v2)));[] 
+ []
+
+
+<group__distance_g69a59a49134b784b0c8797e0e83e7c40_g69a59a49134b784b0c8797e0e83
+e7c40_cgraph.pdf, id=438, 244.915pt x 104.39pt>
+File: group__distance_g69a59a49134b784b0c8797e0e83e7c40_g69a59a49134b784b0c8797
+e0e83e7c40_cgraph.pdf Graphic file (type pdf)
+
+<use group__distance_g69a59a49134b784b0c8797e0e83e7c40_g69a59a49134b784b0c8797e
+0e83e7c40_cgraph.pdf> [12]
+<group__distance_g69a59a49134b784b0c8797e0e83e7c40_g69a59a49134b784b0c8797e0e83
+e7c40_icgraph.pdf, id=453, 256.96pt x 28.105pt>
+File: group__distance_g69a59a49134b784b0c8797e0e83e7c40_g69a59a49134b784b0c8797
+e0e83e7c40_icgraph.pdf Graphic file (type pdf)
+
+<use group__distance_g69a59a49134b784b0c8797e0e83e7c40_g69a59a49134b784b0c8797e
+0e83e7c40_icgraph.pdf>
+Underfull \hbox (badness 2521) in paragraph at lines 99--100
+[]\T1/ptm/m/n/10 La fun-cion com-para la dis-tan-cia en-tre dos pun-tos la for-
+mu-la para es-to es:
+ []
+
+
+<group__distance_g3b2b03f846e6b587be683ec8b853e774_g3b2b03f846e6b587be683ec8b85
+3e774_icgraph.pdf, id=454, 244.915pt x 28.105pt>
+File: group__distance_g3b2b03f846e6b587be683ec8b853e774_g3b2b03f846e6b587be683e
+c8b853e774_icgraph.pdf Graphic file (type pdf)
+
+<use group__distance_g3b2b03f846e6b587be683ec8b853e774_g3b2b03f846e6b587be683ec
+8b853e774_icgraph.pdf> [13 <group__distance_g69a59a49134b784b0c8797e0e83e7c40_g
+69a59a49134b784b0c8797e0e83e7c40_cgraph.pdf> <group__distance_g69a59a49134b784b
+0c8797e0e83e7c40_g69a59a49134b784b0c8797e0e83e7c40_icgraph.pdf> <group__distanc
+e_g3b2b03f846e6b587be683ec8b853e774_g3b2b03f846e6b587be683ec8b853e774_icgraph.p
+df>]
+<group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g25716e8d1c8abaf08903bbcd08b
+8d6e5_cgraph.pdf, id=496, 256.96pt x 28.105pt>
+File: group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g25716e8d1c8abaf08903bb
+cd08b8d6e5_cgraph.pdf Graphic file (type pdf)
+
+<use group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g25716e8d1c8abaf08903bbc
+d08b8d6e5_cgraph.pdf> [14]
+<group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g25716e8d1c8abaf08903bbcd08b
+8d6e5_icgraph.pdf, id=501, 301.125pt x 28.105pt>
+File: group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g25716e8d1c8abaf08903bb
+cd08b8d6e5_icgraph.pdf Graphic file (type pdf)
+
+<use group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g25716e8d1c8abaf08903bbc
+d08b8d6e5_icgraph.pdf> [15 <group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g
+25716e8d1c8abaf08903bbcd08b8d6e5_cgraph.pdf> <group__distance_g25716e8d1c8abaf0
+8903bbcd08b8d6e5_g25716e8d1c8abaf08903bbcd08b8d6e5_icgraph.pdf>]
+<group__distance_gc837f0084791f42936ade857a0cce3af_gc837f0084791f42936ade857a0c
+ce3af_cgraph.pdf, id=523, 301.125pt x 28.105pt>
+File: group__distance_gc837f0084791f42936ade857a0cce3af_gc837f0084791f42936ade8
+57a0cce3af_cgraph.pdf Graphic file (type pdf)
+
+<use group__distance_gc837f0084791f42936ade857a0cce3af_gc837f0084791f42936ade85
+7a0cce3af_cgraph.pdf>
+<group__distance_gc837f0084791f42936ade857a0cce3af_gc837f0084791f42936ade857a0c
+ce3af_icgraph.pdf, id=524, 303.1325pt x 28.105pt>
+File: group__distance_gc837f0084791f42936ade857a0cce3af_gc837f0084791f42936ade8
+57a0cce3af_icgraph.pdf Graphic file (type pdf)
+
+<use group__distance_gc837f0084791f42936ade857a0cce3af_gc837f0084791f42936ade85
+7a0cce3af_icgraph.pdf>) [16 <group__distance_gc837f0084791f42936ade857a0cce3af_
+gc837f0084791f42936ade857a0cce3af_cgraph.pdf> <group__distance_gc837f0084791f42
+936ade857a0cce3af_gc837f0084791f42936ade857a0cce3af_icgraph.pdf>]
+(group__geometry.tex [17
+
+] [18]
+<group__geometry_ga27fbafb04a36a60af7bd5cafbdfd412_ga27fbafb04a36a60af7bd5cafbd
+fd412_icgraph.pdf, id=659, 224.84pt x 28.105pt>
+File: group__geometry_ga27fbafb04a36a60af7bd5cafbdfd412_ga27fbafb04a36a60af7bd5
+cafbdfd412_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_ga27fbafb04a36a60af7bd5cafbdfd412_ga27fbafb04a36a60af7bd5c
+afbdfd412_icgraph.pdf> [19 <group__geometry_ga27fbafb04a36a60af7bd5cafbdfd412_g
+a27fbafb04a36a60af7bd5cafbdfd412_icgraph.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+<group__geometry_g95f804c79e71c1ca62453b6f0123e307_g95f804c79e71c1ca62453b6f012
+3e307_icgraph.pdf, id=677, 258.9675pt x 66.2475pt>
+File: group__geometry_g95f804c79e71c1ca62453b6f0123e307_g95f804c79e71c1ca62453b
+6f0123e307_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g95f804c79e71c1ca62453b6f0123e307_g95f804c79e71c1ca62453b6
+f0123e307_icgraph.pdf>
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 298--298
+[]\T1/pcr/m/n/8 130     return (l->v1.x == l->v2.x && l->v1.y == l->v2.y) ? tru
+e : false;[] 
+ []
+
+
+<group__geometry_g68d4dad9b8e742b0d63affc853f80391_g68d4dad9b8e742b0d63affc853f
+80391_icgraph.pdf, id=678, 228.855pt x 28.105pt>
+File: group__geometry_g68d4dad9b8e742b0d63affc853f80391_g68d4dad9b8e742b0d63aff
+c853f80391_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g68d4dad9b8e742b0d63affc853f80391_g68d4dad9b8e742b0d63affc
+853f80391_icgraph.pdf> [21 <group__geometry_g95f804c79e71c1ca62453b6f0123e307_g
+95f804c79e71c1ca62453b6f0123e307_icgraph.pdf> <group__geometry_g68d4dad9b8e742b
+0d63affc853f80391_g68d4dad9b8e742b0d63affc853f80391_icgraph.pdf>]
+Overfull \hbox (19.80023pt too wide) in paragraph at lines 332--332
+[]\T1/pcr/m/n/8 40     return ((b->x - a->x)*(c->y - a->y)) - ((b->y - a->y)*(c
+->x - a->x));[] 
+ []
+
+
+<group__geometry_gb97527165a510655ee37cd3ccfa8d932_gb97527165a510655ee37cd3ccfa
+8d932_icgraph.pdf, id=698, 208.78pt x 28.105pt>
+File: group__geometry_gb97527165a510655ee37cd3ccfa8d932_gb97527165a510655ee37cd
+3ccfa8d932_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_gb97527165a510655ee37cd3ccfa8d932_gb97527165a510655ee37cd3
+ccfa8d932_icgraph.pdf>
+Overfull \hbox (39.00024pt too wide) in paragraph at lines 366--366
+[]\T1/pcr/m/n/8 23     return ((b->x - a->x) * (c->x - b->x)) + ((b->y - a->y) 
+* (c->y - b->y));[] 
+ []
+
+[22 <group__geometry_gb97527165a510655ee37cd3ccfa8d932_gb97527165a510655ee37cd3
+ccfa8d932_icgraph.pdf>]
+<group__geometry_ga7ae8d919209fea43e8a61215398bbbe_ga7ae8d919209fea43e8a6121539
+8bbbe_icgraph.pdf, id=717, 198.7425pt x 28.105pt>
+File: group__geometry_ga7ae8d919209fea43e8a61215398bbbe_ga7ae8d919209fea43e8a61
+215398bbbe_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_ga7ae8d919209fea43e8a61215398bbbe_ga7ae8d919209fea43e8a612
+15398bbbe_icgraph.pdf>
+<group__geometry_gcfbc9e7772d80361768bc0b65cebbca1_gcfbc9e7772d80361768bc0b65ce
+bbca1_icgraph.pdf, id=718, 240.9pt x 104.39pt>
+File: group__geometry_gcfbc9e7772d80361768bc0b65cebbca1_gcfbc9e7772d80361768bc0
+b65cebbca1_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_gcfbc9e7772d80361768bc0b65cebbca1_gcfbc9e7772d80361768bc0b
+65cebbca1_icgraph.pdf> [23 <group__geometry_ga7ae8d919209fea43e8a61215398bbbe_g
+a7ae8d919209fea43e8a61215398bbbe_icgraph.pdf> <group__geometry_gcfbc9e7772d8036
+1768bc0b65cebbca1_gcfbc9e7772d80361768bc0b65cebbca1_icgraph.pdf>]
+<group__geometry_ge39fef354e4411678ec081c197b29825_ge39fef354e4411678ec081c197b
+29825_cgraph.pdf, id=737, 220.825pt x 28.105pt>
+File: group__geometry_ge39fef354e4411678ec081c197b29825_ge39fef354e4411678ec081
+c197b29825_cgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_ge39fef354e4411678ec081c197b29825_ge39fef354e4411678ec081c
+197b29825_cgraph.pdf>
+<group__geometry_ge39fef354e4411678ec081c197b29825_ge39fef354e4411678ec081c197b
+29825_icgraph.pdf, id=738, 214.8025pt x 28.105pt>
+File: group__geometry_ge39fef354e4411678ec081c197b29825_ge39fef354e4411678ec081
+c197b29825_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_ge39fef354e4411678ec081c197b29825_ge39fef354e4411678ec081c
+197b29825_icgraph.pdf> [24 <group__geometry_ge39fef354e4411678ec081c197b29825_g
+e39fef354e4411678ec081c197b29825_cgraph.pdf> <group__geometry_ge39fef354e441167
+8ec081c197b29825_ge39fef354e4411678ec081c197b29825_icgraph.pdf>]
+<group__geometry_g137ef6f552a0a04c5ae0493690088f3f_g137ef6f552a0a04c5ae04936900
+88f3f_icgraph.pdf, id=760, 367.3725pt x 142.5325pt>
+File: group__geometry_g137ef6f552a0a04c5ae0493690088f3f_g137ef6f552a0a04c5ae049
+3690088f3f_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g137ef6f552a0a04c5ae0493690088f3f_g137ef6f552a0a04c5ae0493
+690088f3f_icgraph.pdf> [25 <group__geometry_g137ef6f552a0a04c5ae0493690088f3f_g
+137ef6f552a0a04c5ae0493690088f3f_icgraph.pdf>]
+<group__geometry_g2be6101a257ea8896e61e93d14b22b89_g2be6101a257ea8896e61e93d14b
+22b89_cgraph.pdf, id=774, 242.9075pt x 66.2475pt>
+File: group__geometry_g2be6101a257ea8896e61e93d14b22b89_g2be6101a257ea8896e61e9
+3d14b22b89_cgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g2be6101a257ea8896e61e93d14b22b89_g2be6101a257ea8896e61e93
+d14b22b89_cgraph.pdf>
+<group__geometry_g2be6101a257ea8896e61e93d14b22b89_g2be6101a257ea8896e61e93d14b
+22b89_icgraph.pdf, id=775, 271.0125pt x 66.2475pt>
+File: group__geometry_g2be6101a257ea8896e61e93d14b22b89_g2be6101a257ea8896e61e9
+3d14b22b89_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g2be6101a257ea8896e61e93d14b22b89_g2be6101a257ea8896e61e93
+d14b22b89_icgraph.pdf> [26 <group__geometry_g2be6101a257ea8896e61e93d14b22b89_g
+2be6101a257ea8896e61e93d14b22b89_cgraph.pdf>]
+Overfull \hbox (187.80034pt too wide) in paragraph at lines 624--624
+[]\T1/pcr/m/n/8 57                 (f->x < (p->v[j].x - p->v[i].x) * (f->y - p-
+>v[i].y) / (p->v[j].y - p->v[i].y) + p->v[i].x))[] 
+ []
+
+
+<group__geometry_geab0a1d6da7c44ae49494958bb885504_geab0a1d6da7c44ae49494958bb8
+85504_icgraph.pdf, id=786, 260.975pt x 104.39pt>
+File: group__geometry_geab0a1d6da7c44ae49494958bb885504_geab0a1d6da7c44ae494949
+58bb885504_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_geab0a1d6da7c44ae49494958bb885504_geab0a1d6da7c44ae4949495
+8bb885504_icgraph.pdf> [27 <group__geometry_g2be6101a257ea8896e61e93d14b22b89_g
+2be6101a257ea8896e61e93d14b22b89_icgraph.pdf> <group__geometry_geab0a1d6da7c44a
+e49494958bb885504_geab0a1d6da7c44ae49494958bb885504_icgraph.pdf>]
+<group__geometry_g95276abee7240f116afaf80a3e1f23c4_g95276abee7240f116afaf80a3e1
+f23c4_cgraph.pdf, id=807, 224.84pt x 66.2475pt>
+File: group__geometry_g95276abee7240f116afaf80a3e1f23c4_g95276abee7240f116afaf8
+0a3e1f23c4_cgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g95276abee7240f116afaf80a3e1f23c4_g95276abee7240f116afaf80
+a3e1f23c4_cgraph.pdf>
+<group__geometry_g95276abee7240f116afaf80a3e1f23c4_g95276abee7240f116afaf80a3e1
+f23c4_icgraph.pdf, id=808, 224.84pt x 66.2475pt>
+File: group__geometry_g95276abee7240f116afaf80a3e1f23c4_g95276abee7240f116afaf8
+0a3e1f23c4_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g95276abee7240f116afaf80a3e1f23c4_g95276abee7240f116afaf80
+a3e1f23c4_icgraph.pdf> [28 <group__geometry_g95276abee7240f116afaf80a3e1f23c4_g
+95276abee7240f116afaf80a3e1f23c4_cgraph.pdf> <group__geometry_g95276abee7240f11
+6afaf80a3e1f23c4_g95276abee7240f116afaf80a3e1f23c4_icgraph.pdf>]
+<group__geometry_g7538c2bf0d1e8acc0cfc055b6bf3a96b_g7538c2bf0d1e8acc0cfc055b6bf
+3a96b_icgraph.pdf, id=827, 357.335pt x 142.5325pt>
+File: group__geometry_g7538c2bf0d1e8acc0cfc055b6bf3a96b_g7538c2bf0d1e8acc0cfc05
+5b6bf3a96b_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g7538c2bf0d1e8acc0cfc055b6bf3a96b_g7538c2bf0d1e8acc0cfc055
+b6bf3a96b_icgraph.pdf> [29 <group__geometry_g7538c2bf0d1e8acc0cfc055b6bf3a96b_g
+7538c2bf0d1e8acc0cfc055b6bf3a96b_icgraph.pdf>]
+<group__geometry_g380cdcfa6caf51828c8d06f4518a4084_g380cdcfa6caf51828c8d06f4518
+a4084_cgraph.pdf, id=842, 224.84pt x 28.105pt>
+File: group__geometry_g380cdcfa6caf51828c8d06f4518a4084_g380cdcfa6caf51828c8d06
+f4518a4084_cgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g380cdcfa6caf51828c8d06f4518a4084_g380cdcfa6caf51828c8d06f
+4518a4084_cgraph.pdf>
+<group__geometry_g380cdcfa6caf51828c8d06f4518a4084_g380cdcfa6caf51828c8d06f4518
+a4084_icgraph.pdf, id=843, 236.885pt x 66.2475pt>
+File: group__geometry_g380cdcfa6caf51828c8d06f4518a4084_g380cdcfa6caf51828c8d06
+f4518a4084_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g380cdcfa6caf51828c8d06f4518a4084_g380cdcfa6caf51828c8d06f
+4518a4084_icgraph.pdf> [30 <group__geometry_g380cdcfa6caf51828c8d06f4518a4084_g
+380cdcfa6caf51828c8d06f4518a4084_cgraph.pdf> <group__geometry_g380cdcfa6caf5182
+8c8d06f4518a4084_g380cdcfa6caf51828c8d06f4518a4084_icgraph.pdf>]
+<group__geometry_g35a6dd45f6d0cbed26ef8a69ed34a2e9_g35a6dd45f6d0cbed26ef8a69ed3
+4a2e9_cgraph.pdf, id=863, 240.9pt x 28.105pt>
+File: group__geometry_g35a6dd45f6d0cbed26ef8a69ed34a2e9_g35a6dd45f6d0cbed26ef8a
+69ed34a2e9_cgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g35a6dd45f6d0cbed26ef8a69ed34a2e9_g35a6dd45f6d0cbed26ef8a6
+9ed34a2e9_cgraph.pdf>
+<group__geometry_g35a6dd45f6d0cbed26ef8a69ed34a2e9_g35a6dd45f6d0cbed26ef8a69ed3
+4a2e9_icgraph.pdf, id=864, 433.62pt x 66.2475pt>
+File: group__geometry_g35a6dd45f6d0cbed26ef8a69ed34a2e9_g35a6dd45f6d0cbed26ef8a
+69ed34a2e9_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g35a6dd45f6d0cbed26ef8a69ed34a2e9_g35a6dd45f6d0cbed26ef8a6
+9ed34a2e9_icgraph.pdf> [31 <group__geometry_g35a6dd45f6d0cbed26ef8a69ed34a2e9_g
+35a6dd45f6d0cbed26ef8a69ed34a2e9_cgraph.pdf> <group__geometry_g35a6dd45f6d0cbed
+26ef8a69ed34a2e9_g35a6dd45f6d0cbed26ef8a69ed34a2e9_icgraph.pdf>]
+<group__geometry_g139317720b027c782db9424256ba2c2d_g139317720b027c782db9424256b
+a2c2d_cgraph.pdf, id=884, 260.975pt x 28.105pt>
+File: group__geometry_g139317720b027c782db9424256ba2c2d_g139317720b027c782db942
+4256ba2c2d_cgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g139317720b027c782db9424256ba2c2d_g139317720b027c782db9424
+256ba2c2d_cgraph.pdf>
+<group__geometry_g139317720b027c782db9424256ba2c2d_g139317720b027c782db9424256b
+a2c2d_icgraph.pdf, id=885, 293.095pt x 28.105pt>
+File: group__geometry_g139317720b027c782db9424256ba2c2d_g139317720b027c782db942
+4256ba2c2d_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g139317720b027c782db9424256ba2c2d_g139317720b027c782db9424
+256ba2c2d_icgraph.pdf> [32 <group__geometry_g139317720b027c782db9424256ba2c2d_g
+139317720b027c782db9424256ba2c2d_cgraph.pdf> <group__geometry_g139317720b027c78
+2db9424256ba2c2d_g139317720b027c782db9424256ba2c2d_icgraph.pdf>]
+<group__geometry_g496bae87588cb5710ced80f713da98ad_g496bae87588cb5710ced80f713d
+a98ad_cgraph.pdf, id=905, 279.0425pt x 66.2475pt>
+File: group__geometry_g496bae87588cb5710ced80f713da98ad_g496bae87588cb5710ced80
+f713da98ad_cgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g496bae87588cb5710ced80f713da98ad_g496bae87588cb5710ced80f
+713da98ad_cgraph.pdf>
+<group__geometry_g496bae87588cb5710ced80f713da98ad_g496bae87588cb5710ced80f713d
+a98ad_icgraph.pdf, id=906, 287.0725pt x 66.2475pt>
+File: group__geometry_g496bae87588cb5710ced80f713da98ad_g496bae87588cb5710ced80
+f713da98ad_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g496bae87588cb5710ced80f713da98ad_g496bae87588cb5710ced80f
+713da98ad_icgraph.pdf> [33 <group__geometry_g496bae87588cb5710ced80f713da98ad_g
+496bae87588cb5710ced80f713da98ad_cgraph.pdf> <group__geometry_g496bae87588cb571
+0ced80f713da98ad_g496bae87588cb5710ced80f713da98ad_icgraph.pdf>] [34]
+Overfull \hbox (135.0003pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 94             draw_line(p->v[i].x,p->v[i].y,p->v[(i+1)%p->nver
+tices].x,p->v[(i+1)%p->nvertices].y);[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35]
+Overfull \hbox (0.60022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 173                 dis[i]=distance_pointpolygonholes(&q[i], p,
+&ref[i]);[] 
+ []
+
+
+Overfull \hbox (149.40031pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 184                 if (line_ispoint(&ref[0]))// Si es un punto
+ entonces se utiliza la formula del cono[] 
+ []
+
+
+Overfull \hbox (120.6003pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 194                     Esta funcion para calcular el volument 
+de un rectangulo que intersecta un[] 
+ []
+
+
+Overfull \hbox (111.00029pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 195                     cono tiene valores indeterminados en al
+gunos segmentos del problema, es[] 
+ []
+
+
+Overfull \hbox (135.0003pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 196                     posible que este error aparesca solo en
+ algunos casos, pero hay que examinar[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 201                            - 2*a*h*sqrt(pow(-c + h,2) + pow
+(a - k,2))[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 202                            - 2*a*d*sqrt(pow(-d + h,2) + pow
+(a - k,2))[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 203                            + 2*a*h*sqrt(pow(-d + h,2) + pow
+(a - k,2))[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 204                            - 2*b*c*sqrt(pow(-c + h,2) + pow
+(b - k,2))[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 205                            + 2*b*h*sqrt(pow(-c + h,2) + pow
+(b - k,2))[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 206                            + 2*b*d*sqrt(pow(-d + h,2) + pow
+(b - k,2))[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 207                            - 2*b*h*sqrt(pow(-d + h,2) + pow
+(b - k,2))[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 208                            - 2*c*k*sqrt(pow(-c + h,2) + pow
+(a - k,2))[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 209                            + 2*h*k*sqrt(pow(-c + h,2) + pow
+(a - k,2))[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 210                            + 2*d*k*sqrt(pow(-d + h,2) + pow
+(a - k,2))[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 211                            - 2*h*k*sqrt(pow(-d + h,2) + pow
+(a - k,2))[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 212                            + 2*c*k*sqrt(pow(-c + h,2) + pow
+(b - k,2))[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 213                            - 2*h*k*sqrt(pow(-c + h,2) + pow
+(b - k,2))[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 214                            - 2*d*k*sqrt(pow(-d + h,2) + pow
+(b - k,2))[] 
+ []
+
+
+Overfull \hbox (5.40022pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 215                            + 2*h*k*sqrt(pow(-d + h,2) + pow
+(b - k,2))[] 
+ []
+
+
+Overfull \hbox (87.00027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 216                            - pow(a,3)*log(-c + h + sqrt(pow
+(-c + h,2) + pow(a - k,2)))[] 
+ []
+
+
+Overfull \hbox (106.20029pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 217                            + 3*pow(a,2)*k*log(-c + h + sqrt
+(pow(-c + h,2) + pow(a - k,2)))[] 
+ []
+
+
+Overfull \hbox (106.20029pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 218                            - 3*a*pow(k,2)*log(-c + h + sqrt
+(pow(-c + h,2) + pow(a - k,2)))[] 
+ []
+
+
+Overfull \hbox (87.00027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 219                            + pow(k,3)*log(-c + h + sqrt(pow
+(-c + h,2) + pow(a - k,2)))[] 
+ []
+
+
+Overfull \hbox (87.00027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 220                            + pow(a,3)*log(-d + h + sqrt(pow
+(-d + h,2) + pow(a - k,2)))[] 
+ []
+
+
+Overfull \hbox (106.20029pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 221                            - 3*pow(a,2)*k*log(-d + h + sqrt
+(pow(-d + h,2) + pow(a - k,2)))[] 
+ []
+
+
+Overfull \hbox (106.20029pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 222                            + 3*a*pow(k,2)*log(-d + h + sqrt
+(pow(-d + h,2) + pow(a - k,2)))[] 
+ []
+
+
+Overfull \hbox (87.00027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 223                            - pow(k,3)*log(-d + h + sqrt(pow
+(-d + h,2) + pow(a - k,2)))[] 
+ []
+
+
+Overfull \hbox (87.00027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 224                            + pow(b,3)*log(-c + h + sqrt(pow
+(-c + h,2) + pow(b - k,2)))[] 
+ []
+
+
+Overfull \hbox (106.20029pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 225                            - 3*pow(b,2)*k*log(-c + h + sqrt
+(pow(-c + h,2) + pow(b - k,2)))[] 
+ []
+
+
+Overfull \hbox (106.20029pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 226                            + 3*b*pow(k,2)*log(-c + h + sqrt
+(pow(-c + h,2) + pow(b - k,2)))[] 
+ []
+
+
+Overfull \hbox (87.00027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 227                            - pow(k,3)*log(-c + h + sqrt(pow
+(-c + h,2) + pow(b - k,2)))[] 
+ []
+
+
+Overfull \hbox (87.00027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 228                            - pow(b,3)*log(-d + h + sqrt(pow
+(-d + h,2) + pow(b - k,2)))[] 
+ []
+
+
+Overfull \hbox (106.20029pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 229                            + 3*pow(b,2)*k*log(-d + h + sqrt
+(pow(-d + h,2) + pow(b - k,2)))[] 
+ []
+
+
+Overfull \hbox (106.20029pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 230                            - 3*b*pow(k,2)*log(-d + h + sqrt
+(pow(-d + h,2) + pow(b - k,2)))[] 
+ []
+
+
+Overfull \hbox (87.00027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 231                            + pow(k,3)*log(-d + h + sqrt(pow
+(-d + h,2) + pow(b - k,2)))[] 
+ []
+
+
+Overfull \hbox (82.20027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 232                            + pow(c,3)*log(a + sqrt(pow(-c +
+ h,2) + pow(a - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (101.40028pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 233                            - 3*pow(c,2)*h*log(a + sqrt(pow(
+-c + h,2) + pow(a - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (101.40028pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 234                            + 3*c*pow(h,2)*log(a + sqrt(pow(
+-c + h,2) + pow(a - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (82.20027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 235                            - pow(h,3)*log(a + sqrt(pow(-c +
+ h,2) + pow(a - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (82.20027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 236                            - pow(d,3)*log(a + sqrt(pow(-d +
+ h,2) + pow(a - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (101.40028pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 237                            + 3*pow(d,2)*h*log(a + sqrt(pow(
+-d + h,2) + pow(a - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (101.40028pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 238                            - 3*d*pow(h,2)*log(a + sqrt(pow(
+-d + h,2) + pow(a - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (82.20027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 239                            + pow(h,3)*log(a + sqrt(pow(-d +
+ h,2) + pow(a - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (82.20027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 240                            - pow(c,3)*log(b + sqrt(pow(-c +
+ h,2) + pow(b - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (101.40028pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 241                            + 3*pow(c,2)*h*log(b + sqrt(pow(
+-c + h,2) + pow(b - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (101.40028pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 242                            - 3*c*pow(h,2)*log(b + sqrt(pow(
+-c + h,2) + pow(b - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (82.20027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 243                            + pow(h,3)*log(b + sqrt(pow(-c +
+ h,2) + pow(b - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (82.20027pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 244                            + pow(d,3)*log(b + sqrt(pow(-d +
+ h,2) + pow(b - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (101.40028pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 245                            - 3*pow(d,2)*h*log(b + sqrt(pow(
+-d + h,2) + pow(b - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (101.40028pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 246                            + 3*d*pow(h,2)*log(b + sqrt(pow(
+-d + h,2) + pow(b - k,2)) - k)[] 
+ []
+
+
+Overfull \hbox (101.40028pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 247                            - pow(h,3)*log(b + sqrt(pow(-d +
+ h,2) + pow(b - k,2)) - k))/6;[] 
+ []
+
+
+Overfull \hbox (19.80023pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 254                 else // Si es una linea se utiliza la formu
+la de la cuna[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+Overfull \hbox (48.60025pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 271                         )) // el poligono esta dentro de p 
+pero no en un hueco[] 
+ []
+
+
+Overfull \hbox (250.20038pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 275                                         vol+= polygonholes_
+volumen_box(p, minx, miny, (minx+maxx)/2.0, (miny+maxy)/2.0);[] 
+ []
+
+
+Overfull \hbox (250.20038pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 276                                         vol+= polygonholes_
+volumen_box(p, (minx+maxx)/2.0, miny, maxx, (miny+maxy)/2.0);[] 
+ []
+
+
+Overfull \hbox (250.20038pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 277                                         vol+= polygonholes_
+volumen_box(p, minx, (miny+maxy)/2.0, (minx+maxx)/2.0, maxy);[] 
+ []
+
+
+Overfull \hbox (250.20038pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 278                                         vol+= polygonholes_
+volumen_box(p, (minx+maxx)/2.0, (miny+maxy)/2.0, maxx, maxy);[] 
+ []
+
+
+Overfull \hbox (120.6003pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 283                         vol+= polygonholes_volumen_box(p, m
+inx, miny, (minx+maxx)/2.0, maxy);[] 
+ []
+
+
+Overfull \hbox (120.6003pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 284                         vol+= polygonholes_volumen_box(p, (
+minx+maxx)/2.0, miny, maxx, maxy);[] 
+ []
+
+
+Overfull \hbox (120.6003pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 288                         vol+= polygonholes_volumen_box(p, m
+inx, miny, maxx, (miny+maxy)/2.0);[] 
+ []
+
+
+Overfull \hbox (120.6003pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 289                         vol+= polygonholes_volumen_box(p, m
+inx, (miny+maxy)/2.0, maxx, maxy);[] 
+ []
+
+
+Overfull \hbox (43.80025pt too wide) in paragraph at lines 1252--1252
+[]\T1/pcr/m/n/8 308             fprintf(stderr,"Error: (%f, %f) (%f, %f)\n",min
+x,miny,maxx,maxy);[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38]
+<group__geometry_g7cf8b3f8c76179bb936754bbbf510999_g7cf8b3f8c76179bb936754bbbf5
+10999_cgraph.pdf, id=951, 449.68pt x 523.9575pt>
+File: group__geometry_g7cf8b3f8c76179bb936754bbbf510999_g7cf8b3f8c76179bb936754
+bbbf510999_cgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g7cf8b3f8c76179bb936754bbbf510999_g7cf8b3f8c76179bb936754b
+bbf510999_cgraph.pdf>
+<group__geometry_g7cf8b3f8c76179bb936754bbbf510999_g7cf8b3f8c76179bb936754bbbf5
+10999_icgraph.pdf, id=952, 252.945pt x 66.2475pt>
+File: group__geometry_g7cf8b3f8c76179bb936754bbbf510999_g7cf8b3f8c76179bb936754
+bbbf510999_icgraph.pdf Graphic file (type pdf)
+
+<use group__geometry_g7cf8b3f8c76179bb936754bbbf510999_g7cf8b3f8c76179bb936754b
+bbf510999_icgraph.pdf>) [39 <group__geometry_g7cf8b3f8c76179bb936754bbbf510999_
+g7cf8b3f8c76179bb936754bbbf510999_cgraph.pdf>] [40 <group__geometry_g7cf8b3f8c7
+6179bb936754bbbf510999_g7cf8b3f8c76179bb936754bbbf510999_icgraph.pdf>]
+(group__genetic.tex [41
+
+
+] [42]
+Overfull \hbox (10.20023pt too wide) in paragraph at lines 172--172
+[]\T1/pcr/m/n/8 104         polygon_minbox(&(g->patrones[i]), &minx, &miny, &ma
+xx, &maxy);[] 
+ []
+
+
+<group__genetic_g1daa6a4e8af34b8b16a48fc2f3701f1c_g1daa6a4e8af34b8b16a48fc2f370
+1f1c_cgraph.pdf, id=1070, 367.3725pt x 142.5325pt>
+File: group__genetic_g1daa6a4e8af34b8b16a48fc2f3701f1c_g1daa6a4e8af34b8b16a48fc
+2f3701f1c_cgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_g1daa6a4e8af34b8b16a48fc2f3701f1c_g1daa6a4e8af34b8b16a48fc2
+f3701f1c_cgraph.pdf>
+<group__genetic_g1daa6a4e8af34b8b16a48fc2f3701f1c_g1daa6a4e8af34b8b16a48fc2f370
+1f1c_icgraph.pdf, id=1071, 160.6pt x 28.105pt>
+File: group__genetic_g1daa6a4e8af34b8b16a48fc2f3701f1c_g1daa6a4e8af34b8b16a48fc
+2f3701f1c_icgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_g1daa6a4e8af34b8b16a48fc2f3701f1c_g1daa6a4e8af34b8b16a48fc2
+f3701f1c_icgraph.pdf> [43 <group__genetic_g1daa6a4e8af34b8b16a48fc2f3701f1c_g1d
+aa6a4e8af34b8b16a48fc2f3701f1c_cgraph.pdf> <group__genetic_g1daa6a4e8af34b8b16a
+48fc2f3701f1c_g1daa6a4e8af34b8b16a48fc2f3701f1c_icgraph.pdf>]
+<group__genetic_g3f63f4034274d731cb3fdf3200c64d41_g3f63f4034274d731cb3fdf3200c6
+4d41_cgraph.pdf, id=1090, 212.795pt x 28.105pt>
+File: group__genetic_g3f63f4034274d731cb3fdf3200c64d41_g3f63f4034274d731cb3fdf3
+200c64d41_cgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_g3f63f4034274d731cb3fdf3200c64d41_g3f63f4034274d731cb3fdf32
+00c64d41_cgraph.pdf>
+<group__genetic_g3f63f4034274d731cb3fdf3200c64d41_g3f63f4034274d731cb3fdf3200c6
+4d41_icgraph.pdf, id=1091, 172.645pt x 28.105pt>
+File: group__genetic_g3f63f4034274d731cb3fdf3200c64d41_g3f63f4034274d731cb3fdf3
+200c64d41_icgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_g3f63f4034274d731cb3fdf3200c64d41_g3f63f4034274d731cb3fdf32
+00c64d41_icgraph.pdf> [44 <group__genetic_g3f63f4034274d731cb3fdf3200c64d41_g3f
+63f4034274d731cb3fdf3200c64d41_cgraph.pdf> <group__genetic_g3f63f4034274d731cb3
+fdf3200c64d41_g3f63f4034274d731cb3fdf3200c64d41_icgraph.pdf>]
+<group__genetic_gf4e60223d27c85a5f6166e35ecafe641_gf4e60223d27c85a5f6166e35ecaf
+e641_cgraph.pdf, id=1111, 230.8625pt x 66.2475pt>
+File: group__genetic_gf4e60223d27c85a5f6166e35ecafe641_gf4e60223d27c85a5f6166e3
+5ecafe641_cgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_gf4e60223d27c85a5f6166e35ecafe641_gf4e60223d27c85a5f6166e35
+ecafe641_cgraph.pdf>
+<group__genetic_gf4e60223d27c85a5f6166e35ecafe641_gf4e60223d27c85a5f6166e35ecaf
+e641_icgraph.pdf, id=1112, 230.8625pt x 28.105pt>
+File: group__genetic_gf4e60223d27c85a5f6166e35ecafe641_gf4e60223d27c85a5f6166e3
+5ecafe641_icgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_gf4e60223d27c85a5f6166e35ecafe641_gf4e60223d27c85a5f6166e35
+ecafe641_icgraph.pdf> [45 <group__genetic_gf4e60223d27c85a5f6166e35ecafe641_gf4
+e60223d27c85a5f6166e35ecafe641_cgraph.pdf> <group__genetic_gf4e60223d27c85a5f61
+66e35ecafe641_gf4e60223d27c85a5f6166e35ecafe641_icgraph.pdf>]
+Overfull \hbox (77.40027pt too wide) in paragraph at lines 369--369
+[]\T1/pcr/m/n/8 34     temp.h = (polygon*) malloc(sizeof(polygon)*(ind->ngenes+
+ind->ambiente->nhuecos));[] 
+ []
+
+
+Overfull \hbox (24.60023pt too wide) in paragraph at lines 369--369
+[]\T1/pcr/m/n/8 41         temp.h[cont].v=(point*) malloc(sizeof(point)*temp.h[
+i].nvertices);[] 
+ []
+
+
+Overfull \hbox (82.20027pt too wide) in paragraph at lines 369--369
+[]\T1/pcr/m/n/8 52         temp.h[cont].nvertices = ind->ambiente->patrones[ind
+->posgen[i].id].nvertices;[] 
+ []
+
+
+Overfull \hbox (48.60025pt too wide) in paragraph at lines 369--369
+[]\T1/pcr/m/n/8 53         temp.h[cont].v = (point*) malloc(sizeof(point)*temp.
+h[cont].nvertices);[] 
+ []
+
+
+Overfull \hbox (63.00026pt too wide) in paragraph at lines 369--369
+[]\T1/pcr/m/n/8 56             temp.h[cont].v[j].x=ind->ambiente->patrones[ind-
+>posgen[i].id].v[j].x;[] 
+ []
+
+
+Overfull \hbox (63.00026pt too wide) in paragraph at lines 369--369
+[]\T1/pcr/m/n/8 57             temp.h[cont].v[j].y=ind->ambiente->patrones[ind-
+>posgen[i].id].v[j].y;[] 
+ []
+
+
+Overfull \hbox (43.80025pt too wide) in paragraph at lines 369--369
+[]\T1/pcr/m/n/8 60         polygon_translate(&(temp.h[cont]),ind->posgen[i].x, 
+ind->posgen[i].y);[] 
+ []
+
+
+Overfull \hbox (15.00023pt too wide) in paragraph at lines 369--369
+[]\T1/pcr/m/n/8 64     ind->fitness = polygonholes_volumen(&temp)/(ind->ambient
+e->volumen);[] 
+ []
+
+
+<group__genetic_gf152bd4602acec2166cc4b91e8c8919a_gf152bd4602acec2166cc4b91e8c8
+919a_cgraph.pdf, id=1134, 385.44pt x 142.5325pt>
+File: group__genetic_gf152bd4602acec2166cc4b91e8c8919a_gf152bd4602acec2166cc4b9
+1e8c8919a_cgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_gf152bd4602acec2166cc4b91e8c8919a_gf152bd4602acec2166cc4b91
+e8c8919a_cgraph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+[47 <group__genetic_gf152bd4602acec2166cc4b91e8c8919a_gf152bd4602acec2166cc4b91
+e8c8919a_cgraph.pdf>] [48]
+Overfull \hbox (58.20026pt too wide) in paragraph at lines 526--526
+[]\T1/pcr/m/n/8 226         pat[i].nvertices = ind->ambiente->patrones[ind->pos
+gen[i].id].nvertices;[] 
+ []
+
+
+Overfull \hbox (39.00024pt too wide) in paragraph at lines 526--526
+[]\T1/pcr/m/n/8 230             pat[i].v[j].x=ind->ambiente->patrones[ind->posg
+en[i].id].v[j].x;[] 
+ []
+
+
+Overfull \hbox (39.00024pt too wide) in paragraph at lines 526--526
+[]\T1/pcr/m/n/8 231             pat[i].v[j].y=ind->ambiente->patrones[ind->posg
+en[i].id].v[j].y;[] 
+ []
+
+
+Overfull \hbox (19.80023pt too wide) in paragraph at lines 526--526
+[]\T1/pcr/m/n/8 234         polygon_translate(&(pat[i]),ind->posgen[i].x, ind->
+posgen[i].y);[] 
+ []
+
+
+<group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f770d6
+3778_cgraph.pdf, id=1161, 397.485pt x 142.5325pt>
+File: group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f
+770d63778_cgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f7
+70d63778_cgraph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+<group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f770d6
+3778_icgraph.pdf, id=1166, 230.8625pt x 28.105pt>
+File: group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f
+770d63778_icgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f7
+70d63778_icgraph.pdf> [50 <group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf8
+0cc38ea4d590f6c45215f770d63778_cgraph.pdf> <group__genetic_gf80cc38ea4d590f6c45
+215f770d63778_gf80cc38ea4d590f6c45215f770d63778_icgraph.pdf>]
+Overfull \hbox (10.20023pt too wide) in paragraph at lines 613--613
+[]\T1/pcr/m/n/8 74     g->huecos=(polygon*) realloc(g->huecos,sizeof(polygon)*g
+->nhuecos);[] 
+ []
+
+
+Overfull \hbox (39.00024pt too wide) in paragraph at lines 613--613
+[]\T1/pcr/m/n/8 75     g->patrones=(polygon*) realloc(g->patrones,sizeof(polygo
+n)*g->npatrones);[] 
+ []
+
+
+<group__genetic_g6fed4910dd1f6172bb5a4e35a97bbe56_g6fed4910dd1f6172bb5a4e35a97b
+be56_icgraph.pdf, id=1187, 154.5775pt x 28.105pt>
+File: group__genetic_g6fed4910dd1f6172bb5a4e35a97bbe56_g6fed4910dd1f6172bb5a4e3
+5a97bbe56_icgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_g6fed4910dd1f6172bb5a4e35a97bbe56_g6fed4910dd1f6172bb5a4e35
+a97bbe56_icgraph.pdf>
+Overfull \hbox (24.60023pt too wide) in paragraph at lines 652--652
+[]\T1/pcr/m/n/8 27     p->individuos = (individuo*) malloc(sizeof(individuo)*p-
+>nindividuos);[] 
+ []
+
+[51 <group__genetic_g6fed4910dd1f6172bb5a4e35a97bbe56_g6fed4910dd1f6172bb5a4e35
+a97bbe56_icgraph.pdf>]
+<group__genetic_gc7ba874876f18abab66f0a42f32b98cc_gc7ba874876f18abab66f0a42f32b
+98cc_cgraph.pdf, id=1202, 230.8625pt x 28.105pt>
+File: group__genetic_gc7ba874876f18abab66f0a42f32b98cc_gc7ba874876f18abab66f0a4
+2f32b98cc_cgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_gc7ba874876f18abab66f0a42f32b98cc_gc7ba874876f18abab66f0a42
+f32b98cc_cgraph.pdf>
+<group__genetic_gc7ba874876f18abab66f0a42f32b98cc_gc7ba874876f18abab66f0a42f32b
+98cc_icgraph.pdf, id=1203, 178.6675pt x 28.105pt>
+File: group__genetic_gc7ba874876f18abab66f0a42f32b98cc_gc7ba874876f18abab66f0a4
+2f32b98cc_icgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_gc7ba874876f18abab66f0a42f32b98cc_gc7ba874876f18abab66f0a42
+f32b98cc_icgraph.pdf>
+<group__genetic_g229293c432c5ef4f70b1ee94c109bb1a_g229293c432c5ef4f70b1ee94c109
+bb1a_icgraph.pdf, id=1204, 188.705pt x 28.105pt>
+File: group__genetic_g229293c432c5ef4f70b1ee94c109bb1a_g229293c432c5ef4f70b1ee9
+4c109bb1a_icgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_g229293c432c5ef4f70b1ee94c109bb1a_g229293c432c5ef4f70b1ee94
+c109bb1a_icgraph.pdf>
+<group__genetic_g5b3202f02e14d7fb3eb1f729d1250243_g5b3202f02e14d7fb3eb1f729d125
+0243_icgraph.pdf, id=1205, 198.7425pt x 28.105pt>
+File: group__genetic_g5b3202f02e14d7fb3eb1f729d1250243_g5b3202f02e14d7fb3eb1f72
+9d1250243_icgraph.pdf Graphic file (type pdf)
+
+<use group__genetic_g5b3202f02e14d7fb3eb1f729d1250243_g5b3202f02e14d7fb3eb1f729
+d1250243_icgraph.pdf>) [52 <group__genetic_gc7ba874876f18abab66f0a42f32b98cc_gc
+7ba874876f18abab66f0a42f32b98cc_cgraph.pdf> <group__genetic_gc7ba874876f18abab6
+6f0a42f32b98cc_gc7ba874876f18abab66f0a42f32b98cc_icgraph.pdf> <group__genetic_g
+229293c432c5ef4f70b1ee94c109bb1a_g229293c432c5ef4f70b1ee94c109bb1a_icgraph.pdf>
+] [53 <group__genetic_g5b3202f02e14d7fb3eb1f729d1250243_g5b3202f02e14d7fb3eb1f7
+29d1250243_icgraph.pdf>] [54
+
+
+]
+Cap\'{\i }tulo 7.
+(struct__genesting.tex
+<struct__genesting__coll__graph.pdf, id=1246, 83.31125pt x 285.065pt>
+File: struct__genesting__coll__graph.pdf Graphic file (type pdf)
+
+<use struct__genesting__coll__graph.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55 <struct__genesting__coll__graph.pdf>] [56]) [57] (struct__individuo.tex
+<struct__individuo__coll__graph.pdf, id=1304, 163.61125pt x 297.11pt>
+File: struct__individuo__coll__graph.pdf Graphic file (type pdf)
+
+<use struct__individuo__coll__graph.pdf> [58
+
+ <struct__individuo__coll__graph.pdf>]) [59] (struct__line.tex
+<struct__line__coll__graph.pdf, id=1347, 52.195pt x 212.795pt>
+File: struct__line__coll__graph.pdf Graphic file (type pdf)
+
+<use struct__line__coll__graph.pdf> [60
+
+
+ <struct__line__coll__graph.pdf>])
+[61] (struct__point.tex) [62
+
+
+] (struct__polygon.tex
+<struct__polygon__coll__graph.pdf, id=1394, 74.2775pt x 200.75pt>
+File: struct__polygon__coll__graph.pdf Graphic file (type pdf)
+
+<use struct__polygon__coll__graph.pdf>) [63
+
+
+ <struct__polygon__coll__graph.pdf>] (struct__polygon__holes.tex
+<struct__polygon__holes__coll__graph.pdf, id=1420, 94.3525pt x 224.84pt>
+File: struct__polygon__holes__coll__graph.pdf Graphic file (type pdf)
+
+<use struct__polygon__holes__coll__graph.pdf> [64
+
+
+ <struct__polygon__holes__coll__graph.pdf>]) [65] (struct__population.tex
+<struct__population__coll__graph.pdf, id=1455, 152.57pt x 429.605pt>
+File: struct__population__coll__graph.pdf Graphic file (type pdf)
+
+<use struct__population__coll__graph.pdf>
+Underfull \vbox (badness 3189) has occurred while \output is active []
+
+ [66
+
+
+ <struct__population__coll__graph.pdf>]) [67] (struct__posicion.tex) [68
+
+
+]
+Cap\'{\i }tulo 8.
+(distance_8c.tex <distance_8c__incl.pdf, id=1514, 264.99pt x 256.96pt>
+File: distance_8c__incl.pdf Graphic file (type pdf)
+
+<use distance_8c__incl.pdf>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69
+
+
+])
+[70 <distance_8c__incl.pdf>] (distance_8h.tex
+<distance_8h__incl.pdf, id=1548, 453.695pt x 145.54375pt>
+File: distance_8h__incl.pdf Graphic file (type pdf)
+
+<use distance_8h__incl.pdf>
+<distance_8h__dep__incl.pdf, id=1549, 196.735pt x 104.39pt>
+File: distance_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use distance_8h__dep__incl.pdf>) [71
+
+ <distance_8h__incl.pdf> <distance_8h__dep__incl.pdf>] (genesting_8c.tex
+<genesting_8c__incl.pdf, id=1584, 299.1175pt x 218.8175pt>
+File: genesting_8c__incl.pdf Graphic file (type pdf)
+
+<use genesting_8c__incl.pdf>) [72
+
+
+ <genesting_8c__incl.pdf>] (genesting_8h.tex
+<genesting_8h__incl.pdf, id=1605, 172.645pt x 28.105pt>
+File: genesting_8h__incl.pdf Graphic file (type pdf)
+
+<use genesting_8h__incl.pdf>
+<genesting_8h__dep__incl.pdf, id=1606, 289.08pt x 180.675pt>
+File: genesting_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use genesting_8h__dep__incl.pdf>) [73
+
+
+ <genesting_8h__incl.pdf> <genesting_8h__dep__incl.pdf>] (graphics_8c.tex
+<graphics_8c__incl.pdf, id=1638, 170.6375pt x 66.2475pt>
+File: graphics_8c__incl.pdf Graphic file (type pdf)
+
+<use graphics_8c__incl.pdf>
+<graphics_8c_ff4bc17c602603d120756f52e18ebb96_ff4bc17c602603d120756f52e18ebb96_
+icgraph.pdf, id=1639, 230.8625pt x 28.105pt>
+File: graphics_8c_ff4bc17c602603d120756f52e18ebb96_ff4bc17c602603d120756f52e18e
+bb96_icgraph.pdf Graphic file (type pdf)
+
+<use graphics_8c_ff4bc17c602603d120756f52e18ebb96_ff4bc17c602603d120756f52e18eb
+b96_icgraph.pdf> [74
+
+
+ <graphics_8c__incl.pdf> <graphics_8c_ff4bc17c602603d120756f52e18ebb96_ff4bc17c
+602603d120756f52e18ebb96_icgraph.pdf>]
+<graphics_8c_a4f2f5f853228f62323d3c4d81c34a13_a4f2f5f853228f62323d3c4d81c34a13_
+icgraph.pdf, id=1672, 222.8325pt x 28.105pt>
+File: graphics_8c_a4f2f5f853228f62323d3c4d81c34a13_a4f2f5f853228f62323d3c4d81c3
+4a13_icgraph.pdf Graphic file (type pdf)
+
+<use graphics_8c_a4f2f5f853228f62323d3c4d81c34a13_a4f2f5f853228f62323d3c4d81c34
+a13_icgraph.pdf>
+Overfull \hbox (67.80026pt too wide) in paragraph at lines 105--105
+[]\T1/pcr/m/n/8 28                                                             
+                      { 
+ []
+
+
+Overfull \hbox (58.20026pt too wide) in paragraph at lines 105--105
+[]\T1/pcr/m/n/8 30 //    rect(screen, (int)minx, (int)miny, (int) maxx, (int) m
+axy, makecol(r,g,b));[] 
+ []
+
+
+<graphics_8c_e3919e2797a81eb7088a6b6f6b33bea7_e3919e2797a81eb7088a6b6f6b33bea7_
+icgraph.pdf, id=1673, 224.84pt x 28.105pt>
+File: graphics_8c_e3919e2797a81eb7088a6b6f6b33bea7_e3919e2797a81eb7088a6b6f6b33
+bea7_icgraph.pdf Graphic file (type pdf)
+
+<use graphics_8c_e3919e2797a81eb7088a6b6f6b33bea7_e3919e2797a81eb7088a6b6f6b33b
+ea7_icgraph.pdf>
+<graphics_8c_9a7e11a2a03b0db3ab57985098c3f8fe_9a7e11a2a03b0db3ab57985098c3f8fe_
+icgraph.pdf, id=1674, 224.84pt x 28.105pt>
+File: graphics_8c_9a7e11a2a03b0db3ab57985098c3f8fe_9a7e11a2a03b0db3ab57985098c3
+f8fe_icgraph.pdf Graphic file (type pdf)
+
+<use graphics_8c_9a7e11a2a03b0db3ab57985098c3f8fe_9a7e11a2a03b0db3ab57985098c3f
+8fe_icgraph.pdf> [75 <graphics_8c_a4f2f5f853228f62323d3c4d81c34a13_a4f2f5f85322
+8f62323d3c4d81c34a13_icgraph.pdf> <graphics_8c_e3919e2797a81eb7088a6b6f6b33bea7
+_e3919e2797a81eb7088a6b6f6b33bea7_icgraph.pdf> <graphics_8c_9a7e11a2a03b0db3ab5
+7985098c3f8fe_9a7e11a2a03b0db3ab57985098c3f8fe_icgraph.pdf>]
+<graphics_8c_c792bc74222685f93edc651253c59ed0_c792bc74222685f93edc651253c59ed0_
+icgraph.pdf, id=1700, 156.585pt x 28.105pt>
+File: graphics_8c_c792bc74222685f93edc651253c59ed0_c792bc74222685f93edc651253c5
+9ed0_icgraph.pdf Graphic file (type pdf)
+
+<use graphics_8c_c792bc74222685f93edc651253c59ed0_c792bc74222685f93edc651253c59
+ed0_icgraph.pdf>
+<graphics_8c_7a2327678651d3939af5eec9503333e8_7a2327678651d3939af5eec9503333e8_
+icgraph.pdf, id=1701, 220.825pt x 28.105pt>
+File: graphics_8c_7a2327678651d3939af5eec9503333e8_7a2327678651d3939af5eec95033
+33e8_icgraph.pdf Graphic file (type pdf)
+
+<use graphics_8c_7a2327678651d3939af5eec9503333e8_7a2327678651d3939af5eec950333
+3e8_icgraph.pdf>) [76 <graphics_8c_c792bc74222685f93edc651253c59ed0_c792bc74222
+685f93edc651253c59ed0_icgraph.pdf> <graphics_8c_7a2327678651d3939af5eec9503333e
+8_7a2327678651d3939af5eec9503333e8_icgraph.pdf>] (graphics_8h.tex
+<graphics_8h__dep__incl.pdf, id=1720, 198.7425pt x 104.39pt>
+File: graphics_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use graphics_8h__dep__incl.pdf>) [77
+
+
+ <graphics_8h__dep__incl.pdf>]
+(individuo_8c.tex <individuo_8c__incl.pdf, id=1742, 295.1025pt x 142.5325pt>
+File: individuo_8c__incl.pdf Graphic file (type pdf)
+
+<use individuo_8c__incl.pdf>) [78
+
+
+ <individuo_8c__incl.pdf>] (individuo_8h.tex
+<individuo_8h__incl.pdf, id=1773, 176.66pt x 28.105pt>
+File: individuo_8h__incl.pdf Graphic file (type pdf)
+
+<use individuo_8h__incl.pdf>
+<individuo_8h__dep__incl.pdf, id=1774, 287.0725pt x 104.39pt>
+File: individuo_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use individuo_8h__dep__incl.pdf>) [79
+
+
+ <individuo_8h__incl.pdf> <individuo_8h__dep__incl.pdf>] (line_8c.tex
+<line_8c__incl.pdf, id=1819, 132.495pt x 66.2475pt>
+File: line_8c__incl.pdf Graphic file (type pdf)
+ <use line_8c__incl.pdf>)
+[80
+
+
+ <line_8c__incl.pdf>] (line_8h.tex
+<line_8h__incl.pdf, id=1842, 142.5325pt x 66.2475pt>
+File: line_8h__incl.pdf Graphic file (type pdf)
+ <use line_8h__incl.pdf>
+<line_8h__dep__incl.pdf, id=1843, 341.275pt x 142.5325pt>
+File: line_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use line_8h__dep__incl.pdf>) [81
+
+
+ <line_8h__incl.pdf> <line_8h__dep__incl.pdf>] (main_8c.tex <main_8c__incl.pdf,
+ id=1878, 266.9975pt x 256.96pt>
+File: main_8c__incl.pdf Graphic file (type pdf)
+
+<use main_8c__incl.pdf> [82
+
+
+ <main_8c__incl.pdf>]
+Overfull \hbox (63.00026pt too wide) in paragraph at lines 114--114
+[]\T1/pcr/m/n/8 94         fprintf(stderr,"Se deben entrar ingresar el nombre d
+el archivo a leer\n");[] 
+ []
+
+
+Overfull \hbox (10.20023pt too wide) in paragraph at lines 114--114
+[]\T1/pcr/m/n/8 117             printf("Individuo %i: [%i] \n",i,p->individuos[
+i].ngenes);[] 
+ []
+
+
+Overfull \hbox (370.20045pt too wide) in paragraph at lines 114--114
+[]\T1/pcr/m/n/8 132             printf("Individuo %i: [%i] fitness: %f areautil
+: %f\n",i,p->individuos[i].ngenes,p->individuos[i].fitness,p->individuos[i].are
+autil);[] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [83]
+<main_8c_3c04138a5bfe5d72780bb7e82a18e627_3c04138a5bfe5d72780bb7e82a18e627_cgra
+ph.pdf, id=1901, 198.7425pt x 256.96pt>
+File: main_8c_3c04138a5bfe5d72780bb7e82a18e627_3c04138a5bfe5d72780bb7e82a18e627
+_cgraph.pdf Graphic file (type pdf)
+
+<use main_8c_3c04138a5bfe5d72780bb7e82a18e627_3c04138a5bfe5d72780bb7e82a18e627_
+cgraph.pdf>) [84 <main_8c_3c04138a5bfe5d72780bb7e82a18e627_3c04138a5bfe5d72780b
+b7e82a18e627_cgraph.pdf>] (point_8c.tex
+<point_8c__incl.pdf, id=1912, 138.5175pt x 28.105pt>
+File: point_8c__incl.pdf Graphic file (type pdf)
+ <use point_8c__incl.pdf>)
+[85
+
+
+ <point_8c__incl.pdf>] (point_8h.tex
+<point_8h__dep__incl.pdf, id=1935, 379.4175pt x 218.8175pt>
+File: point_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use point_8h__dep__incl.pdf>) [86
+
+
+ <point_8h__dep__incl.pdf>] (polygon_8c.tex
+<polygon_8c__incl.pdf, id=1963, 164.615pt x 66.2475pt>
+File: polygon_8c__incl.pdf Graphic file (type pdf)
+
+<use polygon_8c__incl.pdf>) [87
+
+
+ <polygon_8c__incl.pdf>] (polygon_8h.tex
+<polygon_8h__incl.pdf, id=1996, 238.8925pt x 104.39pt>
+File: polygon_8h__incl.pdf Graphic file (type pdf)
+
+<use polygon_8h__incl.pdf>
+<polygon_8h__dep__incl.pdf, id=1997, 425.59pt x 295.1025pt>
+File: polygon_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use polygon_8h__dep__incl.pdf>
+Underfull \vbox (badness 1616) has occurred while \output is active []
+
+ [88
+
+
+ <polygon_8h__incl.pdf> <polygon_8h__dep__incl.pdf>]) [89] (polygon__holes_8c.t
+ex
+<polygon__holes_8c__incl.pdf, id=2041, 421.575pt x 295.1025pt>
+File: polygon__holes_8c__incl.pdf Graphic file (type pdf)
+
+<use polygon__holes_8c__incl.pdf>) [90
+
+
+ <polygon__holes_8c__incl.pdf>]
+(polygon__holes_8h.tex
+<polygon__holes_8h__incl.pdf, id=2069, 289.08pt x 104.39pt>
+File: polygon__holes_8h__incl.pdf Graphic file (type pdf)
+
+<use polygon__holes_8h__incl.pdf>
+<polygon__holes_8h__dep__incl.pdf, id=2070, 329.23pt x 142.5325pt>
+File: polygon__holes_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use polygon__holes_8h__dep__incl.pdf> [91
+
+
+ <polygon__holes_8h__incl.pdf> <polygon__holes_8h__dep__incl.pdf>]) [92] (popul
+ation_8c.tex
+<population_8c__incl.pdf, id=2113, 291.0875pt x 142.5325pt>
+File: population_8c__incl.pdf Graphic file (type pdf)
+
+<use population_8c__incl.pdf>) [93
+
+
+ <population_8c__incl.pdf>]
+(population_8h.tex <population_8h__incl.pdf, id=2136, 285.065pt x 66.2475pt>
+File: population_8h__incl.pdf Graphic file (type pdf)
+
+<use population_8h__incl.pdf>
+<population_8h__dep__incl.pdf, id=2137, 186.6975pt x 66.2475pt>
+File: population_8h__dep__incl.pdf Graphic file (type pdf)
+
+<use population_8h__dep__incl.pdf>) [94
+
+
+ <population_8h__incl.pdf> <population_8h__dep__incl.pdf>]
+Cap\'{\i }tulo 9.
+(todo.tex) [95
+
+
+] (bug.tex) [96
+
+] (refman.ind [97
+
+
+]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.96997pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[98]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.96997pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[99]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 12.96997pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[100
+
+]) (refman.aux (group__geometry.aux) (group__genetic.aux)
+(struct__individuo.aux) (struct__line.aux) (struct__point.aux)
+(struct__polygon.aux) (struct__polygon__holes.aux) (struct__population.aux)
+(struct__posicion.aux) (distance_8h.aux) (genesting_8c.aux) (genesting_8h.aux)
+(graphics_8c.aux) (graphics_8h.aux) (individuo_8c.aux) (individuo_8h.aux)
+(line_8c.aux) (line_8h.aux) (main_8c.aux) (point_8c.aux) (point_8h.aux)
+(polygon_8c.aux) (polygon_8h.aux) (polygon__holes_8c.aux)
+(polygon__holes_8h.aux) (population_8c.aux) (population_8h.aux) (bug.aux)) ) 
+Here is how much of TeX's memory you used:
+ 6611 strings out of 95419
+ 121739 string characters out of 1187299
+ 141104 words of memory out of 1134052
+ 8150 multiletter control sequences out of 60000
+ 46339 words of font info for 46 fonts, out of 1000000 for 2000
+ 14 hyphenation exceptions out of 8191
+ 34i,12n,43p,729b,519s stack positions out of 5000i,500n,10000p,200000b,32768s
+PDF statistics:
+ 2387 PDF objects out of 300000
+ 464 named destinations out of 300000
+ 834 words of extra memory for PDF output out of 10000
+
+! pdfTeX warning (dest): name{population_8h-source} has been referenced but doe
+s not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{population_8c-source} has been referenced but doe
+s not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{polygon__holes_8h-source} has been referenced but
+ does not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{polygon__holes_8c-source} has been referenced but
+ does not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{polygon_8h-source} has been referenced but does n
+ot exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{polygon_8c-source} has been referenced but does n
+ot exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{point_8h-source} has been referenced but does not
+ exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{point_8c-source} has been referenced but does not
+ exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{main_8c-source} has been referenced but does not 
+exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{line_8h-source} has been referenced but does not 
+exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{line_8c-source} has been referenced but does not 
+exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{individuo_8h-source} has been referenced but does
+ not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{individuo_8c-source} has been referenced but does
+ not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{graphics_8h-source} has been referenced but does 
+not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{genesting_8h-source} has been referenced but does
+ not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{genesting_8c-source} has been referenced but does
+ not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{distance_8h-source} has been referenced but does 
+not exist, replaced by a fixed one
+
+! pdfTeX warning (dest): name{distance_8c-source} has been referenced but does 
+not exist, replaced by a fixed one
+
+<C:/Program Files/MiKTeX 2.5/fonts/type1/bluesky/cm/cmmi7.pfb><C:/Program Files
+/MiKTeX 2.5/fonts/type1/bluesky/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.5/fonts/
+type1/bluesky/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.5/fonts/type1/bluesky/cm
+/cmr10.pfb><C:/Program Files/MiKTeX 2.5/fonts/type1/bluesky/cm/cmex10.pfb>{8r.e
+nc}<C:/Program Files/MiKTeX 2.5/fonts/type1/urw/urwstd/ucrr8a.pfb><C:/Program F
+iles/MiKTeX 2.5/fonts/type1/urw/urwstd/utmbi8a.pfb><C:/Program Files/MiKTeX 2.5
+/fonts/type1/bluesky/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.5/fonts/type1/urw
+/urwstd/utmb8a.pfb><C:/Program Files/MiKTeX 2.5/fonts/type1/urw/urwstd/utmr8a.p
+fb>
+Output written on refman.pdf (104 pages, 887259 bytes).

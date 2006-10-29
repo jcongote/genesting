@@ -1,0 +1,42 @@
+\hypertarget{distance_8h}{
+\section{Referencia del Archivo distance.h}
+\label{distance_8h}\index{distance.h@{distance.h}}
+}
+
+
+\subsection{Descripci\'{o}n detallada}
+
+
+Definici\'{o}n en el archivo \hyperlink{distance_8h-source}{distance.h}.
+
+{\tt \#include \char`\"{}point.h\char`\"{}}\par
+{\tt \#include \char`\"{}line.h\char`\"{}}\par
+{\tt \#include \char`\"{}polygon.h\char`\"{}}\par
+{\tt \#include \char`\"{}polygon\_\-holes.h\char`\"{}}\par
+
+
+Dependencia gr\'{a}fica adjunta para distance.h:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{distance_8h__incl}
+\end{center}
+\end{figure}
+
+
+Este gr\'{a}fico muestra que archivos directa o indirectamente incluyen a este archivo:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=116pt]{distance_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Funciones}
+\begin{CompactItemize}
+\item 
+float \hyperlink{group__distance_g3b2b03f846e6b587be683ec8b853e774_g3b2b03f846e6b587be683ec8b853e774}{distance\_\-pointpoint} (\hyperlink{struct__point}{point} $\ast$a, \hyperlink{struct__point}{point} $\ast$b)
+\item 
+float \hyperlink{group__distance_g69a59a49134b784b0c8797e0e83e7c40_g69a59a49134b784b0c8797e0e83e7c40}{distance\_\-pointline} (\hyperlink{struct__point}{point} $\ast$f, \hyperlink{struct__line}{line} $\ast$l, int $\ast$seg)
+\item 
+float \hyperlink{group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5_g25716e8d1c8abaf08903bbcd08b8d6e5}{distance\_\-pointpolygon} (\hyperlink{struct__point}{point} $\ast$f, \hyperlink{struct__polygon}{polygon} $\ast$p, \hyperlink{struct__line}{line} $\ast$ref)
+\item 
+float \hyperlink{group__distance_gc837f0084791f42936ade857a0cce3af_gc837f0084791f42936ade857a0cce3af}{distance\_\-pointpolygonholes} (\hyperlink{struct__point}{point} $\ast$f, \hyperlink{struct__polygon__holes}{polygon\_\-holes} $\ast$p, \hyperlink{struct__line}{line} $\ast$ref)
+\end{CompactItemize}

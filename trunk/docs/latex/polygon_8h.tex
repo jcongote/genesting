@@ -1,0 +1,55 @@
+\hypertarget{polygon_8h}{
+\section{Referencia del Archivo polygon.h}
+\label{polygon_8h}\index{polygon.h@{polygon.h}}
+}
+
+
+\subsection{Descripci\'{o}n detallada}
+Declaraciones del Objeto Poligono 
+
+Definici\'{o}n en el archivo \hyperlink{polygon_8h-source}{polygon.h}.
+
+{\tt \#include $<$stdbool.h$>$}\par
+{\tt \#include \char`\"{}point.h\char`\"{}}\par
+{\tt \#include \char`\"{}line.h\char`\"{}}\par
+
+
+Dependencia gr\'{a}fica adjunta para polygon.h:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=137pt]{polygon_8h__incl}
+\end{center}
+\end{figure}
+
+
+Este gr\'{a}fico muestra que archivos directa o indirectamente incluyen a este archivo:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{polygon_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Clases}
+\begin{CompactItemize}
+\item 
+struct \hyperlink{struct__polygon}{\_\-polygon}
+\end{CompactItemize}
+\subsection*{Tipos definidos}
+\begin{CompactItemize}
+\item 
+typedef \hyperlink{struct__polygon}{\_\-polygon} \hyperlink{group__geometry_g9169f21a34d344b356c44948943e99cc_g9169f21a34d344b356c44948943e99cc}{polygon}
+\end{CompactItemize}
+\subsection*{Funciones}
+\begin{CompactItemize}
+\item 
+float \hyperlink{group__geometry_gcfbc9e7772d80361768bc0b65cebbca1_gcfbc9e7772d80361768bc0b65cebbca1}{polygon\_\-area} (\hyperlink{struct__polygon}{polygon} $\ast$p)
+\item 
+bool \hyperlink{group__geometry_geab0a1d6da7c44ae49494958bb885504_geab0a1d6da7c44ae49494958bb885504}{polygon\_\-pointin} (\hyperlink{struct__polygon}{polygon} $\ast$p, \hyperlink{struct__point}{point} $\ast$f)
+\item 
+bool \hyperlink{group__geometry_g2be6101a257ea8896e61e93d14b22b89_g2be6101a257ea8896e61e93d14b22b89}{polygon\_\-overlapping} (\hyperlink{struct__polygon}{polygon} $\ast$p, \hyperlink{struct__polygon}{polygon} $\ast$q)
+\item 
+void \hyperlink{group__geometry_g95276abee7240f116afaf80a3e1f23c4_g95276abee7240f116afaf80a3e1f23c4}{polygon\_\-rotate} (\hyperlink{struct__polygon}{polygon} $\ast$p, float t)
+\item 
+void \hyperlink{group__geometry_g137ef6f552a0a04c5ae0493690088f3f_g137ef6f552a0a04c5ae0493690088f3f}{polygon\_\-minbox} (\hyperlink{struct__polygon}{polygon} $\ast$p, float $\ast$minx, float $\ast$miny, float $\ast$maxx, float $\ast$maxy)
+\item 
+void \hyperlink{group__geometry_g7538c2bf0d1e8acc0cfc055b6bf3a96b_g7538c2bf0d1e8acc0cfc055b6bf3a96b}{polygon\_\-translate} (\hyperlink{struct__polygon}{polygon} $\ast$p, float x, float y)
+\end{CompactItemize}

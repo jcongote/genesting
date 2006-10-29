@@ -1,0 +1,5 @@
+base referer
+rect $point_8h.html 535,85 596,112
+rect $line_8h.html 432,60 486,87
+rect $polygon_8h.html 304,111 384,137
+rect $polygon__holes_8h.html 138,161 255,188

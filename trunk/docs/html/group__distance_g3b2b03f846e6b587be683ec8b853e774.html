@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Genesting: distance_pointpoint</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.4.7 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="modules.html"><span>Módulos</span></a></li>
+    <li><a href="classes.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+  </ul></div>
+<div class="nav">
+<a class="el" href="group__distance.html">Distancias</a></div>
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+   <td valign="top">
+      <div class="navtab">
+        <table>
+          <tr><td class="navtab"><a class="qindex" href="group__distance_g69a59a49134b784b0c8797e0e83e7c40.html#g69a59a49134b784b0c8797e0e83e7c40">distance_pointline</a></td></tr>
+          <tr><td class="navtab"><a class="qindexHL" href="group__distance_g3b2b03f846e6b587be683ec8b853e774.html#g3b2b03f846e6b587be683ec8b853e774">distance_pointpoint</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__distance_g25716e8d1c8abaf08903bbcd08b8d6e5.html#g25716e8d1c8abaf08903bbcd08b8d6e5">distance_pointpolygon</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__distance_gc837f0084791f42936ade857a0cce3af.html#gc837f0084791f42936ade857a0cce3af">distance_pointpolygonholes</a></td></tr>
+        </table>
+      </div>
+   </td>
+   <td valign="top">
+<a class="anchor" name="g3b2b03f846e6b587be683ec8b853e774"></a><!-- doxytag: member="distance.h::distance_pointpoint" ref="g3b2b03f846e6b587be683ec8b853e774" args="(point *a, point *b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float distance_pointpoint           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__point.html">point</a> *&nbsp;</td>
+          <td class="paramname"> <em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct__point.html">point</a> *&nbsp;</td>
+          <td class="paramname"> <em>b</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+La funcion compara la distancia entre dos puntos la formula para esto es: <img class="formulaInl" alt="$\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$" src="form_0.png"><p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>a</em>&nbsp;</td><td>Punto en 2 dimensiones </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>b</em>&nbsp;</td><td>Punto en 2 dimensiones </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>La distancia entre los puntos </dd></dl>
+
+<p>
+Definición en la línea <a class="el" href="distance_8c-source.html#l00029">29</a> del archivo <a class="el" href="distance_8c-source.html">distance.c</a>.<div class="fragment"><pre class="fragment"><a name="l00030"></a>00030 {
+<a name="l00031"></a>00031     <span class="keywordflow">return</span> sqrt(powf(a-&gt;<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a> - b-&gt;<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a>,2.0)+powf(a-&gt;<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a> - b-&gt;<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a>,2.0));
+<a name="l00032"></a>00032 }
+</pre></div>
+<p>
+
+<p>
+Here is the caller graph for this function:<p><center><img src="group__distance_g3b2b03f846e6b587be683ec8b853e774_g3b2b03f846e6b587be683ec8b853e774_icgraph.png" border="0" usemap="#group__distance_g3b2b03f846e6b587be683ec8b853e774_g3b2b03f846e6b587be683ec8b853e774_icgraph_map" alt=""></center>
+<map name="group__distance_g3b2b03f846e6b587be683ec8b853e774_g3b2b03f846e6b587be683ec8b853e774_icgraph_map">
+<area href="group__distance_g69a59a49134b784b0c8797e0e83e7c40.html#g69a59a49134b784b0c8797e0e83e7c40" shape="rect" coords="192,5,320,32" alt="">
+</map>
+
+</div>
+</div><p>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Generado el Sun Oct 29 11:20:02 2006 para Genesting por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
+</body>
+</html>

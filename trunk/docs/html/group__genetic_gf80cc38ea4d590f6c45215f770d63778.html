@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Genesting: individuo_validate</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.4.7 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="modules.html"><span>Módulos</span></a></li>
+    <li><a href="classes.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+    <li><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+  </ul></div>
+<div class="nav">
+<a class="el" href="group__genetic.html">Genetico</a></div>
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+   <td valign="top">
+      <div class="navtab">
+        <table>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_gd9507b892f115e76cd4162059839370c.html#gd9507b892f115e76cd4162059839370c">comparar_individuos</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_gcd77cefe71c44c38745a4f148c7a69eb.html#gcd77cefe71c44c38745a4f148c7a69eb">genesting</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_g1daa6a4e8af34b8b16a48fc2f3701f1c.html#g1daa6a4e8af34b8b16a48fc2f3701f1c">genesting_init</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_g3f63f4034274d731cb3fdf3200c64d41.html#g3f63f4034274d731cb3fdf3200c64d41">genesting_show</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_g86fcc12a3e2577bedca3b8364e722da3.html#g86fcc12a3e2577bedca3b8364e722da3">individuo</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_gf4e60223d27c85a5f6166e35ecafe641.html#gf4e60223d27c85a5f6166e35ecafe641">individuo_create</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_gf152bd4602acec2166cc4b91e8c8919a.html#gf152bd4602acec2166cc4b91e8c8919a">individuo_fitness</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_g05b6d3d7a4be17c9cbf479f424edd01b.html#g05b6d3d7a4be17c9cbf479f424edd01b">individuo_mutate</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_g18105662f4835e24cf3b8fc40ed63b33.html#g18105662f4835e24cf3b8fc40ed63b33">individuo_procreate</a></td></tr>
+          <tr><td class="navtab"><a class="qindexHL" href="group__genetic_gf80cc38ea4d590f6c45215f770d63778.html#gf80cc38ea4d590f6c45215f770d63778">individuo_validate</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_g6fed4910dd1f6172bb5a4e35a97bbe56.html#g6fed4910dd1f6172bb5a4e35a97bbe56">leer_archivo</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_gdc93697b2d7197da72db59932b540a07.html#gdc93697b2d7197da72db59932b540a07">population</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_gc7ba874876f18abab66f0a42f32b98cc.html#gc7ba874876f18abab66f0a42f32b98cc">population_create</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_g229293c432c5ef4f70b1ee94c109bb1a.html#g229293c432c5ef4f70b1ee94c109bb1a">population_evaluate</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_g5b3202f02e14d7fb3eb1f729d1250243.html#g5b3202f02e14d7fb3eb1f729d1250243">population_generation</a></td></tr>
+          <tr><td class="navtab"><a class="qindex" href="group__genetic_ge2fa8f912ec24aab702abf9b76489462.html#ge2fa8f912ec24aab702abf9b76489462">posicion</a></td></tr>
+        </table>
+      </div>
+   </td>
+   <td valign="top">
+<a class="anchor" name="gf80cc38ea4d590f6c45215f770d63778"></a><!-- doxytag: member="individuo.h::individuo_validate" ref="gf80cc38ea4d590f6c45215f770d63778" args="(individuo *ind)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool individuo_validate           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct__individuo.html">individuo</a> *&nbsp;</td>
+          <td class="paramname"> <em>ind</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Esta funcion identifica si un individuo es una solucion validad, esto es verdadero si se cumplen las siguientes condiciones:<ul>
+<li>No se repite ningun patron dentro de la solucion</li><li>Todos los patrones estan dentro de la plantilla</li><li>Ningun patron se solapa con la plantilla, huecos u otro patron En caso contrario el individuo no es valido.</li></ul>
+<p>
+<dl compact><dt><b>Parámetros:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>ind</em>&nbsp;</td><td>Individuo a validar </td></tr>
+  </table>
+</dl>
+<dl compact><dt><b>Devuelve:</b></dt><dd>Verdadero si es un individuo valido, falso en caso contrario. </dd></dl>
+
+<p>
+Definición en la línea <a class="el" href="individuo_8c-source.html#l00190">190</a> del archivo <a class="el" href="individuo_8c-source.html">individuo.c</a>.<div class="fragment"><pre class="fragment"><a name="l00191"></a>00191 {
+<a name="l00192"></a>00192     <span class="keywordtype">bool</span> valido = <span class="keyword">true</span>;
+<a name="l00193"></a>00193     <span class="keywordtype">int</span> i,j;
+<a name="l00194"></a>00194     <a class="code" href="struct__polygon__holes.html">polygon_holes</a> ph;
+<a name="l00195"></a>00195     <a class="code" href="struct__polygon.html">polygon</a> *pat;
+<a name="l00196"></a>00196 
+<a name="l00197"></a>00197     <span class="keywordflow">for</span> (i=0;i&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>-1 &amp;&amp; valido;i++)
+<a name="l00198"></a>00198     {
+<a name="l00199"></a>00199         <span class="keywordflow">for</span> (j=i+1;j&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a> &amp;&amp; valido;j++)
+<a name="l00200"></a>00200         {
+<a name="l00201"></a>00201             <span class="keywordflow">if</span> (ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a> == ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[j].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>)
+<a name="l00202"></a>00202                 valido = <span class="keyword">false</span>;
+<a name="l00203"></a>00203         }
+<a name="l00204"></a>00204     }
+<a name="l00205"></a>00205 
+<a name="l00206"></a>00206     ph.<a class="code" href="struct__polygon__holes_90635c34b3613c8cf8cdda5bebe99638.html#90635c34b3613c8cf8cdda5bebe99638">p</a> = &amp;(ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_c660e2710da2db9469813d0a14981cef.html#c660e2710da2db9469813d0a14981cef">plantilla</a>);
+<a name="l00207"></a>00207     ph.<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a> = ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_87ae802e5ffa06a1b38ce4337eadbcda.html#87ae802e5ffa06a1b38ce4337eadbcda">nhuecos</a>;
+<a name="l00208"></a>00208     ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a> = (<a class="code" href="struct__polygon.html">polygon</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct__polygon.html">polygon</a>)*ph.<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a>);
+<a name="l00209"></a>00209 
+<a name="l00210"></a>00210     for (i=0;i&lt;ph.<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a>;i++)
+<a name="l00211"></a>00211     {
+<a name="l00212"></a>00212         ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a> = ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_3affb28e2ad244f35baed248e3c230f6.html#3affb28e2ad244f35baed248e3c230f6">huecos</a>[i].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>;
+<a name="l00213"></a>00213         ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>=(<a class="code" href="struct__point.html">point</a>*) malloc(<span class="keyword">sizeof</span>(<a class="code" href="struct__point.html">point</a>)*ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>);
+<a name="l00214"></a>00214 
+<a name="l00215"></a>00215         for (j=0;j&lt;ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>;j++)
+<a name="l00216"></a>00216         {
+<a name="l00217"></a>00217             ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a>=ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_3affb28e2ad244f35baed248e3c230f6.html#3affb28e2ad244f35baed248e3c230f6">huecos</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_767ac72154b321228732c3dad513eb27.html#767ac72154b321228732c3dad513eb27">x</a>;
+<a name="l00218"></a>00218             ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a>=ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_3affb28e2ad244f35baed248e3c230f6.html#3affb28e2ad244f35baed248e3c230f6">huecos</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a>;
+<a name="l00219"></a>00219         }
+<a name="l00220"></a>00220     }
+<a name="l00221"></a>00221 
+<a name="l00222"></a>00222     pat = (polygon*) malloc(<span class="keyword">sizeof</span>(polygon)*ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>);
+<a name="l00223"></a>00223 
+<a name="l00224"></a>00224     for (i=0;i&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>;i++)
+<a name="l00225"></a>00225     {
+<a name="l00226"></a>00226         pat[i].nvertices = ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_c4b1743e42547577dbb6d7238ad4db17.html#c4b1743e42547577dbb6d7238ad4db17">patrones</a>[ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>].nvertices;
+<a name="l00227"></a>00227         pat[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a> = (point*) malloc(<span class="keyword">sizeof</span>(point)*pat[i].nvertices);
+<a name="l00228"></a>00228         <span class="keywordflow">for</span> (j=0;j&lt;pat[i].<a class="code" href="struct__polygon_32b823ec27d32ee03ab132c173d3672a.html#32b823ec27d32ee03ab132c173d3672a">nvertices</a>;j++)
+<a name="l00229"></a>00229         {
+<a name="l00230"></a>00230             pat[i].v[j].x=ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_c4b1743e42547577dbb6d7238ad4db17.html#c4b1743e42547577dbb6d7238ad4db17">patrones</a>[ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>].v[j].x;
+<a name="l00231"></a>00231             pat[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>[j].<a class="code" href="struct__point_8959fb193a9a1f2cb450a79d3dfc5b0e.html#8959fb193a9a1f2cb450a79d3dfc5b0e">y</a>=ind-&gt;<a class="code" href="struct__individuo_77db4f35b317761eeb9a0cb2b8f8276d.html#77db4f35b317761eeb9a0cb2b8f8276d">ambiente</a>-&gt;<a class="code" href="struct__genesting_c4b1743e42547577dbb6d7238ad4db17.html#c4b1743e42547577dbb6d7238ad4db17">patrones</a>[ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_3878a3d9cfd02ea5528901bc2e2a732d.html#3878a3d9cfd02ea5528901bc2e2a732d">id</a>].v[j].y;
+<a name="l00232"></a>00232         }
+<a name="l00233"></a>00233         <a class="code" href="group__geometry_g95276abee7240f116afaf80a3e1f23c4.html#g95276abee7240f116afaf80a3e1f23c4">polygon_rotate</a>(&amp;(pat[i]),ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_f0ba9aedeb816d241a108033f8421536.html#f0ba9aedeb816d241a108033f8421536">t</a>);
+<a name="l00234"></a>00234         <a class="code" href="group__geometry_g7538c2bf0d1e8acc0cfc055b6bf3a96b.html#g7538c2bf0d1e8acc0cfc055b6bf3a96b">polygon_translate</a>(&amp;(pat[i]),ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_71ad085b0f981b64ff6c9736979cf4d0.html#71ad085b0f981b64ff6c9736979cf4d0">x</a>, ind-&gt;<a class="code" href="struct__individuo_2187e821ff69e7e3de9fa511745f976a.html#2187e821ff69e7e3de9fa511745f976a">posgen</a>[i].<a class="code" href="struct__posicion_82d516a3aa89949f81676cc9bb3bdcab.html#82d516a3aa89949f81676cc9bb3bdcab">y</a>);
+<a name="l00235"></a>00235     }
+<a name="l00236"></a>00236 
+<a name="l00237"></a>00237     <span class="keywordflow">for</span> (i=0;i&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a> &amp;&amp; valido;i++)
+<a name="l00238"></a>00238     {
+<a name="l00239"></a>00239         <span class="keywordflow">if</span>(!<a class="code" href="group__geometry_g496bae87588cb5710ced80f713da98ad.html#g496bae87588cb5710ced80f713da98ad">polygonholes_polygonin</a>(&amp;ph, &amp;(pat[i])))
+<a name="l00240"></a>00240         {
+<a name="l00241"></a>00241             valido=<span class="keyword">false</span>;
+<a name="l00242"></a>00242         }
+<a name="l00243"></a>00243     }
+<a name="l00244"></a>00244 
+<a name="l00245"></a>00245     <span class="keywordflow">for</span> (i=0;i&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>-1 &amp;&amp; valido;i++)
+<a name="l00246"></a>00246     {
+<a name="l00247"></a>00247         <span class="keywordflow">for</span> (j=i+1;j&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a> &amp;&amp; valido;j++)
+<a name="l00248"></a>00248         {
+<a name="l00249"></a>00249             <span class="keywordflow">if</span> (<a class="code" href="group__geometry_g2be6101a257ea8896e61e93d14b22b89.html#g2be6101a257ea8896e61e93d14b22b89">polygon_overlapping</a>(&amp;(pat[i]),&amp;(pat[j])))
+<a name="l00250"></a>00250             {
+<a name="l00251"></a>00251                 valido=<span class="keyword">false</span>;
+<a name="l00252"></a>00252             }
+<a name="l00253"></a>00253         }
+<a name="l00254"></a>00254     }
+<a name="l00255"></a>00255 
+<a name="l00256"></a>00256     <span class="keywordflow">for</span> (i=0;i&lt;ind-&gt;<a class="code" href="struct__individuo_6ca41cfab8bba8bd7c2ba8f44d2407f1.html#6ca41cfab8bba8bd7c2ba8f44d2407f1">ngenes</a>;i++)
+<a name="l00257"></a>00257     {
+<a name="l00258"></a>00258         free(pat[i].v);
+<a name="l00259"></a>00259     }
+<a name="l00260"></a>00260     free(pat);
+<a name="l00261"></a>00261 
+<a name="l00262"></a>00262     <span class="keywordflow">for</span> (i=0;i&lt;ph.<a class="code" href="struct__polygon__holes_dc7994045ce07712cf57b791ccaa0015.html#dc7994045ce07712cf57b791ccaa0015">nholes</a>;i++)
+<a name="l00263"></a>00263     {
+<a name="l00264"></a>00264         free(ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>[i].<a class="code" href="struct__polygon_32ccf29956c65625eddb9f4c75ce0f0c.html#32ccf29956c65625eddb9f4c75ce0f0c">v</a>);
+<a name="l00265"></a>00265     }
+<a name="l00266"></a>00266     free(ph.<a class="code" href="struct__polygon__holes_b2a2b78ef53f56d9f4a7639c9dd15fd0.html#b2a2b78ef53f56d9f4a7639c9dd15fd0">h</a>);
+<a name="l00267"></a>00267 
+<a name="l00268"></a>00268     <span class="keywordflow">return</span> valido;
+<a name="l00269"></a>00269 }
+</pre></div>
+<p>
+
+<p>
+Gráfico de llamadas para esta función:<p><center><img src="group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f770d63778_cgraph.png" border="0" usemap="#group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f770d63778_cgraph_map" alt=""></center>
+<map name="group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f770d63778_cgraph_map">
+<area href="group__geometry_g2be6101a257ea8896e61e93d14b22b89.html#g2be6101a257ea8896e61e93d14b22b89" shape="rect" coords="192,5,336,32" alt="">
+<area href="group__geometry_g95276abee7240f116afaf80a3e1f23c4.html#g95276abee7240f116afaf80a3e1f23c4" shape="rect" coords="209,56,319,83" alt="">
+<area href="group__geometry_g7538c2bf0d1e8acc0cfc055b6bf3a96b.html#g7538c2bf0d1e8acc0cfc055b6bf3a96b" shape="rect" coords="396,81,521,108" alt="">
+<area href="group__geometry_g496bae87588cb5710ced80f713da98ad.html#g496bae87588cb5710ced80f713da98ad" shape="rect" coords="183,157,345,184" alt="">
+</map>
+
+<p>
+Here is the caller graph for this function:<p><center><img src="group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f770d63778_icgraph.png" border="0" usemap="#group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f770d63778_icgraph_map" alt=""></center>
+<map name="group__genetic_gf80cc38ea4d590f6c45215f770d63778_gf80cc38ea4d590f6c45215f770d63778_icgraph_map">
+<area href="group__genetic_gf4e60223d27c85a5f6166e35ecafe641.html#gf4e60223d27c85a5f6166e35ecafe641" shape="rect" coords="183,5,300,32" alt="">
+</map>
+
+</div>
+</div><p>
+    </td>
+  </tr>
+</table>
+<hr size="1"><address style="align: right;"><small>Generado el Sun Oct 29 11:20:30 2006 para Genesting por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
+</body>
+</html>

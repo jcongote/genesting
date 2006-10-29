@@ -1,0 +1,7 @@
+\form#0:$\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$
+\form#1:$\int_{a}^{b}\int_{c}^{d}\sqrt{((x-h)^2 + (y-k)^2)} dx dy$
+\form#2:$(h,k)$
+\form#3:$(a,b)$
+\form#4:$y$
+\form#5:$(c,d)$
+\form#6:$x$

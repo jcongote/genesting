@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
+<title>Genesting: Fichero Fuente genesting.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Generado por Doxygen 1.4.7 -->
+<div class="tabs">
+  <ul>
+    <li><a href="index.html"><span>Página&nbsp;principal</span></a></li>
+    <li><a href="modules.html"><span>Módulos</span></a></li>
+    <li><a href="classes.html"><span>Estructuras&nbsp;de&nbsp;Datos</span></a></li>
+    <li id="current"><a href="files.html"><span>Archivos</span></a></li>
+    <li><a href="pages.html"><span>Páginas&nbsp;relacionadas</span></a></li>
+  </ul></div>
+<div class="tabs">
+  <ul>
+    <li><a href="files.html"><span>Lista&nbsp;de&nbsp;archivos</span></a></li>
+    <li><a href="globals.html"><span>Archivos&nbsp;de&nbsp;los&nbsp;miembros</span></a></li>
+  </ul></div>
+<h1>genesting.h</h1><a href="genesting_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/*!\addtogroup genetic</span>
+<a name="l00002"></a>00002 <span class="comment">@{</span>
+<a name="l00003"></a>00003 <span class="comment">*/</span>
+<a name="l00004"></a>00004 <span class="comment"></span>
+<a name="l00005"></a>00005 <span class="comment">/*!\file genesting.h</span>
+<a name="l00006"></a>00006 <span class="comment">Declaraciones del Objeto Genesting</span>
+<a name="l00007"></a>00007 <span class="comment">*/</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="preprocessor">#ifndef FILE_GENESTING_H</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span><span class="preprocessor">#define FILE_GENESTING_H</span>
+<a name="l00011"></a>00011 <span class="preprocessor"></span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include "<a class="code" href="polygon_8h.html">polygon.h</a>"</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a><a class="code" href="struct__genesting.html">00014</a> <span class="keyword">struct </span><a class="code" href="struct__genesting.html">_genesting</a>
+<a name="l00015"></a>00015 {
+<a name="l00016"></a><a class="code" href="struct__genesting_c660e2710da2db9469813d0a14981cef.html#c660e2710da2db9469813d0a14981cef">00016</a>     <a class="code" href="struct__polygon.html">polygon</a> <a class="code" href="struct__genesting_c660e2710da2db9469813d0a14981cef.html#c660e2710da2db9469813d0a14981cef">plantilla</a>;
+<a name="l00017"></a><a class="code" href="struct__genesting_3affb28e2ad244f35baed248e3c230f6.html#3affb28e2ad244f35baed248e3c230f6">00017</a>     <a class="code" href="struct__polygon.html">polygon</a> *<a class="code" href="struct__genesting_3affb28e2ad244f35baed248e3c230f6.html#3affb28e2ad244f35baed248e3c230f6">huecos</a>;
+<a name="l00018"></a><a class="code" href="struct__genesting_c4b1743e42547577dbb6d7238ad4db17.html#c4b1743e42547577dbb6d7238ad4db17">00018</a>     <a class="code" href="struct__polygon.html">polygon</a> *<a class="code" href="struct__genesting_c4b1743e42547577dbb6d7238ad4db17.html#c4b1743e42547577dbb6d7238ad4db17">patrones</a>;
+<a name="l00019"></a><a class="code" href="struct__genesting_87ae802e5ffa06a1b38ce4337eadbcda.html#87ae802e5ffa06a1b38ce4337eadbcda">00019</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct__genesting_87ae802e5ffa06a1b38ce4337eadbcda.html#87ae802e5ffa06a1b38ce4337eadbcda">nhuecos</a>;
+<a name="l00020"></a><a class="code" href="struct__genesting_a5ebd60476ce0253be4e5a09349433e1.html#a5ebd60476ce0253be4e5a09349433e1">00020</a>     <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="struct__genesting_a5ebd60476ce0253be4e5a09349433e1.html#a5ebd60476ce0253be4e5a09349433e1">npatrones</a>;
+<a name="l00021"></a><a class="code" href="struct__genesting_052920321c80561169cd61a8eb301378.html#052920321c80561169cd61a8eb301378">00021</a>     <span class="keywordtype">float</span> <a class="code" href="struct__genesting_052920321c80561169cd61a8eb301378.html#052920321c80561169cd61a8eb301378">area</a>;
+<a name="l00022"></a><a class="code" href="struct__genesting_313b6909792763a5381ce7ff14830d6d.html#313b6909792763a5381ce7ff14830d6d">00022</a>     <span class="keywordtype">float</span> <a class="code" href="struct__genesting_313b6909792763a5381ce7ff14830d6d.html#313b6909792763a5381ce7ff14830d6d">volumen</a>;
+<a name="l00023"></a>00023 };
+<a name="l00024"></a>00024 
+<a name="l00025"></a><a class="code" href="group__genetic_gcd77cefe71c44c38745a4f148c7a69eb.html#gcd77cefe71c44c38745a4f148c7a69eb">00025</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="struct__genesting.html">_genesting</a> <a class="code" href="group__genetic_gcd77cefe71c44c38745a4f148c7a69eb.html#gcd77cefe71c44c38745a4f148c7a69eb">genesting</a>;
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028 <a class="code" href="group__genetic_gcd77cefe71c44c38745a4f148c7a69eb.html#gcd77cefe71c44c38745a4f148c7a69eb">genesting</a>* <a class="code" href="group__genetic_g6fed4910dd1f6172bb5a4e35a97bbe56.html#g6fed4910dd1f6172bb5a4e35a97bbe56">leer_archivo</a>(<span class="keywordtype">char</span> *arc_name);
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030 <span class="keywordtype">void</span> <a class="code" href="group__genetic_g1daa6a4e8af34b8b16a48fc2f3701f1c.html#g1daa6a4e8af34b8b16a48fc2f3701f1c">genesting_init</a>(<a class="code" href="group__genetic_gcd77cefe71c44c38745a4f148c7a69eb.html#gcd77cefe71c44c38745a4f148c7a69eb">genesting</a> *g);
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 <span class="keywordtype">void</span> <a class="code" href="group__genetic_g3f63f4034274d731cb3fdf3200c64d41.html#g3f63f4034274d731cb3fdf3200c64d41">genesting_show</a>(<a class="code" href="group__genetic_gcd77cefe71c44c38745a4f148c7a69eb.html#gcd77cefe71c44c38745a4f148c7a69eb">genesting</a> *g);
+<a name="l00033"></a>00033 
+<a name="l00034"></a>00034 <span class="preprocessor">#endif</span>
+<a name="l00035"></a>00035 <span class="preprocessor"></span><span class="comment"></span>
+<a name="l00036"></a>00036 <span class="comment">/*!@}*/</span>
+</pre></div><hr size="1"><address style="align: right;"><small>Generado el Sun Oct 29 11:19:29 2006 para Genesting por&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.4.7 </small></address>
+</body>
+</html>
