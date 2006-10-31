@@ -1,10 +1,63 @@
-/*!\addtogroup genetic
-@{
+/*!\mainpage Proyecto Genesting
+\author John Edgar Congote Calle
+\version 0.3a1
+
+Genesting es un proyecto que intenta resolver el problema de nesting o
+anidamiento de figuras a través del uso de algoritmos genéticos.
+
+\section Introduction
+
+In the manufacturing industry the raw materials usually came in finite
+two-dimensional sheets, where the permanent goal is the reduction of waste
+materials. But there is a frequent problem: how to distribute two-dimensional
+patterns in a container sheet in order to get the maximum utilization of
+material? This is know as the Knapsack problem.
+
+
+Nowdays many company make this job according with the empirical experience
+of their employers having two risks. The first one is that there is not way
+to know if their solution are going to be the best to minimize the amount of
+waste materials. The second risk is in the case of presuming that an employ
+has the optimal solution the knowledge would be in the hands of just one person
+or group of work and not as a part of a system or as a part of the company.
+
+
+\section definition Definicion
+El problema de nesting se puede definir como encontrar una dispocision de
+patrones que esten dentro de otro de forma que se maximice el area utilizada.
+Este problema tiene muchas variantes, pero en el proyecto se trabajara
+especificamente sobre el caso de Knapsack.
+
+\section objective Objetivo
+Encontrar una dispocicion de patrones que maximicen el area
+utilizada dentro de otro patron. Los patrones estan definidos como poligonos
+simples, los cuales pueden ser por definicion convexos o concavos pero solo
+pueden tener un adentro o mas claramente sus lineas no se intersectan.
+
+\section case Caso de Estudio
+Aunque el problema es teorico, el projecto quiere generar una aplicacion
+que pueda ser utilizada por la industria marroquinera, donde tienen que
+definir como distribuir los moldes de corte dentro de un cuero, en este caso
+el cuero se puede definir como el patron o poligono donde se tienen que
+colocar los demas patrones, y los moldes como los patrones internos.
 */
 
-/*!\file genesting.c
-Aqui estan las estructuras principales del programa
-la estructura es muy sencilla
+
+
+/*!\defgroup genetic Genetico
+Dentro del modulo genetico encontraremos una implementacion de heuristicas
+de algoritmos geneticos y evoluticos que seleccionara la solucion.
+*/
+
+
+/*!\todo
+- Se deben cambiar los typedef de los objetos para que sean punteros
+- Para calcular el fitness es mejor comprobar primero el area y despues
+el fitness, asi se ahorra mucho calculo
+*/
+
+/*!\file main.c
+Programa principal, usa y prueba la libreria genesting.
 */
 
 #include <stdio.h>
@@ -12,140 +65,76 @@ la estructura es muy sencilla
 #include <math.h>
 
 #include "genesting.h"
+#include "graphics.h"
+#include "distance.h"
+#include "population.h"
 
-#include "polygon.h"
-#include "polygon_holes.h"
-
-/*!\fn genesting* leer_archivo(char *arc_name)
-Lee el archivo de datos que definen las caracteristicas del problema
-*/
-/*!\todo
-Documentar como es la estructura leida por el programa.
-*/
-genesting* leer_archivo(char *arc_name)
+int main(int argc, char **argv)
 {
-    FILE* arc;
     genesting *g;
-    int npoly;
-    int i,j;
+    population *p;
 
-    g =(genesting*) malloc (sizeof(genesting));
+#if graphics
 
-    arc=fopen(arc_name,"r");
+    init_graphics();
+#endif
 
-    if(arc==NULL){
-            fprintf(stderr,"No se pudo abrir el archivo\n");
-            exit(1);
+    if (argc<2)
+    {
+        fprintf(stderr,"Se deben entrar ingresar el nombre del archivo a leer\n");
+        return 1;
     }
 
-    fscanf(arc,"%i",&npoly);
+    g=leer_archivo(argv[1]);
+    p=(population*) malloc(sizeof(population));
 
-    g->nhuecos =0;
-    g->npatrones =0;
+    srand((int)p);
 
-    g->huecos=(polygon*) malloc(sizeof(polygon)*npoly-1);
-    g->patrones=(polygon*) malloc(sizeof(polygon)*npoly-1);
+    genesting_init(g);
 
-    for (i=0;i<npoly;i++)
+    genesting_show(g);
+
+    population_create(p,g, 200);
+
+    int i,k;
+    for (k=0;k<30;k++)
     {
-        int nvert,tipo;
+        printf("Iteracion: %i\n",k);
 
-        polygon *p=NULL;
-        fscanf(arc,"%i %i",&nvert,&tipo);
-        switch(tipo)
+        /*
+        for (i=0;i<5;i++)
         {
-            case 1:
-            p=&(g->plantilla);
-            break;
-            case 2:
-            p=&(g->patrones[g->npatrones++]);
-            break;
-            case 3:
-            p=&(g->huecos[g->nhuecos++]);
-            break;
+            printf("Individuo %i: [%i] \n",i,p->individuos[i].ngenes);
+            for (j=0;j<p->individuos[i].ngenes;j++)
+            {
+                printf("Pat[%i] x[%f] y[%f] t[%f]\n",
+                       p->individuos[i].posgen[j].id,
+                       p->individuos[i].posgen[j].x,
+                       p->individuos[i].posgen[j].y,
+                       p->individuos[i].posgen[j].t);
+            }
         }
-        p->nvertices = nvert;
-        p->v=(point*) malloc(sizeof(point)*nvert);
-        for (j=0;j<nvert;j++)
+        */
+        population_evaluate(p);
+
+        for (i=0;i<10;i++)
         {
-            fscanf(arc,"%f %f",&(p->v[j].x),&(p->v[j].y));
+            printf("Individuo %i: [%i] fitness: %f areautil: %f\n",i,p->individuos[i].ngenes,p->individuos[i].fitness,p->individuos[i].areautil);
+            /*
+                        for (j=0;j<p->individuos[i].ngenes;j++)
+                        {
+                            printf("Pat[%i] x[%f] y[%f] t[%f]\n",
+                                   p->individuos[i].posgen[j].id,
+                                   p->individuos[i].posgen[j].x,
+                                   p->individuos[i].posgen[j].y,
+                                   p->individuos[i].posgen[j].t);
+                        }
+            */
         }
+
+        population_generation(p);
     }
-    g->huecos=(polygon*) realloc(g->huecos,sizeof(polygon)*g->nhuecos);
-    g->patrones=(polygon*) realloc(g->patrones,sizeof(polygon)*g->npatrones);
+    free(p);
 
-    fclose(arc);
-
-    return g;
+    return 0;
 }
-
-/*!\fn void genesting_init(genesting *g)
-Realiza unas correcciones iniciales al archivo de entrada y calcula los
-valores fijos del problema, como el area maxima y volumen maximo que se
-dan cuando generamos una solucion vacia.
-*/
-void genesting_init(genesting *g)
-{
-    int i;
-    float minx, miny, maxx, maxy;
-    polygon_holes p;
-
-    polygon_minbox(&(g->plantilla), &minx, &miny, &maxx, &maxy);
-
-    polygon_translate(&(g->plantilla), -minx, -miny);
-
-    for (i=0;i<g->nhuecos;i++)
-    {
-        polygon_translate(&(g->huecos[i]), -minx, -miny);
-    }
-
-    for (i=0;i<g->npatrones;i++)
-    {
-        polygon_minbox(&(g->patrones[i]), &minx, &miny, &maxx, &maxy);
-        polygon_translate(&(g->patrones[i]), -minx, -miny);
-    }
-
-    p.nholes = g->nhuecos;
-    p.p = &(g->plantilla);
-    p.h = g->huecos;
-
-    g->area = polygonholes_area(&p);
-
-    g->volumen = polygonholes_volumen(&p);
-}
-
-/*!\fn void genesting_show(genesting *g)
-Muestra la informacion del programa
-\param [in] g Genesting
-*/
-void genesting_show(genesting *g)
-{
-    int i;
-
-    printf("Mostrando informacion de genesting\n");
-    printf("Plantilla:\n");
-    printf("  Vertices: %i\n",g->plantilla.nvertices);
-    printf("  Area: %f\n",polygon_area(&(g->plantilla)));
-
-    printf("Huecos: %i\n",g->nhuecos);
-    for (i=0;i<g->nhuecos;i++)
-    {
-        printf("  Hueco %i:\n",i+1);
-        printf("    Vertices: %i\n",g->huecos[i].nvertices);
-        printf("    Area: %f\n",polygon_area(&(g->huecos[i])));
-    }
-
-    printf("Area Util: %f\n",g->area);
-    printf("Volumen Util: %f\n",g->volumen);
-
-    printf("Patrones: %i\n",g->npatrones);
-    for (i=0;i<g->npatrones;i++)
-    {
-        printf("  Patrones %i:\n",i+1);
-        printf("    Vertices: %i\n",g->patrones[i].nvertices);
-        printf("    Area: %f\n",polygon_area(&(g->patrones[i])));
-    }
-}
-
-
-/*!@}*/
