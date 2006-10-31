@@ -17,19 +17,6 @@ entre varios objetos.
 #include "line.h"
 #include "polygon.h"
 
-/*!\fn float distance_pointpoint(point *a, point *b)
-La funcion compara la distancia entre dos puntos la formula para esto es:
-\f$\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\f$
-
-\param [in] a Punto en 2 dimensiones
-\param [in] b Punto en 2 dimensiones
-\return La distancia entre los puntos
-*/
-
-float distance_pointpoint(point *a, point *b)
-{
-    return sqrt(powf(a->x - b->x,2.0)+powf(a->y - b->y,2.0));
-}
 
 /*!\fn float distance_pointline(point *f, line *l,int *seg)
 La funcion calcula la distancia entre un punto un segmento de linea,
