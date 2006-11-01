@@ -116,10 +116,6 @@ bool polygonholes_polygonin(polygonholes p, polygon q)
     return false;
 }
 
-
-
-
-
 /*!\fn float polygonholes_volumen(polygonholes p)
 Calcula el volumen generado por el poligono con huecos, definiendo asi el
 poligono como una figura tridimensional de la siguiente manera, la base del
